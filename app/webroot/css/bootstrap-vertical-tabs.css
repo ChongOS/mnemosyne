@@ -1,0 +1,43 @@
+/*!
+ * bootstrap-vertical-tabs - v1.2.1
+ * https://dbtek.github.io/bootstrap-vertical-tabs
+ * 2014-11-07
+ * Copyright (c) 2014 İsmail Demirbilek
+ * License: MIT
+ */
+.tabs-left {
+  border-bottom: none;
+  padding-top: 2px;
+}
+.tabs-left {
+  border: 0;
+}
+
+.tabs-left>li {
+  float: none;
+  margin-bottom: 2px;
+  border: 0;
+  border-radius: 0;
+}
+
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border: 0;
+  border-radius: 0;
+  background-color: #ee6e73;
+  color: white;
+}
+
+.tabs-left>li>a {
+  border: 0;
+  border-radius: 0;
+  margin-right: 0;
+  color: black;
+  display:block;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
