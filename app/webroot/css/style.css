@@ -11,6 +11,18 @@ body {
 }
 
 
+.ui-state-highlight {
+    height: 300px;
+    border: dashed 2px grey;
+    border-radius: 10px;
+}
+
+.card-text-content {
+    word-wrap: break-word; 
+    height: 150px;
+    overflow-y: scroll;
+}
+    
 /* label color */
 /*.input-field label {*/
     /*color: white;*/

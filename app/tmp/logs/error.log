@@ -1909,3 +1909,1935 @@ Stack Trace:
 #14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #15 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #16 {main}
+2015-04-22 15:38:03 Error: [MissingHelperException] Helper class FacebookHelper could not be found.
+Exception Attributes: array (
+  'class' => 'FacebookHelper',
+  'plugin' => false,
+)
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(848): HelperCollection->__isset('Facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/View/Users/login.ctp(65): View->__get('Facebook')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-04-22 15:42:05 Error: [ConfigureException] Could not load configuration file: /Applications/MAMP/htdocs/mnemosyne/app/Config/facebook.php
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/Configure.php(299): PhpReader->read('facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FacebookInfo.php(38): Configure::load('facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/View/Helper/FacebookHelper.php(48): FacebookInfo::getConfig('locale')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/HelperCollection.php(136): FacebookHelper->__construct(Object(View), Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Facebook')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(848): HelperCollection->__isset('Facebook')
+#6 /Applications/MAMP/htdocs/mnemosyne/app/View/Users/login.ctp(65): View->__get('Facebook')
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#13 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-04-22 15:45:24 Error: [ConfigureException] Could not load configuration file: /Applications/MAMP/htdocs/mnemosyne/app/Config/facebook.php
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/Configure.php(299): PhpReader->read('facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FacebookInfo.php(42): Configure::load('facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(29): FacebookInfo::getConfig()
+#3 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(21): FB->__initInstance()
+#4 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Controller/Component/ConnectComponent.php(84): FB->__construct()
+#5 [internal function]: ConnectComponent->initialize(Object(UsersController))
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#7 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-22 15:45:46 Error: [ConfigureException] Could not load configuration file: /Applications/MAMP/htdocs/mnemosyne/app/Config/facebook.php
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/Configure.php(299): PhpReader->read('facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FacebookInfo.php(42): Configure::load('facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(29): FacebookInfo::getConfig()
+#3 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(21): FB->__initInstance()
+#4 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Controller/Component/ConnectComponent.php(84): FB->__construct()
+#5 [internal function]: ConnectComponent->initialize(Object(UsersController))
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#7 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-22 15:46:30 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/AppController.php, line 51]
+2015-04-22 15:46:30 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 51)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 51, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 51, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-22 15:47:36 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/AppController.php, line 51]
+2015-04-22 15:47:36 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 51)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 51, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 51, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-22 15:47:37 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/AppController.php, line 51]
+2015-04-22 15:47:37 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 51)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 51, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 51, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-22 15:48:09 Error: Fatal Error (4): syntax error, unexpected ''authenticate'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/AppController.php, line 43]
+2015-04-22 15:48:09 Error: [FatalErrorException] syntax error, unexpected ''authenticate'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 43, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 43, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-22 15:48:18 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/AppController.php, line 52]
+2015-04-22 15:48:18 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 52, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-22 15:48:39 Error: [ConfigureException] Could not load configuration file: /Applications/MAMP/htdocs/mnemosyne/app/Config/facebook.php
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/Configure.php(299): PhpReader->read('facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FacebookInfo.php(42): Configure::load('facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(29): FacebookInfo::getConfig()
+#3 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(21): FB->__initInstance()
+#4 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Controller/Component/ConnectComponent.php(84): FB->__construct()
+#5 [internal function]: ConnectComponent->initialize(Object(UsersController))
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#7 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-22 15:49:55 Error: [ConfigureException] Could not load configuration file: /Applications/MAMP/htdocs/mnemosyne/app/Config/facebook.php
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/Configure.php(299): PhpReader->read('facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FacebookInfo.php(42): Configure::load('facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(29): FacebookInfo::getConfig()
+#3 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(21): FB->__initInstance()
+#4 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Controller/Component/ConnectComponent.php(84): FB->__construct()
+#5 [internal function]: ConnectComponent->initialize(Object(UsersController))
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#7 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-22 15:51:05 Error: [ConfigureException] Could not load configuration file: /Applications/MAMP/htdocs/mnemosyne/app/Config/facebook.php
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/Configure.php(299): PhpReader->read('facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FacebookInfo.php(42): Configure::load('facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(29): FacebookInfo::getConfig()
+#3 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(21): FB->__initInstance()
+#4 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Controller/Component/ConnectComponent.php(84): FB->__construct()
+#5 [internal function]: ConnectComponent->initialize(Object(UsersController))
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#7 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-22 16:01:02 Error: [MissingViewException] View file "Users/login_with_facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/login_with_facebook.ctp',
+)
+Request URL: /mnemosyne/users/loginWithFacebook
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-22 16:01:52 Error: Fatal Error (1): Call to a member function css() on null in [/Applications/MAMP/htdocs/mnemosyne/app/View/Layouts/facebook.ctp, line 3]
+2015-04-22 16:01:52 Error: [FatalErrorException] Call to a member function css() on null
+Request URL: /mnemosyne/users/loginWithFacebook
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 3, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 3, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-22 16:06:15 Error: [MissingActionException] Action UsersController::profile() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'profile',
+)
+Request URL: /mnemosyne/users/profile
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-22 16:06:34 Error: [MissingControllerException] Controller class FController could not be found.
+Exception Attributes: array (
+  'class' => 'FController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/f
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-22 16:09:57 Error: [ConfigureException] Could not load configuration file: /Applications/MAMP/htdocs/mnemosyne/app/Config/facebook.php
+Request URL: /mnemosyne/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/Configure.php(299): PhpReader->read('facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FacebookInfo.php(42): Configure::load('facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(29): FacebookInfo::getConfig()
+#3 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Lib/FB.php(21): FB->__initInstance()
+#4 /Applications/MAMP/htdocs/mnemosyne/app/Plugin/Facebook/Controller/Component/ConnectComponent.php(84): FB->__construct()
+#5 [internal function]: ConnectComponent->initialize(Object(UsersController))
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#7 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-22 17:11:54 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/AppController.php, line 53]
+2015-04-22 17:11:54 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mnemosyne/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 53)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 53, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 53, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-22 17:29:16 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/Applications/MAMP/htdocs/mnemosyne/app/View/Users/login.ctp, line 70]
+2015-04-22 17:29:16 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /mnemosyne/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 70)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 70, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 70, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-22 19:40:55 Error: [MissingHelperException] Helper class FacebookHelper could not be found.
+Exception Attributes: array (
+  'class' => 'FacebookHelper',
+  'plugin' => false,
+)
+Request URL: /mnemosyne/profile
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(848): HelperCollection->__isset('Facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/View/Layouts/default.ctp(22): View->__get('Facebook')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(546): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(481): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProfileController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-22 19:41:03 Error: [MissingHelperException] Helper class FacebookHelper could not be found.
+Exception Attributes: array (
+  'class' => 'FacebookHelper',
+  'plugin' => false,
+)
+Request URL: /mnemosyne/profile
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(848): HelperCollection->__isset('Facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/View/Layouts/default.ctp(22): View->__get('Facebook')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(546): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(481): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProfileController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-22 19:41:03 Error: [MissingHelperException] Helper class FacebookHelper could not be found.
+Exception Attributes: array (
+  'class' => 'FacebookHelper',
+  'plugin' => false,
+)
+Request URL: /mnemosyne/profile
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Facebook')
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(848): HelperCollection->__isset('Facebook')
+#2 /Applications/MAMP/htdocs/mnemosyne/app/View/Layouts/default.ctp(22): View->__get('Facebook')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(546): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(481): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProfileController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-22 19:45:35 Error: [MissingActionException] Action UsersController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'index',
+)
+Request URL: /mnemosyne/users
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-22 19:46:18 Error: [MissingActionException] Action UsersController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'index',
+)
+Request URL: /mnemosyne/users
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-23 07:28:40 Error: [MissingActionException] Action DecksController::create() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'create',
+)
+Request URL: /mnemosyne/decks/create
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-23 08:01:42 Error: [MissingActionException] Action DecksController::create() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'create',
+)
+Request URL: /mnemosyne/decks/create
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-23 08:13:02 Error: [MissingViewException] View file "Decks/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/add.ctp',
+)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-23 08:15:40 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:15:41 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:15:58 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:15:58 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:16:00 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:16:00 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:16:23 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:16:23 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:16:24 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:16:24 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:17:20 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:17:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:17:21 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:17:21 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:18:54 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:18:54 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:19:11 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:19:11 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:19:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Category.id' in 'field list'
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Categor...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Categor...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('list', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(27): Model->find('list', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(16): DecksController->__getCategories()
+#8 [internal function]: DecksController->add()
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-23 08:20:47 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:20:47 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:20:52 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:20:52 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:22:00 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:22:00 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:22:01 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:22:01 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:22:24 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:22:24 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:24:45 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 28]
+2015-04-23 08:24:45 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 28, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 28, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:25:55 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:25:55 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:26:22 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:26:22 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:30:09 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 21]
+2015-04-23 08:30:10 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 21, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 21, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:30:23 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:30:23 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:31:14 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:31:14 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:31:15 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:31:15 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:33:14 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 53836605 bytes) in [/Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/Debugger.php, line 610]
+2015-04-23 08:33:14 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 53836605 bytes)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/Applications/M...', 610)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/Applications/M...', 610, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/Applications/M...', 610, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:33:40 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 53836605 bytes) in [/Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/Debugger.php, line 610]
+2015-04-23 08:33:40 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 53836605 bytes)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/Applications/M...', 610)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/Applications/M...', 610, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/Applications/M...', 610, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:33:40 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:33:40 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:33:40 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:33:40 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:33:49 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:33:49 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:34:59 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:34:59 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:35:29 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:35:29 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:35:30 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:35:30 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:35:47 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:35:47 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:35:48 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:35:48 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:38:20 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:38:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:39:12 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:39:12 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:39:19 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:39:19 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:43:32 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:43:32 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:43:33 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:43:33 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:44:12 Error: Fatal Error (4): syntax error, unexpected 'name' (T_STRING), expecting variable (T_VARIABLE) in [/Applications/MAMP/htdocs/mnemosyne/app/Model/Category.php, line 10]
+2015-04-23 08:44:12 Error: [FatalErrorException] syntax error, unexpected 'name' (T_STRING), expecting variable (T_VARIABLE)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 10, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 10, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:44:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Category.id' in 'field list'
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Categor...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Categor...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('list', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(28): Model->find('list', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(16): DecksController->__getCategories()
+#8 [internal function]: DecksController->add()
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-23 08:44:56 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:44:56 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:45:42 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:45:42 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-23 08:45:43 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 20]
+2015-04-23 08:45:43 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 08:17:51 Error: [MissingControllerException] Controller class UploadController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/upload/picture
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-24 08:39:00 Error: [MissingPluginException] Plugin MeioUpload could not be found.
+Exception Attributes: array (
+  'plugin' => 'MeioUpload',
+)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(227): CakePlugin::path('MeioUpload')
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(549): App::path('Model/Behavior', 'MeioUpload')
+#2 [internal function]: App::load('MeioUploadBehav...')
+#3 [internal function]: spl_autoload_call('MeioUploadBehav...')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/BehaviorCollection.php(120): class_exists('MeioUploadBehav...')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('MeioUpload.Meio...', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(774): BehaviorCollection->init('Image', Array)
+#7 [internal function]: Model->__construct(Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(171): ClassRegistry::init('Image', true)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(354): FormHelper->_introspectModel('Image', 'key')
+#12 /Applications/MAMP/htdocs/mnemosyne/app/View/Decks/add.ctp(127): FormHelper->create('Image', Array)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#15 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#16 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#17 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#18 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#19 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#20 {main}
+2015-04-24 08:40:12 Error: [MissingPluginException] Plugin MeioUpload could not be found.
+Exception Attributes: array (
+  'plugin' => 'MeioUpload',
+)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(227): CakePlugin::path('MeioUpload')
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(549): App::path('Model/Behavior', 'MeioUpload')
+#2 [internal function]: App::load('MeioUploadBehav...')
+#3 [internal function]: spl_autoload_call('MeioUploadBehav...')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/BehaviorCollection.php(120): class_exists('MeioUploadBehav...')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('MeioUpload.Meio...', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(774): BehaviorCollection->init('Image', Array)
+#7 [internal function]: Model->__construct(Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(171): ClassRegistry::init('Image', true)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(354): FormHelper->_introspectModel('Image', 'key')
+#12 /Applications/MAMP/htdocs/mnemosyne/app/View/Decks/add.ctp(127): FormHelper->create('Image', Array)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#15 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#16 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#17 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#18 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#19 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#20 {main}
+2015-04-24 08:40:43 Error: [MissingPluginException] Plugin MeioUpload could not be found.
+Exception Attributes: array (
+  'plugin' => 'MeioUpload',
+)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(227): CakePlugin::path('MeioUpload')
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(549): App::path('Model/Behavior', 'MeioUpload')
+#2 [internal function]: App::load('MeioUploadBehav...')
+#3 [internal function]: spl_autoload_call('MeioUploadBehav...')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/BehaviorCollection.php(120): class_exists('MeioUploadBehav...')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('MeioUpload.Meio...', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(774): BehaviorCollection->init('Image', Array)
+#7 [internal function]: Model->__construct(Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(171): ClassRegistry::init('Image', true)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(354): FormHelper->_introspectModel('Image', 'key')
+#12 /Applications/MAMP/htdocs/mnemosyne/app/View/Decks/add.ctp(127): FormHelper->create('Image', Array)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#15 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#16 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#17 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#18 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#19 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#20 {main}
+2015-04-24 08:41:21 Error: [MissingPluginException] Plugin MeioUpload could not be found.
+Exception Attributes: array (
+  'plugin' => 'MeioUpload',
+)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(227): CakePlugin::path('MeioUpload')
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(549): App::path('Model/Behavior', 'MeioUpload')
+#2 [internal function]: App::load('MeioUploadBehav...')
+#3 [internal function]: spl_autoload_call('MeioUploadBehav...')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/BehaviorCollection.php(120): class_exists('MeioUploadBehav...')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('MeioUpload.Meio...', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(774): BehaviorCollection->init('Image', Array)
+#7 [internal function]: Model->__construct(Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(171): ClassRegistry::init('Image', true)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(354): FormHelper->_introspectModel('Image', 'key')
+#12 /Applications/MAMP/htdocs/mnemosyne/app/View/Decks/add.ctp(127): FormHelper->create('Image', Array)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#15 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#16 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#17 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#18 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#19 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#20 {main}
+2015-04-24 09:09:11 Error: [MissingTableException] Table images for model Image was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'images',
+  'class' => 'Image',
+  'ds' => 'default',
+)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('images')
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('Image', 'fields')
+#4 /Applications/MAMP/htdocs/mnemosyne/app/View/Decks/add.ctp(127): FormHelper->create('Image', Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-24 09:20:05 Error: [MissingControllerException] Controller class PictureController could not be found.
+Exception Attributes: array (
+  'class' => 'PictureController',
+  'plugin' => 'Upload',
+)
+Request URL: /mnemosyne/upload/picture
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-24 09:20:09 Error: [MissingControllerException] Controller class PictureController could not be found.
+Exception Attributes: array (
+  'class' => 'PictureController',
+  'plugin' => 'Upload',
+)
+Request URL: /mnemosyne/upload/picture
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-24 11:11:03 Error: [MissingActionException] Action DecksController::deleteFile() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'deleteFile',
+)
+Request URL: /mnemosyne/decks/deleteFile/Untitled-2.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-24 11:12:03 Error: [MissingActionException] Action DecksController::deleteFile() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'deleteFile',
+)
+Request URL: /mnemosyne/decks/deleteFile/softcon.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-24 11:14:28 Error: [MissingActionException] Action DecksController::deleteFile() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'deleteFile',
+)
+Request URL: /mnemosyne/decks/deleteFile/Untitled-2.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-24 11:27:42 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/deck/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-24 12:01:48 Error: [MissingViewException] View file "Decks/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/upload.ctp',
+)
+Request URL: /mnemosyne/decks/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:03:19 Error: [MissingViewException] View file "Decks/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/upload.ctp',
+)
+Request URL: /mnemosyne/decks/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:05:00 Error: [MissingViewException] View file "Decks/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/upload.ctp',
+)
+Request URL: /mnemosyne/decks/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:05:23 Error: [MissingViewException] View file "Decks/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/upload.ctp',
+)
+Request URL: /mnemosyne/decks/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:06:01 Error: [MissingViewException] View file "Decks/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/upload.ctp',
+)
+Request URL: /mnemosyne/decks/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:08:24 Error: [MissingViewException] View file "Decks/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/upload.ctp',
+)
+Request URL: /mnemosyne/decks/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:08:31 Error: [MissingViewException] View file "Decks/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/upload.ctp',
+)
+Request URL: /mnemosyne/decks/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:08:43 Error: [MissingViewException] View file "Decks/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/upload.ctp',
+)
+Request URL: /mnemosyne/decks/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:10:48 Error: [MissingViewException] View file "Images/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Images/upload.ctp',
+)
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:11:59 Error: [MissingControllerException] Controller class UploadController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-24 12:12:21 Error: [MissingControllerException] Controller class UploadController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-24 12:13:29 Error: [MissingViewException] View file "Images/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Images/upload.ctp',
+)
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:13:54 Error: [MissingViewException] View file "Decks/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/upload.ctp',
+)
+Request URL: /mnemosyne/decks/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:16:01 Error: [MissingActionException] Action DecksController::mnemosyne() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'mnemosyne',
+)
+Request URL: /mnemosyne/decks/mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-24 12:16:14 Error: [MissingActionException] Action DecksController::mnemosyne() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'mnemosyne',
+)
+Request URL: /mnemosyne/decks/mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-24 12:31:42 Error: [MissingViewException] View file "Images/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Images/upload.ctp',
+)
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 12:32:05 Error: [MissingViewException] View file "Images/upload.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Images/upload.ctp',
+)
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-24 13:06:52 Error: Fatal Error (1): Call to undefined method Component::get_file_name_param() in [/Applications/MAMP/htdocs/mnemosyne/app/Plugin/JqueryFileUpload/Controller/Component/UploadComponent.php, line 18]
+2015-04-24 13:06:52 Error: [FatalErrorException] Call to undefined method Component::get_file_name_param()
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 18, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 18, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 13:07:35 Error: Fatal Error (1): Call to undefined method Component::get_file_name_param() in [/Applications/MAMP/htdocs/mnemosyne/app/Plugin/JqueryFileUpload/Controller/Component/UploadComponent.php, line 18]
+2015-04-24 13:07:35 Error: [FatalErrorException] Call to undefined method Component::get_file_name_param()
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 18, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 18, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 13:08:33 Error: Fatal Error (1): Call to undefined method UploadComponent::get_file_name_param() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php, line 31]
+2015-04-24 13:08:33 Error: [FatalErrorException] Call to undefined method UploadComponent::get_file_name_param()
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 31)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 16:55:47 Error: Fatal Error (1): Call to undefined method UploadComponent::get_file_name_param() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php, line 31]
+2015-04-24 16:55:47 Error: [FatalErrorException] Call to undefined method UploadComponent::get_file_name_param()
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 31)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 16:59:06 Error: Fatal Error (1): Call to undefined method UploadComponent::get_file_name_param() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php, line 31]
+2015-04-24 16:59:06 Error: [FatalErrorException] Call to undefined method UploadComponent::get_file_name_param()
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 31)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 17:02:40 Error: Fatal Error (1): Call to undefined method UploadComponent::get_file_name_param() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php, line 31]
+2015-04-24 17:02:40 Error: [FatalErrorException] Call to undefined method UploadComponent::get_file_name_param()
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 31)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 17:05:14 Error: Fatal Error (1): Call to undefined method UploadComponent::get_file_name_param() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php, line 31]
+2015-04-24 17:05:14 Error: [FatalErrorException] Call to undefined method UploadComponent::get_file_name_param()
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 31)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 17:08:24 Error: Fatal Error (1): Call to undefined method UploadComponent::get_file_name_param() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php, line 31]
+2015-04-24 17:08:24 Error: [FatalErrorException] Call to undefined method UploadComponent::get_file_name_param()
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 31)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 31, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 17:09:26 Error: Fatal Error (1): Call to protected method UploadHandler::get_file_name_param() from context 'ImagesController' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php, line 32]
+2015-04-24 17:09:26 Error: [FatalErrorException] Call to protected method UploadHandler::get_file_name_param() from context 'ImagesController'
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to protect...', '/Applications/M...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to protect...', '/Applications/M...', 32, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to protect...', '/Applications/M...', 32, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 17:30:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Image), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php(33): Model->save(Array)
+#6 [internal function]: ImagesController->upload()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-24 17:32:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Image), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php(33): Model->save(Array)
+#6 [internal function]: ImagesController->upload()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-24 17:34:14 Error: Fatal Error (4): syntax error, unexpected ']' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php, line 32]
+2015-04-24 17:34:14 Error: [FatalErrorException] syntax error, unexpected ']'
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 32, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 32, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-24 17:35:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /mnemosyne/images/upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Image), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/ImagesController.php(33): Model->save(Array)
+#6 [internal function]: ImagesController->upload()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-25 07:22:00 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/140909_K46_Outdoor_01%20%281%29.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-25 07:22:00 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/140909_K46_Outdoor_02.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-25 07:22:08 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/140909_K46_Outdoor_01%20%281%29.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-25 09:14:33 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('categories')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('list', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(34): Model->find('list', Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(18): DecksController->__getCategories()
+#9 [internal function]: DecksController->add()
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#13 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-04-25 10:42:59 Error: Fatal Error (4): syntax error, unexpected ';', expecting ']' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 33]
+2015-04-25 10:43:00 Error: [FatalErrorException] syntax error, unexpected ';', expecting ']'
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 33, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 33, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 10:43:15 Error: Fatal Error (1): Call to undefined method DecksController::__findAccount() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 22]
+2015-04-25 10:43:15 Error: [FatalErrorException] Call to undefined method DecksController::__findAccount()
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 22, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 22, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 10:55:48 Error: Fatal Error (4): syntax error, unexpected '(array)' (array) (T_ARRAY_CAST) in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 21]
+2015-04-25 10:55:48 Error: [FatalErrorException] syntax error, unexpected '(array)' (array) (T_ARRAY_CAST)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 21, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 21, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:19:15 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 61]
+2015-04-25 11:19:15 Error: [FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 61, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 61, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:46:16 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 36]
+2015-04-25 11:46:16 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:47:18 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 37]
+2015-04-25 11:47:18 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 37, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 37, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:47:38 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 37]
+2015-04-25 11:47:38 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 37, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 37, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:50:19 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 11:50:19 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:51:43 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 11:51:43 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:53:05 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 11:53:05 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:53:21 Error: Fatal Error (1): Call to a member function saveAll() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 11:53:21 Error: [FatalErrorException] Call to a member function saveAll() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:55:00 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 11:55:00 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:55:10 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 11:55:10 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:55:36 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 11:55:36 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:57:11 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 11:57:11 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:57:20 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 11:57:20 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 11:59:27 Error: Fatal Error (4): syntax error, unexpected ''Card'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 33]
+2015-04-25 11:59:27 Error: [FatalErrorException] syntax error, unexpected ''Card'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 33, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 33, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:00:00 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 12:00:00 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:02:17 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 12:02:17 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:02:29 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 12:02:29 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:04:44 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 12:04:44 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:05:40 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 12:05:40 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:48:38 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 12:48:38 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:50:24 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 12:50:24 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:50:28 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 12:50:28 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:55:37 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 38]
+2015-04-25 12:55:37 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 38, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:57:09 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 36]
+2015-04-25 12:57:09 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 12:57:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`cards`, CONSTRAINT `cards_ibfk_1` FOREIGN KEY (`deck_id`) REFERENCES `decks` (`id`))
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Card), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(38): Model->save(Array)
+#6 [internal function]: DecksController->add()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-25 12:58:41 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`cards`, CONSTRAINT `cards_ibfk_1` FOREIGN KEY (`deck_id`) REFERENCES `decks` (`id`))
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Card), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(38): Model->save(Array)
+#6 [internal function]: DecksController->add()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-25 13:00:26 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 42]
+2015-04-25 13:00:26 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 42, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 42, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:00:51 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 44]
+2015-04-25 13:00:51 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:01:19 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 44]
+2015-04-25 13:01:19 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:01:37 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 44]
+2015-04-25 13:01:37 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:01:51 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 44]
+2015-04-25 13:01:51 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:02:13 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 44]
+2015-04-25 13:02:13 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 44, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:13:50 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 37]
+2015-04-25 13:13:50 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 37, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 37, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:24:40 Error: Fatal Error (4): syntax error, unexpected ''user_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 31]
+2015-04-25 13:24:40 Error: [FatalErrorException] syntax error, unexpected ''user_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 31)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 31, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 31, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:24:56 Error: Fatal Error (4): syntax error, unexpected ''user_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 31]
+2015-04-25 13:24:56 Error: [FatalErrorException] syntax error, unexpected ''user_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 31)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 31, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 31, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:25:08 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 39]
+2015-04-25 13:25:08 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 39, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 39, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:25:18 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 39]
+2015-04-25 13:25:18 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 39, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 39, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:28:24 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/Applications/MAMP/htdocs/mnemosyne/app/Model/Deck.php, line 141]
+2015-04-25 13:28:24 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 141)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 141, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 141, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:46:50 Error: Fatal Error (4): syntax error, unexpected ''Card'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 34]
+2015-04-25 13:46:50 Error: [FatalErrorException] syntax error, unexpected ''Card'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 34, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 34, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:47:09 Error: Fatal Error (4): syntax error, unexpected ''Card'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 34]
+2015-04-25 13:47:09 Error: [FatalErrorException] syntax error, unexpected ''Card'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 34, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 34, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:47:27 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 39]
+2015-04-25 13:47:27 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 39, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 39, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 13:49:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`decks`, CONSTRAINT `decks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Deck), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2501): Model->save(Array, Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2336): Model->saveAssociated(Array, Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2558): Model->saveMany(Array, Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(42): Model->saveAssociated(Array, Array)
+#9 [internal function]: DecksController->add()
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#13 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-04-25 14:17:08 Error: Fatal Error (4): syntax error, unexpected ''+file.name+'' (T_CONSTANT_ENCAPSED_STRING) in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/add.ctp, line 181]
+2015-04-25 14:17:08 Error: [FatalErrorException] syntax error, unexpected ''+file.name+'' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 181)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 181, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 181, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 15:22:55 Error: Fatal Error (1): Call to a member function getLastInsertId() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 52]
+2015-04-25 15:22:55 Error: [FatalErrorException] Call to a member function getLastInsertId() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 52, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 52, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 15:23:25 Error: Fatal Error (1): Call to a member function getLastInsertId() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 53]
+2015-04-25 15:23:25 Error: [FatalErrorException] Call to a member function getLastInsertId() on null
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 53)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 53, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 53, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 15:29:51 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 57]
+2015-04-25 15:29:51 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 57, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 57, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 15:42:43 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`deck_tags`, CONSTRAINT `deck_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`))
+Request URL: /mnemosyne/decks/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(DeckTag), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1745): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2501): Model->save(Array, Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2336): Model->saveAssociated(Array, Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2558): Model->saveMany(Array, Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2336): Model->saveAssociated(Array, Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2558): Model->saveMany(Array, Array)
+#10 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(47): Model->saveAssociated(Array, Array)
+#11 [internal function]: DecksController->add()
+#12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#15 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-04-25 16:48:26 Error: [MissingViewException] View file "Decks/edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/edit.ctp',
+)
+Request URL: /mnemosyne/decks/edit/19
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
