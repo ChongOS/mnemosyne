@@ -6,7 +6,7 @@ class DecksController extends AppController {
 		
 		// Desks info page allow the user to choose between 'Learn' or 'Review' mode
 		
-		$this->redirect(["controller" => "Decks", "action" => "reviewMode"]);
+		$this->redirect(["controller" => "Decks", "action" => "learnMode"]);
 		
 	}
 	
