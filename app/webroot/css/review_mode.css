@@ -1,0 +1,44 @@
+.top-bottom-padding-adjustment {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.card {
+	position: absolute;
+	height: 50%;
+	width: 40%;
+	left: 30%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	-moz-transition: -moz-transform 1s ease-in-out;
+	-ms-transition: -ms-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+}
+
+.show {
+	display: block;
+	z-index: 10;
+}
+
+.move-down {
+	display: block;
+	-webkit-transform: translate3d(0,100%, 5px) rotateZ(120deg);
+	-moz-transform: translate3d(0,100%, 5px) rotateZ(120deg);
+	-ms-transform: translate3d(0,100%, 5px) rotateZ(120deg);
+	transform: translate3d(0,100%, 5px) rotateZ(120deg);
+	z-index: -1;
+}

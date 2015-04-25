@@ -1909,3 +1909,170 @@ Stack Trace:
 #14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #15 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #16 {main}
+2015-04-25 03:51:12 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/MAMP/htdocs/mnemosyne/app/View/Users/login.ctp(22): FormHelper->create('User')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-04-25 04:27:26 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/deck
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:44:39 Error: [MissingViewException] View file "Decks/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/index.ctp',
+)
+Request URL: /mnemosyne/decks?ckcachecontrol=1429929879
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-25 04:46:03 Error: [MissingControllerException] Controller class ReviewModeController could not be found.
+Exception Attributes: array (
+  'class' => 'ReviewModeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/reviewMode
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:47:29 Error: [MissingControllerException] Controller class ReviewModeController could not be found.
+Exception Attributes: array (
+  'class' => 'ReviewModeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/reviewMode?ckcachecontrol=1429930049
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:47:42 Error: [MissingControllerException] Controller class ReviewModeController could not be found.
+Exception Attributes: array (
+  'class' => 'ReviewModeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/reviewMode?ckcachecontrol=1429930063
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:47:52 Error: Fatal Error (1): Call to undefined function reviewMode() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 9]
+2015-04-25 04:47:52 Error: [FatalErrorException] Call to undefined function reviewMode()
+Request URL: /mnemosyne/decks
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 9, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 9, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-25 04:50:30 Error: [MissingControllerException] Controller class DesksControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksControllerController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/DesksController/reviewMode
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:50:44 Error: [MissingControllerException] Controller class DesksControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksControllerController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/DesksController/reviewMode?ckcachecontrol=1429930245
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:50:48 Error: [MissingControllerException] Controller class DesksControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksControllerController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/DesksController/reviewMode?ckcachecontrol=1429930245
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:50:57 Error: [MissingControllerException] Controller class DesksControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksControllerController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/DesksController/reviewMode?ckcachecontrol=1429930257
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:51:03 Error: [MissingControllerException] Controller class DesksControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksControllerController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/DesksController/reviewMode?ckcachecontrol=1429930257
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:51:14 Error: [MissingControllerException] Controller class DesksController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Desks/reviewMode
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:51:37 Error: [MissingControllerException] Controller class DesksController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Desks/reviewMode?ckcachecontrol=1429930297
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:51:39 Error: [MissingControllerException] Controller class DesksController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Desks/reviewMode?ckcachecontrol=1429930297
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-25 04:51:47 Error: [MissingViewException] View file "Decks/review_mode.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/review_mode.ctp',
+)
+Request URL: /mnemosyne/Decks/reviewMode
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
