@@ -61,7 +61,7 @@
                     </div>
                 <?php echo $this->Form->end(); ?>
                 <div class="row center-align">
-                    <a class="waves-effect waves-light btn blue darken-4">Connect With Facebook</a>
+<!--                    <a class="waves-effect waves-light btn blue darken-4">Connect With Facebook</a>-->
                 </div>
                 <div class="row">
                     <div class="center-align" >

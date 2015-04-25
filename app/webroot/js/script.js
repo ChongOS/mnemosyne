@@ -4,11 +4,6 @@
 
 $(document).ready(function() {
     $(".button-collapse").sideNav();
-    $( "#sortable" ).sortable({
-        handle: ".move-card",
-        placeholder: "ui-state-highlight"
-    });
-    $( "#sortable" ).disableSelection();
     $('.dropdown-button').dropdown({
             inDuration: 300,
             outDuration: 225,

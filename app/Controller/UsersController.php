@@ -12,7 +12,6 @@ class UsersController extends AppController {
         $this->Auth->allow('login','add');
     }
 
-
     public function login() {
 
         //if already logged-in, redirect
@@ -43,7 +42,7 @@ class UsersController extends AppController {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been created'));
-                $this->redirect(array('action' => 'index'));
+                $this->redirect(array('action' => 'login'));
             } else {
                 $this->Session->setFlash(__('The user could not be created. Please, try again.'));
             }

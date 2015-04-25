@@ -601,7 +601,7 @@ if ($) { Vel = $.Velocity } else { Vel = Velocity};
   $.fn.extend({
     openModal: function(options) {
       var modal = this;
-      var overlay = $('<div id="lean-overlay"></div>');
+      var overlay = $('<div id="lean-overlay" onclick="closeModal()"></div>');
       $("body").append(overlay);
 
       var defaults = {

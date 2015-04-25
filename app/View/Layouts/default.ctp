@@ -89,7 +89,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 <a href="#" class="brand-logo"></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu white-text"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="white-text">Create Flashcards</a></li>
+                    <li>
+                        <?php echo $this->Html->link(
+                            'Create Flashcard',
+                            [
+                                'controller' => 'decks',
+                                'action' => 'add'
+                            ], [
+                            'class' => 'white-text'
+                        ]);
+                        ?>
+                    </li>
                     <li><a class="white-text">Categories</a></li>
                     <li>
                         <form>
