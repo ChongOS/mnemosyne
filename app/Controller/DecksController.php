@@ -11,9 +11,47 @@ class DecksController extends AppController {
     public $uses = ['Deck', 'Category', 'Card', 'Tag', 'User', 'DeckTag', 'FavoriteDeck', 'Score'];
 
     public function index() {
-
+        $this->__getCategories();
+    }
+    
+    public function category($category_id = null) {
+        $this->__getCategories();
+        $this->set('category_id', $category_id);
+        $decks = $this->Deck->find('all', [
+            'conditions' => ['Deck.status' => 1,'Category.id' => $category_id],
+            'recursive'=> 1,
+        ]);
+        
+        $tags = $this->Tag->find('list', [
+            'recursive'=> 1,
+            'fields' => ['Tag.id','Tag.name']
+        ]);
+        
+        $data = [];
+        foreach($decks as $deck) {
+            $deckTag = [];
+            foreach($deck['DeckTag'] as $tag) {
+                $id = $tag['tag_id'];
+                $deckTag[] = [
+                    'id' => $id, 
+                    'name' => $tags[$id]  
+                ];
+            }
+            $data[] = [
+                        'Deck' => $deck['Deck'],
+                        'Card' => count($deck['Card']),
+                        'User' => [
+                            'id' => $deck['User']['id'],
+                            'username' => $deck['User']['username']
+                            ],
+                        'Category' => $deck['Category'],
+                        'Tag' => $deckTag
+                      ];   
+        }
+        $this->set('data', $data);
     }
 
+    
     public function add() {
         $this->__getCategories();
         
@@ -23,10 +61,12 @@ class DecksController extends AppController {
                 $tags[] = ['Tag' => ['name' => $tag]];
 
             $cards = [];
+            $count = 1;
             foreach(json_decode($this->request->data['Deck']['cards'], true) as $card) {
                 $front = '{\''.$card['front']['type'].'\':\''.$card['front']['value'].'\'}';
                 $back = '{\''.$card['back']['type'].'\':\''.$card['back']['value'].'\'}';
-                $cards[] = ['front' => $front, 'back' => $back];
+                $cards[] = ['front' => $front, 'back' => $back, 'sort_number' => $count];
+                $count++;
             }
             
             $data = [
@@ -110,12 +150,34 @@ class DecksController extends AppController {
     }
     
     public function stat($deck_id=null) {
-        $fDeck = $this->FavoriteDeck->find('all', [
-            'conditions' => ['Deck.id' => $deck_id],
-            'recursive'=> 0
+        $favoruteDeck = $this->FavoriteDeck->find('all', [
+            'conditions' => ['deck_id' => $deck_id],
+            'recursive' => 0,
+            'fields' => [
+                'User.id', 'User.username'
+            ]
+        ]);
+        $this->set('favoriteDeck',$favoruteDeck);
+        
+        $deck = $this->Deck->find('first', [
+            'conditions' => ['id' => $deck_id],
+            'recursive' => -1,
+            'fields' => [
+                'Deck.name', 'Deck.description'
+            ]
         ]);
         
-        print_r($fDeck);
+        $this->set('deck', $deck);
+        
+        $scores = $this->Score->find('all', [
+            'conditions' => ['deck_id' => $deck_id],
+            'recursive' => 0,
+            'fields' => [
+                'Score.score', 'Score.modified', 'User.id', 'User.username'
+            ]
+        ]);
+        
+        $this->set('scores', $scores);
     }
     
     function __getTags($deck_id) {

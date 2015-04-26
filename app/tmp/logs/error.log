@@ -4291,3 +4291,690 @@ Stack Trace:
 #10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
 #11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2015-04-26 11:58:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Deck.id' in 'where clause'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Favorit...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Favorit...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Favorit...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(FavoriteDeck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(116): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:07:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Deck.id' in 'where clause'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Score), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(121): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:12:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Deck.id' in 'where clause'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Score), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(121): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:30:16 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Message.from' in 'on clause'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Score), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(131): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:30:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Message.from' in 'on clause'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Score), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(131): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:30:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Message.from' in 'on clause'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Score), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(131): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:30:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Message.from' in 'on clause'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Score), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(131): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:45:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Score.score' in 'field list'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:45:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Score.score' in 'field list'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:45:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:46:25 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:47:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Score.score' in 'field list'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:48:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Score.score' in 'field list'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:48:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Score.score' in 'field list'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Score`....', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Score`....', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Score`....', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:50:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Deck.Score' in 'field list'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 12:50:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Deck.Score' in 'field list'
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('all', Array)
+#7 [internal function]: DecksController->stat('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 13:55:32 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('decks')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('first', Array)
+#8 [internal function]: DecksController->stat('20')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-26 13:55:38 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/decks/stat/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('decks')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(124): Model->find('first', Array)
+#8 [internal function]: DecksController->stat('20')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-26 13:56:07 Error: [MissingControllerException] Controller class UController could not be found.
+Exception Attributes: array (
+  'class' => 'UController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/u
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-26 13:56:34 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/deck/stat
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-26 13:56:46 Error: [MissingActionException] Action ProfileController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProfileController',
+  'action' => 'view',
+)
+Request URL: /mnemosyne/profile/view/44
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProfileController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 14:15:59 Error: [MissingActionException] Action ProfileController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProfileController',
+  'action' => 'view',
+)
+Request URL: /mnemosyne/profile/view/44
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProfileController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 14:17:06 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/brain.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 14:24:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Card' in 'field list'
+Request URL: /mnemosyne/decks/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT count(Ca...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT count(Ca...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT count(Ca...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(20): Model->find('all', Array)
+#7 [internal function]: DecksController->index()
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 14:24:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Card.id' in 'field list'
+Request URL: /mnemosyne/decks/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT count(`C...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT count(`C...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT count(`C...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(20): Model->find('all', Array)
+#7 [internal function]: DecksController->index()
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 14:26:36 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Deck.Deck' in 'field list'
+Request URL: /mnemosyne/decks/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(20): Model->find('all', Array)
+#7 [internal function]: DecksController->index()
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 14:26:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Card.id' in 'field list'
+Request URL: /mnemosyne/decks/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(21): Model->find('all', Array)
+#7 [internal function]: DecksController->index()
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 16:03:34 Error: [MissingActionException] Action DecksController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'images',
+)
+Request URL: /mnemosyne/decks/images/yuna.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 16:07:05 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Deck/reviewMode/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-26 16:11:44 Error: [MissingActionException] Action DecksController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => '1',
+)
+Request URL: /mnemosyne/decks/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 16:12:14 Error: [MissingActionException] Action DecksController::2() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => '2',
+)
+Request URL: /mnemosyne/decks/2
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 16:14:27 Error: [MissingViewException] View file "Decks/category.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/category.ctp',
+)
+Request URL: /mnemosyne/decks/category/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-26 16:17:06 Error: Fatal Error (4): syntax error, unexpected ':', expecting ']' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 54]
+2015-04-26 16:17:06 Error: [FatalErrorException] syntax error, unexpected ':', expecting ']'
+Request URL: /mnemosyne/decks/category/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 54)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 54, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 54, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 16:19:02 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Deck/reviewMode/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-26 16:19:48 Error: [MissingViewException] View file "Decks/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/index.ctp',
+)
+Request URL: /mnemosyne/decks/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-26 16:22:02 Error: [MissingViewException] View file "Decks/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/index.ctp',
+)
+Request URL: /mnemosyne/decks/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-26 16:36:15 Error: [MissingActionException] Action DecksController::profile() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'profile',
+)
+Request URL: /mnemosyne/decks/profile/45
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 16:42:45 Error: [MissingActionException] Action DecksController::tag() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'tag',
+)
+Request URL: /mnemosyne/decks/tag/5
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 16:48:45 Error: [MissingActionException] Action DecksController::tag() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'tag',
+)
+Request URL: /mnemosyne/decks/tag/5
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 16:48:51 Error: [MissingActionException] Action DecksController::profile() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'profile',
+)
+Request URL: /mnemosyne/decks/profile/44
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 17:17:17 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Deck/category/18
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-26 17:17:33 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Deck/category/14
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-26 17:18:44 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';' in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/category.ctp, line 29]
+2015-04-26 17:18:44 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';'
+Request URL: /mnemosyne/decks/category/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 29, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 29, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 17:21:54 Error: [MissingActionException] Action DecksController::profile() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'profile',
+)
+Request URL: /mnemosyne/decks/profile/44
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 17:22:12 Error: [MissingActionException] Action ProfileController::deck() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProfileController',
+  'action' => 'deck',
+)
+Request URL: /mnemosyne/profile/deck
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProfileController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 17:22:17 Error: [MissingViewException] View file "Decks/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/index.ctp',
+)
+Request URL: /mnemosyne/decks/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-26 19:04:36 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/admin
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-26 19:13:44 Error: Fatal Error (4): syntax error, unexpected ';' in [/Applications/MAMP/htdocs/mnemosyne/app/View/Users/add.ctp, line 35]
+2015-04-26 19:13:44 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /mnemosyne/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 35, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 35, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 19:13:46 Error: Fatal Error (4): syntax error, unexpected ';' in [/Applications/MAMP/htdocs/mnemosyne/app/View/Users/add.ctp, line 35]
+2015-04-26 19:13:46 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /mnemosyne/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 35, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 35, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 19:13:54 Error: Fatal Error (4): syntax error, unexpected ';' in [/Applications/MAMP/htdocs/mnemosyne/app/View/Users/add.ctp, line 35]
+2015-04-26 19:13:54 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /mnemosyne/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 35, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 35, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 19:15:34 Error: Fatal Error (1): Call to undefined method UsersController::layout() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/UsersController.php, line 46]
+2015-04-26 19:15:34 Error: [FatalErrorException] Call to undefined method UsersController::layout()
+Request URL: /mnemosyne/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 46, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 46, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 19:44:30 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Deck/reviewMode/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-26 19:44:40 Error: [MissingActionException] Action DecksController::profile() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'profile',
+)
+Request URL: /mnemosyne/decks/profile/44
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

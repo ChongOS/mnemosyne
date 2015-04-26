@@ -22,8 +22,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $this->fetch('title'); ?>
+		Mnemosyne - Flashcard
 	</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<?php
@@ -61,8 +60,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                         ?>
                     </li>
                     <ul id="dropdown-profile-menu" class="dropdown-content">
-                        <li><a>one</a></li>
-                        <li><a>two</a></li>
+                        <li>
+                            <?php echo $this->Html->link(
+                                'View Profile',
+                                [
+                                    'controller' => 'profile',
+                                    'action' => 'index'
+                                ], [
+                                    'class' => 'main-theme-text'
+                                ]);
+                            ?>
+                        </li>
                         <li class="divider"></li>
                         <li>
                             <?php echo $this->Html->link(
@@ -100,7 +108,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                         ]);
                         ?>
                     </li>
-                    <li><a class="white-text">Categories</a></li>
+                    <li>
+                        <?php echo $this->Html->link(
+                            'Categories',
+                            [
+                                'controller' => 'decks',
+                                'action' => 'index'
+                            ], [
+                            'class' => 'white-text'
+                        ]);
+                        ?>
+                    </li>
                     <li>
                         <form>
                             <div class="input-field">
@@ -164,9 +182,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             </div>
         </div>
         <div class="footer-copyright">
-            <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <div class="container center">
+                Copyright © 2015 Web Technology &amp; Web Services
+<!--                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
             </div>
         </div>
     </footer>

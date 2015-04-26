@@ -22,9 +22,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <head>
     <?php echo $this->Html->charset(); ?>
     <title>
-        <?php echo $cakeDescription ?>:
-        <?php echo $this->fetch('title'); ?>
-    </title>
+		Mnemosyne - Flashcard
+	</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <?php
     echo $this->Html->meta('icon');
