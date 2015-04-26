@@ -202,9 +202,11 @@
         cardNumber = cards.length;
         var i;
         for(i=0; i<cards.length; i++) {
-            var front = eval('('+cards[i].Card.front.replace('"', '\'') +')');
+            var front = eval('('+cards[i].Card.front+')');
             var back = eval('('+cards[i].Card.back+')');
-   
+
+            
+                
             var cardElement = document.createElement("div");
             cardElement.className = "row";
             cardElement.id = 'card'+cards[i].Card.sort_number;
@@ -218,7 +220,7 @@
                             '<div class="card-content">'+
                                 '<span class="card-title black-text">Front</span>'+
                                 '<div class="card-text-content">'+
-                ( typeof front.text != 'undefined' ? '"'+front.text+'"' : '<img class="responsive-img" src="/mnemosyne/app/webroot/files/'+front.image+'">')+
+                ( typeof front.text != 'undefined' ? front.text : '<img class="responsive-img" src="/mnemosyne/app/webroot/files/'+front.image+'">')+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
@@ -240,6 +242,7 @@
                 '</div>';
             
             document.getElementById('sortable').appendChild(cardElement);
+            
         }
         sortCard();
     });

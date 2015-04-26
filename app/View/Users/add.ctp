@@ -1,26 +1,64 @@
-<!-- app/View/Users/add.ctp -->
-<div class="users form">
+<nav>
+    <div class="nav-wrapper white">
+        <div class="container">
+            <a href="#" class="brand-logo main-theme-text">Mnemosyne</a>
+        </div>
+    </div>
+</nav>
+<nav>
+    <div class="nav-wrapper">
+        <div class="container">
+        </div>
+    </div>
+</nav>
 
-    <?php echo $this->Form->create('User');?>
-    <fieldset>
-        <legend><?php echo __('Add User'); ?></legend>
-        <?php echo $this->Form->input('username');
-        echo $this->Form->input('firstname');
-        echo $this->Form->input('lastname');
-        echo $this->Form->input('email');
-        echo $this->Form->input('password');
-        echo $this->Form->input('password_confirm', array('label' => 'Confirm Password *', 'maxLength' => 255, 'title' => 'Confirm password', 'type'=>'password'));
-        echo $this->Form->submit('Add User', array('class' => 'form-submit',  'title' => 'Click here to add the user') );
-        ?>
-    </fieldset>
-    <?php echo $this->Form->end(); ?>
+<div class="row center">
+    <h3 class="grey-text text-darken-2">Sign Up</h3>
 </div>
-<?php
-if($this->Session->check('Auth.User')){
-    echo $this->Html->link( "Return to Dashboard",   array('action'=>'index') );
-    echo "<br>";
-    echo $this->Html->link( "Logout",   array('action'=>'logout') );
-}else{
-    echo $this->Html->link( "Return to Login Screen",   array('action'=>'login') );
-}
-?>
+
+
+<div class="container">
+    <div class="card">
+        <div class="container">
+            <br/><br/>
+            <?php echo $this->Form->create('User');?>
+            <div class="row">
+                <div class="input-field col s12">
+                <?php echo $this->Form->input('username'); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <?php echo $this->Form->input('firstname'); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <?php echo $this->Form->input('lastname'); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <?php echo $this->Form->input('email'); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <?php echo $this->Form->input('password'); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <?php echo $this->Form->input('password_confirm', array('label' => 'Confirm Password *', 'maxLength' => 255, 'title' => 'Confirm password', 'type'=>'password')); ?>
+                </div>
+            </div>
+            <br/><br/>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="row center">
+        <?php echo $this->Form->submit('Sign Up', array('class' => 'btn light-green')); ?>
+    </div>
+    <?php echo $this->Form->end(); ?>
+    <br/><br/>
+</div>

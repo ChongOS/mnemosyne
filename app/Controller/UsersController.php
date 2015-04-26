@@ -15,15 +15,21 @@ class UsersController extends AppController {
     public function login() {
 
         //if already logged-in, redirect
-        if($this->Session->check('Auth.User')){
-            $this->redirect(array('controller' => 'profile', 'action' => 'index'));
+        if($this->Session->check('Auth.User')) {
+            if($this->Auth->user('role') == 'a')
+                $this->redirect(array('controller' => 'admin', 'action' => 'index'));
+            else
+                $this->redirect(array('controller' => 'profile', 'action' => 'index'));
         }
 
         // if we get the post information, try to authenticate
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
                 $this->Session->setFlash(__('Welcome, '. $this->Auth->user('username')));
-                $this->redirect($this->Auth->redirectUrl());
+                if($this->Auth->user('role') == 'a')
+                    $this->redirect(array('controller' => 'admin', 'action' => 'index'));
+                else
+                    $this->redirect(array('controller' => 'profile', 'action' => 'index'));
             } else {
                 $this->Session->setFlash(__('Invalid username or password'));
             }
@@ -37,6 +43,7 @@ class UsersController extends AppController {
 
     public function add()
     {
+        $this->layout ='blank';
         if ($this->request->is('post')) {
 
             $this->User->create();
