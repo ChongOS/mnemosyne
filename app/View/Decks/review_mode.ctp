@@ -4,14 +4,32 @@
 	echo $this->Html->script("review_mode.js");
 
 ?>
+<div class="row">
+	<h5 id="header">
+		Reviewing - 
+	</h5>
+</div>
 <div class="row" id="card-container">
+	<div class="preloader-wrapper big active">
+	  	<div class="spinner-layer spinner-red-only">
+	  	<div class="circle-clipper left">
+        <div class="circle"></div>
+      	</div>
+      	<div class="gap-patch">
+	        <div class="circle"></div>
+      	</div>
+      		<div class="circle-clipper right">
+        		<div class="circle"></div>
+      		</div>
+    	</div>
+  	</div>
 	<div class="top-bottom-padding-adjustment">
 		<section class="col z-depth-1 card left-card">
 			<p>test</p>
 			<p>test</p>
 			<p>test</p>
 			<p>test</p>
-			<button class="waves-effect waves-teal btn-flat" type="submit" name="action">Submit
+			<button class="waves-effect waves-teal btn-flat">Submit
 				<i class="mdi-content-send right"></i>
 			</button>
 		</section>
@@ -20,7 +38,7 @@
 			<p>test</p>
 			<p>test</p>
 			<p>test</p>
-			<button class="waves-effect waves-teal btn-flat" type="submit" name="action">Submit
+			<button class="waves-effect waves-teal btn-flat">Submit
 				<i class="mdi-content-send right"></i>
 			</button>
 		</section>
@@ -29,7 +47,7 @@
 			<p>test</p>
 			<p>test</p>
 			<p>test</p>
-			<button class="waves-effect waves-teal btn-flat" type="submit" name="action">Submit
+			<button class="waves-effect waves-teal btn-flat">Submit
 				<i class="mdi-content-send right"></i>
 			</button>
 		</section>

@@ -24,33 +24,72 @@
     	</div>
   	</div>
 	<div class="top-bottom-padding-adjustment">
-		<section class="col z-depth-1 card left-card">
-			<p>test</p>
-			<p>test</p>
-			<p>test</p>
-			<p>test</p>
-			<button class="waves-effect waves-teal btn-flat" type="submit" name="action">
-				<i class="mdi-action-flip-to-back left"></i>Answer
-			</button>
-		</section>
-		<section class="col z-depth-1 card middle-card">
-			<p>test</p>
-			<p>test</p>
-			<p>test</p>
-			<p>test</p>
-			<button class="waves-effect waves-teal btn-flat" type="submit" name="action">
-				<i class="mdi-action-flip-to-back left"></i>Answer
-			</button>
-		</section>
-		<section class="col z-depth-1 card right-card">
-			<p>test</p>
-			<p>test</p>
-			<p>test</p>
-			<p>test</p>
-			<button class="waves-effect waves-teal btn-flat" type="submit" name="action">
-				<i class="mdi-action-flip-to-back left"></i>Answer
-			</button>
-		</section>
+		<div class="card left-card">
+			<div class="col z-depth-1 card-wrapper">
+				<div class="front">
+					<p>front</p>
+					<p>test</p>
+					<p>test</p>
+					<p>test</p>
+					<button class="waves-effect waves-teal btn-flat">
+						<i class="mdi-action-flip-to-back left"></i>Answer
+					</button>
+				</div>
+				<div class="back">
+					<p>back</p>
+					<p>test</p>
+					<p>test</p>
+					<p>test</p>
+					<button class="waves-effect waves-teal btn-flat">
+						<i class="mdi-action-flip-to-back left"></i>Question
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="card middle-card">
+			<div class="col z-depth-1 card-wrapper">
+				<div class="front">
+					<p>front</p>
+					<p>test</p>
+					<p>test</p>
+					<p>test</p>
+					<button class="waves-effect waves-teal btn-flat">
+						<i class="mdi-action-flip-to-back left"></i>Answer
+					</button>
+				</div>
+				<div class="back">
+					<p>back</p>
+					<p>test</p>
+					<p>test</p>
+					<p>test</p>
+					<button class="waves-effect waves-teal btn-flat">
+						<i class="mdi-action-flip-to-back left"></i>Question
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="card right-card">
+			<div class="col z-depth-1 card-wrapper">
+				<div class="front">
+					<p>front</p>
+					<p>test</p>
+					<p>test</p>
+					<p>test</p>
+					<button class="waves-effect waves-teal btn-flat">
+						<i class="mdi-action-flip-to-back left"></i>Answer
+					</button>
+				</div>
+				<div class="back">
+					<p>back</p>
+					<p>test</p>
+					<p>test</p>
+					<p>test</p>
+					<button class="waves-effect waves-teal btn-flat">
+						<i class="mdi-action-flip-to-back left"></i>Question
+					</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 

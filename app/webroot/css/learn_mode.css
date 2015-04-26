@@ -5,8 +5,8 @@
 
 #header {
 	position: relative;
-	left: 6%;
-	top: 30px;
+	margin-left: 6%;
+	margin-top: 30px;
 	color: rgb(238, 110, 115);
 }
 
@@ -14,9 +14,13 @@
 	position: absolute;
 	width: 40%;
 	left: 29%;
-	height: 50%;
-	
-	-webkit-transform-style: preserve-3d;
+	height: 52%;
+		
+	-webkit-perspective: 1500px;
+    -moz-perspective: 1500px;
+    perspective: 1500px;
+    
+    -webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -30,6 +34,38 @@
 	-moz-transition: -moz-transform 1s ease-in-out;
 	-ms-transition: -ms-transform 1s ease-in-out;
 	transition: transform 1s ease-in-out;
+	
+	box-shadow: none;
+	padding: 8px;
+	background-color: transparent;
+	
+}
+
+.card-wrapper {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	-moz-transition: -moz-transform 0.5s ease-in-out;
+	-ms-transition: -ms-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+	
+	background-color: white;
+}
+
+.card-wrapper > * {
+	padding-left: 15px;
 }
 
 .middle-card {
@@ -37,7 +73,7 @@
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
-	z-index: 100;
+	z-index: 3;
 
 }
 
@@ -55,10 +91,35 @@
 	transform: scale(0.9) translateX(70%);
 }
 
-button[type=submit] {
+.btn-flat {
 	position: absolute;
 	right: 2%;
 	bottom: 3%;
+}
+
+.front {
+	z-index: 2;
+	
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .preloader-wrapper {
