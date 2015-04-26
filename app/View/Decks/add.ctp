@@ -12,8 +12,6 @@
         if(type == 'text') {
             tinymce.activeEditor.setContent(document.getElementById(currentCardID).innerHTML);
             tinymce.activeEditor.focus();
-        } else if(type == 'image'){
-            
         }
         $('#modal-'+type).openModal();
     }
@@ -211,11 +209,11 @@
             'placeholderColor' : '#666666'
         });
         
-        $("#sortable").sortable({
-            handle: ".move-card",
-            placeholder: "ui-state-highlight"
-        });
-        $("#sortable").disableSelection();
+//        $("#sortable").sortable({
+//            handle: ".move-card",
+//            placeholder: "ui-state-highlight"
+//        });
+//        $("#sortable").disableSelection();
         $('.modal-trigger').leanModal({
                 dismissible: true, // Modal can be dismissed by clicking outside of the modal
                 opacity: .5, // Opacity of modal background
