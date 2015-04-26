@@ -1,6 +1,6 @@
 .top-bottom-padding-adjustment {
-	padding-top: 2%;
-	padding-bottom: 2%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
 
 #header {
@@ -30,10 +30,10 @@
 	-ms-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 	
-	-webkit-transition: -webkit-transform 1s ease-in-out;
-	-moz-transition: -moz-transform 1s ease-in-out;
-	-ms-transition: -ms-transform 1s ease-in-out;
-	transition: transform 1s ease-in-out;
+	-webkit-transition: -webkit-transform 0.6s ease-in-out;
+	-moz-transition: -moz-transform 0.6s ease-in-out;
+	-ms-transition: -ms-transform 0.6s ease-in-out;
+	transition: transform 0.6s ease-in-out;
 	
 	box-shadow: none;
 	padding: 8px;
@@ -113,7 +113,15 @@
 	transform: rotateY(180deg);
 }
 
+.flipped {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
 .front, .back {
+	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	position: absolute;
 	top: 0;

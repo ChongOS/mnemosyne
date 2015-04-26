@@ -2076,3 +2076,330 @@ Stack Trace:
 #3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
 #4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2015-04-26 12:46:36 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 45]
+2015-04-26 12:46:36 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/Decks/learnMode
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 45)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 45, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 45, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 12:47:01 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 45]
+2015-04-26 12:47:01 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/Decks/learnMode
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 45)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 45, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 45, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 12:47:26 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 45]
+2015-04-26 12:47:26 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/Decks/learnMode
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 45)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 45, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 45, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 14:10:54 Error: Fatal Error (4): syntax error, unexpected '?>', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/learn_mode.ctp, line 8]
+2015-04-26 14:10:54 Error: [FatalErrorException] syntax error, unexpected '?>', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430050253
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 8, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 8, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 14:11:05 Error: Fatal Error (4): syntax error, unexpected '?>', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/learn_mode.ctp, line 8]
+2015-04-26 14:11:05 Error: [FatalErrorException] syntax error, unexpected '?>', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430050265
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 8, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 8, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 15:46:19 Error: Fatal Error (4): syntax error, unexpected 'json_encode' (T_STRING) in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 49]
+2015-04-26 15:46:19 Error: [FatalErrorException] syntax error, unexpected 'json_encode' (T_STRING)
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430055980
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 49)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 49, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 49, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 15:54:26 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /mnemosyne/Decks/testAjax
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(66): CakeRequest->allowMethod(Array)
+#1 [internal function]: DecksController->testAjax()
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-04-26 15:55:44 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /mnemosyne/Decks/testAjax?ckcachecontrol=1430056530
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(66): CakeRequest->allowMethod(Array)
+#1 [internal function]: DecksController->testAjax()
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-04-26 15:56:22 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /mnemosyne/Decks/testAjax?ckcachecontrol=1430056583
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(66): CakeRequest->allowMethod(Array)
+#1 [internal function]: DecksController->testAjax()
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-04-26 15:56:48 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /mnemosyne/Decks/testAjax?ckcachecontrol=1430056583
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(66): CakeRequest->allowMethod(Array)
+#1 [internal function]: DecksController->testAjax()
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-04-26 16:02:00 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /mnemosyne/Decks/testAjax?ckcachecontrol=1430056906
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(66): CakeRequest->allowMethod(Array)
+#1 [internal function]: DecksController->testAjax()
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-04-26 16:02:13 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /mnemosyne/Decks/testAjax?ckcachecontrol=1430056933
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(66): CakeRequest->allowMethod(Array)
+#1 [internal function]: DecksController->testAjax()
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-04-26 16:03:09 Error: [MissingActionException] Action DecksController::testAjax.json() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'testAjax.json',
+)
+Request URL: /mnemosyne/Decks/testAjax.json
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 16:12:42 Error: Fatal Error (4): syntax error, unexpected '}' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 40]
+2015-04-26 16:12:42 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430057562
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 40, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 40, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 16:21:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sort_number' in 'order clause'
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430058109
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(37): Model->find('first', Array)
+#7 [internal function]: DecksController->learnMode('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 16:22:03 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AESC ASC  LIMIT 1' at line 1
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430058123
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(37): Model->find('first', Array)
+#7 [internal function]: DecksController->learnMode('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 16:22:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sort_number' in 'order clause'
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430058146
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(37): Model->find('first', Array)
+#7 [internal function]: DecksController->learnMode('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 16:23:16 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sort_number' in 'order clause'
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430058196
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(37): Model->find('first', Array)
+#7 [internal function]: DecksController->learnMode('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 16:23:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sort_number' in 'order clause'
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430058196
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(37): Model->find('first', Array)
+#7 [internal function]: DecksController->learnMode('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 16:23:41 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Card.sort_number' in 'order clause'
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430058221
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Deck`.`...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Deck`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Deck`.`...', false)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Deck), Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#6 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(37): Model->find('first', Array)
+#7 [internal function]: DecksController->learnMode('20')
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-04-26 16:29:22 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 40]
+2015-04-26 16:29:22 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430058562
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 40, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 40, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 16:29:36 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 40]
+2015-04-26 16:29:36 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430058576
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 40, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 40, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 16:36:32 Error: Fatal Error (4): syntax error, unexpected 'as' (T_AS), expecting ';' in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/learn_mode.ctp, line 16]
+2015-04-26 16:36:32 Error: [FatalErrorException] syntax error, unexpected 'as' (T_AS), expecting ';'
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430058991
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 16, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 16, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 16:37:08 Error: Fatal Error (4): syntax error, unexpected end of file in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/learn_mode.ctp, line 95]
+2015-04-26 16:37:08 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430059027
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 95)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 95, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 95, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 16:37:21 Error: Fatal Error (4): syntax error, unexpected end of file in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/learn_mode.ctp, line 95]
+2015-04-26 16:37:21 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430059041
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 95)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 95, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 95, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 16:40:07 Error: Fatal Error (4): syntax error, unexpected 'endforeach' (T_ENDFOREACH) in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/learn_mode.ctp, line 89]
+2015-04-26 16:40:07 Error: [FatalErrorException] syntax error, unexpected 'endforeach' (T_ENDFOREACH)
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430059206
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 89)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 89, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 89, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 19:20:47 Error: Fatal Error (4): syntax error, unexpected '$front' (T_VARIABLE) in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/learn_mode.ctp, line 64]
+2015-04-26 19:20:47 Error: [FatalErrorException] syntax error, unexpected '$front' (T_VARIABLE)
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430068846
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 64)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 64, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 64, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 19:42:34 Error: Fatal Error (4): syntax error, unexpected 'endforeach' (T_ENDFOREACH) in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/learn_mode.ctp, line 103]
+2015-04-26 19:42:34 Error: [FatalErrorException] syntax error, unexpected 'endforeach' (T_ENDFOREACH)
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430070151
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 103)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 103, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 103, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-26 19:48:41 Error: Fatal Error (4): syntax error, unexpected 'endif' (T_ENDIF) in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/learn_mode.ctp, line 105]
+2015-04-26 19:48:41 Error: [FatalErrorException] syntax error, unexpected 'endif' (T_ENDIF)
+Request URL: /mnemosyne/Decks/learnMode/20?ckcachecontrol=1430070521
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 105, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 105, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

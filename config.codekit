@@ -110,6 +110,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/Controller\/CardsController.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/Controller\/CardsController.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/Controller\/PagesController.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1156,6 +1165,33 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/View\/Decks\/index.ctp": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/View\/Decks\/index.ctp",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/View\/Decks\/learn_mode.ctp": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/View\/Decks\/learn_mode.ctp",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/View\/Decks\/review_mode.ctp": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/View\/Decks\/review_mode.ctp",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/View\/Emails\/html\/default.ctp": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1354,6 +1390,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/webroot\/css\/learn_mode.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/webroot\/css\/learn_mode.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/webroot\/css\/materialize.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1368,6 +1413,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/webroot\/css\/materialize.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/webroot\/css\/review_mode.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/webroot\/css\/review_mode.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1489,6 +1543,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/app\/webroot\/js\/learn_mode.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/webroot\/js\/learn_mode.js",
+		"outputAbbreviatedPath": "\/app\/webroot\/js\/min\/learn_mode-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/app\/webroot\/js\/materialize.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1506,6 +1571,39 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/webroot\/js\/materialize.min.js",
 		"outputAbbreviatedPath": "\/app\/webroot\/js\/min\/materialize.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/webroot\/js\/min\/learn_mode-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/webroot\/js\/min\/learn_mode-min.js",
+		"outputAbbreviatedPath": "\/app\/webroot\/js\/min\/min\/learn_mode-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/webroot\/js\/min\/review_mode-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/webroot\/js\/min\/review_mode-min.js",
+		"outputAbbreviatedPath": "\/app\/webroot\/js\/min\/min\/review_mode-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/webroot\/js\/review_mode.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/webroot\/js\/review_mode.js",
+		"outputAbbreviatedPath": "\/app\/webroot\/js\/min\/review_mode-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
