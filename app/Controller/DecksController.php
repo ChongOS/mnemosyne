@@ -95,6 +95,15 @@ class DecksController extends AppController {
 	
 	public function validateCard() {
 		
+		function _prepareString($string) {
+			$string = str_replace('{', '', $string);
+			$string = str_replace('}', '', $string);
+			$string = str_replace('\'', '', $string);
+			$string = explode(':', $string, 2);
+			$result = array('type' => $string[0], 'data' => $string[1]);
+			return $result;
+		}
+		
 		$this->autoRender = false;
 		
 		$this->request->allowMethod(array('ajax'));
@@ -103,15 +112,22 @@ class DecksController extends AppController {
 			
 			$answer = $this->request->data['value'];
 			
-			$id = $this->request->data['id'];
+			if ($answer !== 'finish') {
 			
-			$correctAnswer = $this->Session->read('answer');
+				$id = $this->request->data['id'];
 			
-			if ($correctAnswer[$id] === $answer) {
-				echo json_encode('correct');
+				$correctAnswer = $this->Session->read('answer');
+							
+				if (_prepareString($correctAnswer[$id])['data'] == $answer) {
+					echo json_encode('correct');
+				}
+				else {
+					echo json_encode('wrong');
+				}
+			
 			}
 			else {
-				echo json_encode('wrong');
+				// $this->redirect();
 			}
 			
 			die();

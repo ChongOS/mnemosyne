@@ -1,6 +1,6 @@
 .top-bottom-padding-adjustment {
-	padding-top: 1%;
-	padding-bottom: 1%;
+	padding-top: 0.2%;
+	padding-bottom: 0.2%;
 }
 
 #header {
@@ -37,7 +37,7 @@
 	
 	box-shadow: none;
 	padding: 8px;
-	background-color: transparent;
+	background-color: rgb(252, 252, 252);
 	
 }
 
@@ -56,12 +56,12 @@
 	-ms-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 	
-	-webkit-transition: -webkit-transform 0.5s ease-in-out;
-	-moz-transition: -moz-transform 0.5s ease-in-out;
-	-ms-transition: -ms-transform 0.5s ease-in-out;
-	transition: transform 0.5s ease-in-out;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	-moz-transition: -moz-transform 0.3s ease-in-out;
+	-ms-transition: -ms-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
 	
-	background-color: white;
+	background-color: transparent;
 }
 
 .card-wrapper .card-head {
@@ -144,11 +144,7 @@ img {
 	left: 25%;
 }
 
-#notification {
-	z-index: 999;
-}
-
-.wrongs {
+.wrong {
 	background-color: rgb(227, 116, 117);
 }
 
@@ -165,6 +161,21 @@ img {
 	transform: translate(-50%,170%) rotate(90deg);
 }
 
-#answer-selector {
+#notification {
+	position: absolute;
+	height: 60px;
+	width: 20%;
+	right: 0;
+	top: 22%;
+}
+
+#notification > * {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	margin-left: 20px;
+}
+
+.collection li {
 	display: inline-block;
 }
