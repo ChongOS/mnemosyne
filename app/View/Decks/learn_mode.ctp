@@ -6,11 +6,24 @@ echo $this->Html->script("learn_mode.js");
 $counter = 0;
 
 function prepareString($string) {
-    $string = str_replace('\'', '""', $string);
-    return trim($string);
+    $string = str_replace('{', '', $string);
+    $string = str_replace('}', '', $string);
+    $string = str_replace('\'', '', $string);
+    $string = explode(':', $string);
+    $result = array('type' => $string[0], 'data' => $string[1]);
+    return $result;
 }
 
-pr($cards);
+function whichType($string) {
+
+    if (substr($string, 0, 4) === 'text') {
+        return 'text';
+    }
+    else if (substr($string, 0, 5) === 'image') {
+        return 'image';
+    }
+
+}
 
 ?>
 <div class="row">
@@ -42,48 +55,42 @@ pr($cards);
                     <div class="col z-depth-1 card-wrapper">
                         <div class="front">
                             <p>Question</p>
-
                             <?php
 
-                            $front = $card['Card']['front'];
-                            $front = json_decode(prepareString($front), true);
+                            $front = prepareString($card['Card']['front']);
 
-                            if (array_key_exists('image', $front)) : ?>
+                            /*
+                            if (whichType($front['type']) === 'image') {
+                                echo '<img class="center" src="' . $front['data'] . '">';
+                            }
 
-                                <img class="center-align" src="<?php echo $front['image'] ?>">
+                            else if (whichType($front['type']) === 'text') {
+                                echo $front['data'];
+                            }
+                            */
 
-                            <?php endif; ?>
-
-                            <?php if (array_key_exists('text', $front)) : ?>
-
-                                <?php echo $front['text']?>
-
-                            <?php endif; ?>
-
+                            ?>
                             <button class="waves-effect waves-teal btn-flat">
                                 <i class="mdi-action-flip-to-back left"></i>Answer
                             </button>
                         </div>
                         <div class="back">
                             <p>Answer</p>
-
                             <?php
 
-                            $back = $card['Card']['back'];
-                            $back = json_decode(prepareString($back), true);
+                            $back = prepareString($card['Card']['back']);
 
-                            if (array_key_exists('image', $back)) : ?>
+                            /*
+                            if (whichType($back['type']) === 'image') {
+                                echo '<img class="center" src="' . $back['data'] . '">';
+                            }
 
-                                <img src="<?php echo $back['image'] ?>">
+                            else if (whichType($back['type']) === 'text') {
+                                echo $back['data'];
+                            }
+                            */
 
-                            <?php endif; ?>
-
-                            <?php if (array_key_exists('text', $back)) : ?>
-
-                                <?php echo $back['text']?>
-
-                            <?php endif; ?>
-
+                            ?>
                             <button class="waves-effect waves-teal btn-flat">
                                 <i class="mdi-action-flip-to-front left"></i>Question
                             </button>
@@ -97,23 +104,21 @@ pr($cards);
                     <div class="col z-depth-1 card-wrapper">
                         <div class="front">
                             <p>Question</p>
-
                             <?php
 
-                            $front = $card['Card']['front'];
-                            $front = json_decode(prepareString($front), true);
+                            $front = prepareString($card['Card']['front']);
 
-                            if (array_key_exists('image', $front)) : ?>
+                            /*
+                            if (whichType($front['type']) === 'image') {
+                                echo '<img class="center" src="' . $front['data'] . '">';
+                            }
 
-                                <img class="center-align" src="<?php echo $front['image'] ?>">
+                            else if (whichType($front['type']) === 'text') {
+                                echo $front['data'];
+                            }
+                            */
 
-                            <?php endif; ?>
-
-                            <?php if (array_key_exists('text', $front)) : ?>
-
-                                <?php echo $front['text']?>
-
-                            <?php endif; ?>
+                            ?>
 
                             <button class="waves-effect waves-teal btn-flat">
                                 <i class="mdi-action-flip-to-back left"></i>Answer
@@ -121,23 +126,21 @@ pr($cards);
                         </div>
                         <div class="back">
                             <p>Answer</p>
-
                             <?php
 
-                            $back = $card['Card']['back'];
-                            $back = json_decode(prepareString($back), true);
+                            $back = prepareString($card['Card']['back']);
 
-                            if (array_key_exists('image', $back)) : ?>
+                            /*
+                            if (whichType($back['type']) === 'image') {
+                                echo '<img class="center" src="' . $back['data'] . '">';
+                            }
 
-                                <img src="<?php echo $back['image'] ?>">
+                            else if (whichType($back['type']) === 'text') {
+                                echo $back['data'];
+                            }
+                            */
 
-                            <?php endif; ?>
-
-                            <?php if (array_key_exists('text', $back)) : ?>
-
-                                <?php echo $back['text']?>
-
-                            <?php endif; ?>
+                            ?>
 
                             <button class="waves-effect waves-teal btn-flat">
                                 <i class="mdi-action-flip-to-front left"></i>Question
