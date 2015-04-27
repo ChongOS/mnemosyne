@@ -47,7 +47,7 @@ function whichType($string) {
 
     <div class="top-bottom-padding-adjustment" hidden="hidden">
 
-        <?php $this->Form->create('answer', array('url' => array('controller' => 'decks', 'action' => 'reviewMode'))); ?>
+        <?php $this->Form->create('answer', array('url' => array('controller' => 'Decks', 'action' => 'reviewMode'))); ?>
 
         <?php foreach ($cards as $card):
 

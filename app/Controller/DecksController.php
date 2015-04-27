@@ -42,23 +42,64 @@ class DecksController extends AppController {
                     return $result;
                 }
 
+                // Use a string matching as an validation approach
 
-                // Mapping
-                for ($i=0; $i<sizeof($cards)-1; $i++) {
-                    $indexAnswerMap[$i] = _prepareString($cards[$i]['Card']['back'])['data'];
+                foreach ($cards as $card) {
+                    $questionAnswerMap[_prepareString($card['Card']['front'])['data']] = _prepareString($card['Card']['back'])['data'];
                 }
 
                 // Store the correct answer for later validation
-                $this->Session->write('correct_answer', $indexAnswerMap);
 
-                pr($indexAnswerMap);
+                $this->Session->write('correct_answer', $questionAnswerMap);
+
+                // Generating the set of answers for multi-choices
+
+                foreach ($questionAnswerMap as $key => $value) {
+
+                    $toSelectArray = $questionAnswerMap;
+
+                    // Exclude it's own answer from being selected, which can lead to duplicate options
+                    unset($toSelectArray[$key]);
+
+                    if (sizeof($questionAnswerMap) >= 5) {
+
+                        $randomSelection = array_rand($toSelectArray, 4);
+
+                    }
+                    else {
+
+                        $randomSelection = array_rand($toSelectArray, sizeof($questionAnswerMap) - 1);
+
+                    }
+
+                    // Map the values back to the key
+                    $randomized = array();
+                    foreach ($randomSelection as $key) {
+                        array_push($randomized, $questionAnswerMap[$key]);
+                    }
+
+                    // Add its answer back, then shuffle the options
+                    array_push($randomized, $value);
+                    shuffle($randomized);
+
+                    pr($randomized);
+
+                }
+
+                /*
+                $this->set('cards', $cards);
+
+                $this->set('choices', $randomized);
 
                 $this->set('deck_name', $deck['Deck']['name']);
+                */
             }
 
             else if ($this->request->is('post')) {
 
                 // Validate the answer
+
+                // $this->set('', '');
 
             }
 
