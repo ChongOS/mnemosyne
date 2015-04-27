@@ -55,42 +55,46 @@ function whichType($string) {
                     <div class="col z-depth-1 card-wrapper">
                         <div class="front">
                             <p class="card-head">Question</p>
+                            
                             <?php
 
                             $front = prepareString($card['Card']['front']);
 
 
-                            if (whichType($front['type']) === 'image') {
-                                echo '<img class="center" src="' . $front['data'] . '">';
-                            }
+                            if (whichType($front['type']) === 'image'): ?>
+                            
+                                <img class="center" src="/mnemosyne/app/webroot/files/<?php echo $front['data']; ?>">
 
-                            else if (whichType($front['type']) === 'text') {
-                                echo $front['data'];
-                            }
+                            <?php elseif (whichType($front['type']) === 'text'): ?>
+                                
+                                <?php echo $front['data']; ?>
 
 
-                            ?>
+                            <?php endif; ?>
+                            
                             <button class="waves-effect waves-teal btn-flat">
                                 <i class="mdi-action-flip-to-back left"></i>Answer
                             </button>
                         </div>
                         <div class="back">
                             <p class="card-head">Answer</p>
+                            
                             <?php
 
                             $back = prepareString($card['Card']['back']);
 
 
-                            if (whichType($back['type']) === 'image') {
-                                echo '<img class="center" src="' . $back['data'] . '">';
-                            }
+                            if (whichType($back['type']) === 'image'): ?>
+                            
+                                <img class="center" src="/mnemosyne/app/webroot/files/<?php echo $back['data']; ?>">
 
-                            else if (whichType($back['type']) === 'text') {
-                                echo $back['data'];
-                            }
+                            <?php elseif (whichType($back['type']) === 'text'): ?>
+                                
+                                <?php echo $back['data']; ?>
 
 
-                            ?>
+                            <?php endif; ?>
+                            
                             <button class="waves-effect waves-teal btn-flat">
                                 <i class="mdi-action-flip-to-front left"></i>Question
                             </button>
@@ -109,16 +113,16 @@ function whichType($string) {
                             $front = prepareString($card['Card']['front']);
 
 
-                            if (whichType($front['type']) === 'image') {
-                                echo '<img class="center" src="' . $front['data'] . '">';
-                            }
+                            if (whichType($front['type']) === 'image'): ?>
+                            
+                                <img class="center" src="/mnemosyne/app/webroot/files/<?php echo $front['data']; ?>">
 
-                            else if (whichType($front['type']) === 'text') {
-                                echo $front['data'];
-                            }
+                            <?php elseif (whichType($front['type']) === 'text'): ?>
+                                
+                                <?php echo $front['data']; ?>
 
 
-                            ?>
+                            <?php endif; ?>
 
                             <button class="waves-effect waves-teal btn-flat">
                                 <i class="mdi-action-flip-to-back left"></i>Answer
@@ -131,16 +135,16 @@ function whichType($string) {
                             $back = prepareString($card['Card']['back']);
 
 
-                            if (whichType($back['type']) === 'image') {
-                                echo '<img class="center" src="' . $back['data'] . '">';
-                            }
+                            if (whichType($back['type']) === 'image'): ?>
+                            
+                                <img class="center" src="/mnemosyne/app/webroot/files/<?php echo $back['data']; ?>">
 
-                            else if (whichType($back['type']) === 'text') {
-                                echo $back['data'];
-                            }
+                            <?php elseif (whichType($back['type']) === 'text'): ?>
+                                
+                                <?php echo $back['data']; ?>
 
 
-                            ?>
+                            <?php endif; ?>
 
                             <button class="waves-effect waves-teal btn-flat">
                                 <i class="mdi-action-flip-to-front left"></i>Question

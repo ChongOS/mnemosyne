@@ -136,3 +136,35 @@
 	left: 46%;
 	z-index: 9999;
 }
+
+img {
+	position: absolute;
+	max-height: 60%;
+	max-width: 60%;
+	left: 25%;
+}
+
+#notification {
+	z-index: 999;
+}
+
+.wrongs {
+	background-color: rgb(227, 116, 117);
+}
+
+.correct {
+	background-color: rgb(166, 213, 169);
+}
+
+.move-off {
+	display: block;
+	z-index: 20;
+	-webkit-transform: translate(-50%,170%) rotate(90deg);
+	-moz-transform: translate(-50%,170%) rotate(90deg);
+	-ms-transform: translate(-50%,170%) rotate(90deg);
+	transform: translate(-50%,170%) rotate(90deg);
+}
+
+#answer-selector {
+	display: inline-block;
+}

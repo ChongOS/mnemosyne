@@ -32,74 +32,19 @@ class DecksController extends AppController {
                     'order' => 'sort_number ASC',
                     'recusive' => -1
                 ));
-
-                function _prepareString($string) {
-                    $string = str_replace('{', '', $string);
-                    $string = str_replace('}', '', $string);
-                    $string = str_replace('\'', '', $string);
-                    $string = explode(':', $string, 2);
-                    $result = array('type' => $string[0], 'data' => $string[1]);
-                    return $result;
-                }
-
-                // Use a string matching as an validation approach
-
+                
+				$answer = array();
+                
                 foreach ($cards as $card) {
-                    $questionAnswerMap[_prepareString($card['Card']['front'])['data']] = _prepareString($card['Card']['back'])['data'];
+	            	array_push($answer, $card['Card']['back']);    
                 }
-
-                // Store the correct answer for later validation
-
-                $this->Session->write('correct_answer', $questionAnswerMap);
-
-                // Generating the set of answers for multi-choices
-
-                foreach ($questionAnswerMap as $key => $value) {
-
-                    $toSelectArray = $questionAnswerMap;
-
-                    // Exclude it's own answer from being selected, which can lead to duplicate options
-                    unset($toSelectArray[$key]);
-
-                    if (sizeof($questionAnswerMap) >= 5) {
-
-                        $randomSelection = array_rand($toSelectArray, 4);
-
-                    }
-                    else {
-
-                        $randomSelection = array_rand($toSelectArray, sizeof($questionAnswerMap) - 1);
-
-                    }
-
-                    // Map the values back to the key
-                    $randomized = array();
-                    foreach ($randomSelection as $key) {
-                        array_push($randomized, $questionAnswerMap[$key]);
-                    }
-
-                    // Add its answer back, then shuffle the options
-                    array_push($randomized, $value);
-                    shuffle($randomized);
-
-                    pr($randomized);
-
-                }
-
-                /*
+                                
+                // Store the answers for later validation
+                $this->Session->write('answer', $answer);
+                
                 $this->set('cards', $cards);
 
-                $this->set('choices', $randomized);
-
                 $this->set('deck_name', $deck['Deck']['name']);
-                */
-            }
-
-            else if ($this->request->is('post')) {
-
-                // Validate the answer
-
-                // $this->set('', '');
 
             }
 
@@ -146,5 +91,31 @@ class DecksController extends AppController {
 
         }
 		
+	}
+	
+	public function validateCard() {
+		
+		$this->autoRender = false;
+		
+		$this->request->allowMethod(array('ajax'));
+		
+		if ($this->request->is('ajax')) {
+			
+			$answer = $this->request->data['value'];
+			
+			$id = $this->request->data['id'];
+			
+			$correctAnswer = $this->Session->read('answer');
+			
+			if ($correctAnswer[$id] === $answer) {
+				echo json_encode('correct');
+			}
+			else {
+				echo json_encode('wrong');
+			}
+			
+			die();
+						
+		}
 	}
 }

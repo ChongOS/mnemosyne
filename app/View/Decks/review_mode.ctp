@@ -2,6 +2,7 @@
 
 echo $this->Html->css("review_mode.css");
 echo $this->Html->script("review_mode.js");
+echo $this->Html->script("jquery-ui.min.js");
 
 $counter = 0;
 
@@ -26,11 +27,13 @@ function whichType($string) {
 }
 
 ?>
+
 <div class="row">
     <h5 id="header">
         Reviewing - <?php echo $deck_name ?>
     </h5>
 </div>
+
 <div class="row" id="card-container">
 
     <div class="preloader-wrapper big active">
@@ -44,10 +47,12 @@ function whichType($string) {
             </div>
         </div>
     </div>
+    
+    <div id="notification" class="card middle-card col z-depth-1" hidden="hidden">
+		<h5></h5>
+	</div>
 
     <div class="top-bottom-padding-adjustment" hidden="hidden">
-
-        <?php $this->Form->create('answer', array('url' => array('controller' => 'Decks', 'action' => 'reviewMode'))); ?>
 
         <?php foreach ($cards as $card):
 
@@ -57,44 +62,36 @@ function whichType($string) {
                     <div class="col z-depth-1 card-wrapper">
                         <div class="front">
                             <p class="card-head">Question</p>
+                            
                             <?php
 
                             $front = prepareString($card['Card']['front']);
 
 
-                            if (whichType($front['type']) === 'image') {
-                                echo '<img class="center" src="' . $front['data'] . '">';
-                            }
+                            if (whichType($front['type']) === 'image'): ?>
+                            
+                                <img class="center" src="/mnemosyne/app/webroot/files/<?php echo $front['data']; ?>">
 
-                            else if (whichType($front['type']) === 'text') {
-                                echo $front['data'];
-                            }
+                            <?php elseif (whichType($front['type']) === 'text'): ?>
+                                
+                                <?php echo $front['data']; ?>
 
 
-                            ?>
-                            <button class="waves-effect waves-teal btn-flat">
+                            <?php endif; ?>
+                            
+                            <button class="waves-effect waves-teal btn-flat answer-button">
                                 <i class="mdi-action-flip-to-back left"></i>Answer
                             </button>
                         </div>
                         <div class="back">
                             <p class="card-head">Answer</p>
-                            <?php
-
-                            $back = prepareString($card['Card']['back']);
-
-
-                            if (whichType($back['type']) === 'image') {
-                                echo '<img class="center" src="' . $back['data'] . '">';
-                            }
-
-                            else if (whichType($back['type']) === 'text') {
-                                echo $back['data'];
-                            }
-
-
-                            ?>
-                            <button class="waves-effect waves-teal btn-flat">
-                                <i class="mdi-action-flip-to-front left"></i>Question
+                            
+							<div class="input-field">
+	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'placeholder' => 'Type the answer here', 'class' => 'validate')); ?>
+        					</div>
+							
+                            <button class="waves-effect waves-teal btn-flat submit-button">
+                                <i class="mdi-content-send left"></i>Submit
                             </button>
                         </div>
                     </div>
@@ -106,46 +103,36 @@ function whichType($string) {
                     <div class="col z-depth-1 card-wrapper">
                         <div class="front">
                             <p class="card-head">Question</p>
+                            
                             <?php
 
                             $front = prepareString($card['Card']['front']);
 
 
-                            if (whichType($front['type']) === 'image') {
-                                echo '<img class="center" src="' . $front['data'] . '">';
-                            }
+                            if (whichType($front['type']) === 'image'): ?>
+                            
+                                <img class="center" src="/mnemosyne/app/webroot/files/<?php echo $front['data']; ?>">
 
-                            else if (whichType($front['type']) === 'text') {
-                                echo $front['data'];
-                            }
+                            <?php elseif (whichType($front['type']) === 'text'): ?>
+                                
+                                <?php echo $front['data']; ?>
 
 
-                            ?>
+                            <?php endif; ?>
 
-                            <button class="waves-effect waves-teal btn-flat">
+                            <button class="waves-effect waves-teal btn-flat answer-button">
                                 <i class="mdi-action-flip-to-back left"></i>Answer
                             </button>
                         </div>
                         <div class="back">
                             <p class="card-head">Answer</p>
-                            <?php
+                            
+                            <div class="input-field">
+	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'placeholder' => 'Type the answer here', 'class' => 'validate')); ?>
+        					</div>
 
-                            $back = prepareString($card['Card']['back']);
-
-
-                            if (whichType($back['type']) === 'image') {
-                                echo '<img class="center" src="' . $back['data'] . '">';
-                            }
-
-                            else if (whichType($back['type']) === 'text') {
-                                echo $back['data'];
-                            }
-
-
-                            ?>
-
-                            <button class="waves-effect waves-teal btn-flat">
-                                <i class="mdi-action-flip-to-front left"></i>Question
+                            <button class="waves-effect waves-teal btn-flat submit-button">
+                                <i class="mdi-content-send left"></i>Submit
                             </button>
                         </div>
                     </div>
@@ -164,11 +151,6 @@ function whichType($string) {
     <div class="col s4 offset-s4">
         <div class="center-align top-bottom-padding-adjustment">
             <p id="counter">1 of 10</p>
-            <button class="waves-effect waves-light btn disabled" id="btn-back" disabled><i class="mdi-navigation-arrow-back left"></i> Back</button>
-            <button class="waves-effect waves-light btn" id="btn-next">Next <i class="mdi-navigation-arrow-forward right"></i></button>
-            <?php echo $this->Form->submit('Submit', array('class' => 'waves-effect waves-light btn', 'escape' => false)); ?>
         </div>
     </div>
 </div>
-
-<?php echo $this->Form->end(); ?>

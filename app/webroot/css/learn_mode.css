@@ -136,3 +136,10 @@
 	left: 46%;
 	z-index: 9999;
 }
+
+img {
+	position: absolute;
+	max-height: 60%;
+	max-width: 60%;
+	left: 25%;
+}
