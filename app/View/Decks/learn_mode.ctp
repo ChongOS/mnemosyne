@@ -9,7 +9,7 @@ function prepareString($string) {
     $string = str_replace('{', '', $string);
     $string = str_replace('}', '', $string);
     $string = str_replace('\'', '', $string);
-    $string = explode(':', $string);
+    $string = explode(':', $string, 2);
     $result = array('type' => $string[0], 'data' => $string[1]);
     return $result;
 }
@@ -59,7 +59,7 @@ function whichType($string) {
 
                             $front = prepareString($card['Card']['front']);
 
-                            /*
+
                             if (whichType($front['type']) === 'image') {
                                 echo '<img class="center" src="' . $front['data'] . '">';
                             }
@@ -67,7 +67,7 @@ function whichType($string) {
                             else if (whichType($front['type']) === 'text') {
                                 echo $front['data'];
                             }
-                            */
+
 
                             ?>
                             <button class="waves-effect waves-teal btn-flat">
@@ -80,7 +80,7 @@ function whichType($string) {
 
                             $back = prepareString($card['Card']['back']);
 
-                            /*
+
                             if (whichType($back['type']) === 'image') {
                                 echo '<img class="center" src="' . $back['data'] . '">';
                             }
@@ -88,7 +88,7 @@ function whichType($string) {
                             else if (whichType($back['type']) === 'text') {
                                 echo $back['data'];
                             }
-                            */
+
 
                             ?>
                             <button class="waves-effect waves-teal btn-flat">
@@ -108,7 +108,7 @@ function whichType($string) {
 
                             $front = prepareString($card['Card']['front']);
 
-                            /*
+
                             if (whichType($front['type']) === 'image') {
                                 echo '<img class="center" src="' . $front['data'] . '">';
                             }
@@ -116,7 +116,7 @@ function whichType($string) {
                             else if (whichType($front['type']) === 'text') {
                                 echo $front['data'];
                             }
-                            */
+
 
                             ?>
 
@@ -130,7 +130,7 @@ function whichType($string) {
 
                             $back = prepareString($card['Card']['back']);
 
-                            /*
+
                             if (whichType($back['type']) === 'image') {
                                 echo '<img class="center" src="' . $back['data'] . '">';
                             }
@@ -138,7 +138,7 @@ function whichType($string) {
                             else if (whichType($back['type']) === 'text') {
                                 echo $back['data'];
                             }
-                            */
+
 
                             ?>
 
