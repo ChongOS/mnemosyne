@@ -175,7 +175,7 @@ function whichType($string) {
 						
 			<?php elseif (whichType($back['type']) === 'image'): ?>
 					
-				<li class="collection-item"><img src="<?php echo $back['data'] ?>"></li>
+				<li class="collection-item"><img src="/mnemosyne/app/webroot/files/<?php echo $back['data'] ?>"></li>
 						
 			<?php endif; ?>
 					
@@ -187,7 +187,7 @@ function whichType($string) {
 						
 		<?php elseif (whichType($back['type']) === 'image'): ?>
 					
-			<li class="collection-item"><img src="<?php echo $back['data'] ?>"></li>
+			<li class="collection-item"><img src="/mnemosyne/app/webroot/files/<?php echo $back['data'] ?>"></li>
 						
 		<?php endif; ?>
 			

@@ -2,7 +2,7 @@
 
 class DecksController extends AppController {
 
-    public $uses = array('Deck', 'Card');
+    public $uses = array('Deck', 'Card', 'Score');
 
     public $components = array('RequestHandler');
 
@@ -19,6 +19,9 @@ class DecksController extends AppController {
 		// Enter 'Reviewing' mode
 
         if (! is_null($deckID)) {
+	        
+	        // Store deckID for later usage
+	        $this->Session->write('deckID', $deckID);
 
             if ($this->request->is('get')) {
 
@@ -62,6 +65,9 @@ class DecksController extends AppController {
 
         // Enter 'Learning mode'
         if (! is_null($deckID)) {
+	        
+			// Store deckID for later usage
+	        $this->Session->write('deckID', $deckID);
 
             if ($this->request->is('get')) {
 
@@ -111,27 +117,64 @@ class DecksController extends AppController {
 		if ($this->request->is('ajax')) {
 			
 			$answer = $this->request->data['value'];
+				
+			// initial the score
+			if (! $this->Session->check('score')) {
+				$this->Session->write('score', 0);
+			}
 			
-			if ($answer !== 'finish') {
+			$id = $this->request->data['id'];
+				
+			$currentScore = $this->Session->read('score');
 			
-				$id = $this->request->data['id'];
-			
-				$correctAnswer = $this->Session->read('answer');
+			$correctAnswer = $this->Session->read('answer');
 							
-				if (_prepareString($correctAnswer[$id])['data'] == $answer) {
-					echo json_encode('correct');
-				}
-				else {
-					echo json_encode('wrong');
-				}
-			
+			if (_prepareString($correctAnswer[$id])['data'] == $answer) {
+				$this->Session->write('score', $currentScore + 1);
+				$return['action'] = 'correct';
 			}
 			else {
-				// $this->redirect();
+				$return['action'] = 'wrong';
 			}
 			
-			die();
-						
+			// force redirection if it is a last card
+			$isLastCard = $this->request->data['lastCard'];
+			if ($isLastCard == 1) {
+				$return['action'] = 'redirect';
+				$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
+			}
+			
+			$return['json'] = json_encode($return);
+			echo json_encode($return);
+			
 		}
+			
+		die();
+						
 	}
+	
+	public function result() {
+		
+		$score = $this->Session->read('score');
+		$userID = $this->Auth->user('id');
+		$deckID = $this->Session->read('deckID');
+		
+		// Save latest user'sscore
+		$data = array(
+			'data' => array(
+				'score' => $score,
+				'user_id' => $userID,
+				'deck_id' => $deckID
+			)
+		);
+		
+		$this->Score->save($data);
+		
+		// Get the latest 10 results
+		
+		
+		$this->set('score', $score);
+		
+	}
+	
 }

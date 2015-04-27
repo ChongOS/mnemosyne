@@ -26,20 +26,30 @@ var flipCard = function() {
 	
 };
 
-var test;
-
 var checkAnswer = function() {
+	
+	var isLastCard = 0;
+	
+	if (counter === numOfCard) {
+		isLastCard = 1;
+	}
 	
 	var textField = $(this).parent().find('input[type=text]');
 		
 	$.ajax({
 		type: 'POST',
 		url: '/mnemosyne/Decks/validateCard',
-		data: {id: textField.attr('id'), value: textField.attr('data-answer')}
+		data: {id: textField.attr('id'), value: textField.attr('data-answer'), lastCard: isLastCard}
 		
 	}).done(function(data){
-				
-		if (data === '"correct"') {
+		
+		var ajaxResponse = $.parseJSON(data);
+		
+		if (ajaxResponse.action === 'redirect') {
+			window.location.href = ajaxResponse.value;
+		}
+	
+		if (ajaxResponse.action === 'correct') {
 			$('#notification p').html('<i class="mdi-navigation-check"></i> Correct :)');
 			$('#notification').addClass('correct').removeClass('wrong').fadeIn(1000).fadeOut(3000);
 		}
