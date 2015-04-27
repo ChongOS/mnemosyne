@@ -185,7 +185,7 @@
     var currentCardNumber = 0;
     
     function closeModal() {
-        var id = parseInt(currentCardID.substr(currentCardID.length-1));
+        var id = parseInt(currentCardID.substr(4));
         var card = cards[id-1];
         if(currentCardID.substr(0, currentCardID.length-1) == 'front')
             card.front = {'type':currentType, 'value': value};

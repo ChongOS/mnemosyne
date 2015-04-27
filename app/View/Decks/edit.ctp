@@ -204,8 +204,6 @@
         for(i=0; i<cards.length; i++) {
             var front = eval('('+cards[i].Card.front+')');
             var back = eval('('+cards[i].Card.back+')');
-
-            
                 
             var cardElement = document.createElement("div");
             cardElement.className = "row";
@@ -264,7 +262,7 @@
             $('#'+id).remove();
             document.getElementById('cards-delete').value = JSON.stringify(delID);
 
-            var card_id = parseInt(id.substr(id.length-1));
+            var card_id = parseInt(id.substr(4));
             var i;
             for(i=card_id+1; i<=cardNumber; i++) {
                 var title = document.getElementById('title-card'+i);

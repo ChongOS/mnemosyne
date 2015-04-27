@@ -24,15 +24,19 @@ class DecksController extends AppController {
         
         $favoriteDeck = $this->FavoriteDeck->find('list', [
             'conditions' => ['FavoriteDeck.user_id' => $this->Auth->User('id')],
+            'fields' => ['FavoriteDeck.deck_id'],
             'recursive'=> -1
         ]);
+        $favorites = [];
+        foreach($favoriteDeck as $key => $value) {
+            $favorites[] = $value;
+        }
+        $this->set('favorite', $favorites);
         
         $tags = $this->Tag->find('list', [
             'recursive'=> -1,
             'fields' => ['Tag.id','Tag.name']
         ]);
-        
-        print_r($favoriteDeck);
         
         $data = [];
         foreach($decks as $deck) {
@@ -44,7 +48,6 @@ class DecksController extends AppController {
                     'name' => $tags[$id]  
                 ];
             }
-//            print_r($deck['Deck']['FavoriteDeck']);
             $data[] = [
                         'Deck' => $deck['Deck'],
                         'Card' => count($deck['Card']),
@@ -53,13 +56,11 @@ class DecksController extends AppController {
                             'username' => $deck['User']['username']
                             ],
                         'Category' => $deck['Category'],
-                        'Tag' => $deckTag,
-//                        'Favorite' => 
+                        'Tag' => $deckTag
                       ];   
         }
         $this->set('data', $data);
     }
-
     
     public function add() {
         $this->__getCategories();
@@ -159,14 +160,14 @@ class DecksController extends AppController {
     }
     
     public function stat($deck_id=null) {
-        $favoruteDeck = $this->FavoriteDeck->find('all', [
+        $favoriteDeck = $this->FavoriteDeck->find('all', [
             'conditions' => ['deck_id' => $deck_id],
             'recursive' => 0,
             'fields' => [
                 'User.id', 'User.username'
             ]
         ]);
-        $this->set('favoriteDeck',$favoruteDeck);
+        $this->set('favoriteDeck',$favoriteDeck);
         
         $deck = $this->Deck->find('first', [
             'conditions' => ['id' => $deck_id],
@@ -188,6 +189,91 @@ class DecksController extends AppController {
         
         $this->set('scores', $scores);
     }
+    
+    
+   public function reviewMode($deckID = null) {
+		
+		// Enter 'Reviewing' mode
+        if (! is_null($deckID)) {
+            if ($this->request->is('get')) {
+                $deck = $this->Deck->find('first', array('conditions' => array('Deck.id' => $deckID),
+                    'fields' => array('name'),
+                    'recursive' => -1
+                ));
+                $cards = $this->Card->find('all', array('conditions' => array('deck_id' => $deckID),
+                    'fields' => array('front', 'back'),
+                    'order' => 'sort_number ASC',
+                    'recusive' => -1
+                ));
+                
+				$answer = array();
+                
+                foreach ($cards as $card) {
+	            	array_push($answer, $card['Card']['back']);    
+                }
+                                
+                // Store the answers for later validation
+                $this->Session->write('answer', $answer);
+                
+                $this->set('cards', $cards);
+                $this->set('deck_name', $deck['Deck']['name']);
+            }
+        }
+        else {
+            // $this->Session-setFlash();
+            // $this->redirect();
+        }
+	}
+	public function learnMode($deckID = null) {
+        // Enter 'Learning mode'
+        if (! is_null($deckID)) {
+            if ($this->request->is('get')) {
+                // If deckID != null then go to the learn page
+                $deck = $this->Deck->find('first', array('conditions' => array('Deck.id' => $deckID),
+                    'fields' => array('name'),
+                    'recursive' => -1
+                ));
+                $cards = $this->Card->find('all', array('conditions' => array('deck_id' => $deckID),
+                    'fields' => array('front', 'back'),
+                    'order' => 'sort_number ASC',
+                    'recusive' => -1
+                ));
+                $this->set('deck_name', $deck['Deck']['name']);
+                $this->set('cards', $cards);
+            }
+        }
+        else {
+            // $this->Session->setFlash();
+            // $this->redirect();
+        }
+		
+	}
+	
+	public function validateCard() {
+		
+		$this->autoRender = false;
+		
+		$this->request->allowMethod(array('ajax'));
+		
+		if ($this->request->is('ajax')) {
+			
+			$answer = $this->request->data['value'];
+			
+			$id = $this->request->data['id'];
+			
+			$correctAnswer = $this->Session->read('answer');
+			
+			if ($correctAnswer[$id] === $answer) {
+				echo json_encode('correct');
+			}
+			else {
+				echo json_encode('wrong');
+			}
+			
+			die();
+						
+		}
+	}
     
     function __getTags($deck_id) {
         $tags = $this->DeckTag->find('all', [

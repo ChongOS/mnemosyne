@@ -5139,3 +5139,599 @@ Request URL: /mnemosyne/js/bootstrap.min.js
 Stack Trace:
 #0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-04-27 06:14:32 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Deck/learnMode/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 06:14:51 Error: [MissingControllerException] Controller class DeckController could not be found.
+Exception Attributes: array (
+  'class' => 'DeckController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Deck/learnMode/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 06:14:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/css/learn_mode.css
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 06:14:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/js/learn_mode.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 06:51:29 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/brain.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-27 06:51:41 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/brain.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-27 06:55:00 Error: [MissingHelperException] Helper class JavascriptHelper could not be found.
+Exception Attributes: array (
+  'class' => 'JavascriptHelper',
+  'plugin' => false,
+)
+Request URL: /mnemosyne/decks/category/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(897): HelperCollection->load('Javascript', Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(354): View->loadHelpers()
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(1247): View->__construct(Object(DecksController))
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(946): Controller->_getViewObject()
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#6 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2015-04-27 08:16:17 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/?20=
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:16:20 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/?24=
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:16:33 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/?20=
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:16:34 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/?20=
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:23:58 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:24:00 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:24:00 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:24:57 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:24:57 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:24:58 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:24:58 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:26:30 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:26:31 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:26:48 Error: [MissingViewException] View file "Decks/favorite.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/favorite.ctp',
+)
+Request URL: /mnemosyne/decks/favorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 08:46:33 Error: [MissingControllerException] Controller class FavoriteDecksController could not be found.
+Exception Attributes: array (
+  'class' => 'FavoriteDecksController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 08:47:07 Error: [MissingControllerException] Controller class FavoritedecksController could not be found.
+Exception Attributes: array (
+  'class' => 'FavoritedecksController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/favoritedecks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 08:47:18 Error: [MissingControllerException] Controller class FavoriteDecksController could not be found.
+Exception Attributes: array (
+  'class' => 'FavoriteDecksController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/favorite_decks
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 08:48:01 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 08:48:01 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 08:48:35 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 08:48:35 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 08:49:53 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 08:49:53 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 08:49:54 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 08:49:54 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 09:06:17 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 09:06:17 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 09:08:10 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 09:08:10 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 09:09:15 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 09:09:15 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 09:09:21 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 09:09:21 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 09:09:22 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 09:09:22 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 09:10:24 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 09:10:24 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 09:13:13 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 7]
+2015-04-27 09:13:13 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 7, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 09:13:53 Error: Fatal Error (1): Call to undefined function data() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 9]
+2015-04-27 09:13:53 Error: [FatalErrorException] Call to undefined function data()
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 9, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 9, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 10:02:51 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`favorite_decks`, CONSTRAINT `favorite_decks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(FavoriteDeck), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php(21): Model->save(Array)
+#6 [internal function]: FavoriteDecksController->setFavorite()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FavoriteDecksController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FavoriteDecksController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-27 10:03:07 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`favorite_decks`, CONSTRAINT `favorite_decks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(FavoriteDeck), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php(21): Model->save(Array)
+#6 [internal function]: FavoriteDecksController->setFavorite()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FavoriteDecksController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FavoriteDecksController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-27 10:03:34 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`favorite_decks`, CONSTRAINT `favorite_decks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(FavoriteDeck), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php(21): Model->save(Array)
+#6 [internal function]: FavoriteDecksController->setFavorite()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FavoriteDecksController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FavoriteDecksController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-27 10:04:12 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`favorite_decks`, CONSTRAINT `favorite_decks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(FavoriteDeck), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php(21): Model->save(Array)
+#6 [internal function]: FavoriteDecksController->setFavorite()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FavoriteDecksController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FavoriteDecksController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-27 10:05:17 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`favorite_decks`, CONSTRAINT `favorite_decks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(FavoriteDeck), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php(21): Model->save(Array)
+#6 [internal function]: FavoriteDecksController->setFavorite()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FavoriteDecksController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FavoriteDecksController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-27 10:06:46 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`favorite_decks`, CONSTRAINT `favorite_decks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(FavoriteDeck), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php(21): Model->save(Array)
+#6 [internal function]: FavoriteDecksController->setFavorite()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FavoriteDecksController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FavoriteDecksController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-27 10:07:25 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mnemosyne`.`favorite_decks`, CONSTRAINT `favorite_decks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `mn...', Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `mn...')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1928): DboSource->create(Object(FavoriteDeck), Array, Array)
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php(20): Model->save(Array)
+#6 [internal function]: FavoriteDecksController->setFavorite()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FavoriteDecksController), Array)
+#8 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FavoriteDecksController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-04-27 10:13:53 Error: Fatal Error (1): Call to a member function saveAssociated() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/FavoriteDecksController.php, line 12]
+2015-04-27 10:13:53 Error: [FatalErrorException] Call to a member function saveAssociated() on null
+Request URL: /mnemosyne/favorite_decks/setFavorite/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 12, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 12, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 10:43:15 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/admin
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 10:44:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/img/kong/kp1.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 10:44:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/img/kong/kp2.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 10:44:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/img/kong/p4.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 10:44:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/img/kong/p3.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 10:51:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/img/images.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 10:59:09 Error: [MissingViewException] View file "Decks/review_mode.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Decks/review_mode.ctp',
+)
+Request URL: /mnemosyne/decks/reviewMode/20
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-27 11:20:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/js/jquery-ui.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 11:26:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/js/jquery-ui.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-27 11:30:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/js/jquery-ui.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

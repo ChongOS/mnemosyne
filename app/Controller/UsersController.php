@@ -17,7 +17,7 @@ class UsersController extends AppController {
         //if already logged-in, redirect
         if($this->Session->check('Auth.User')) {
             if($this->Auth->user('role') == 'a')
-                $this->redirect(array('controller' => 'admin', 'action' => 'index'));
+                $this->redirect(array('controller' => 'admins', 'action' => 'index'));
             else
                 $this->redirect(array('controller' => 'profile', 'action' => 'index'));
         }
@@ -27,7 +27,7 @@ class UsersController extends AppController {
             if ($this->Auth->login()) {
                 $this->Session->setFlash(__('Welcome, '. $this->Auth->user('username')));
                 if($this->Auth->user('role') == 'a')
-                    $this->redirect(array('controller' => 'admin', 'action' => 'index'));
+                    $this->redirect(array('controller' => 'admins', 'action' => 'index'));
                 else
                     $this->redirect(array('controller' => 'profile', 'action' => 'index'));
             } else {
