@@ -13,7 +13,7 @@
                                     'action' => 'category',
                                     $id
                                 ], [
-                                    'class' => 'collection-item '.($id==$category_id?'active':'')   
+                                    'class' => 'collection-item '.($id==$category_id?'active ':'')   
                                 ]
                         ); 
                     }  
@@ -59,8 +59,8 @@
                             <?php echo $this->Html->link(
                                 $item['Deck']['name'],
                                     [
-                                        'controller' => 'Deck',
-                                        'action' => 'reviewMode',
+                                        'controller' => 'decks',
+                                        'action' => 'learnMode',
                                         $item['Deck']['id']
                                     ]
                                 ); ?>
@@ -68,6 +68,11 @@
                         </div>
                         <div class="card-content">
                             <span class="right main-theme-text">
+                                <p>
+<!--                                    checked="checked"-->
+                                  <input type="checkbox" onclick="setFavorite($(this).attr('id'))" id='deck<?php echo $item['Deck']['id']; ?>' <?php echo in_array($item['Deck']['id'], $favorite) ? 'checked="checked"':''; ?> />
+                                  <label for='deck<?php echo $item['Deck']['id']; ?>'>Favorite</label>
+                                </p>
                                 <b><?php echo $item['Card']; ?></b> flashcard<?php echo $item['Card'] > 1 ? 's': ''; ?>
                             </span>
                             <h6><b><?php echo $item['Deck']['description']; ?></b></h6>
@@ -98,6 +103,23 @@
                             <h6>
                                 Created: <?php echo $item['Deck']['created']; ?> 
                             </h6>
+                            
+                            <span class="right main-theme-text">
+                                <?php echo $this->Html->link(
+                                    'Test',
+                                        [
+                                            'controller' => 'decks',
+                                            'action' => 'reviewMode',
+                                            $item['Deck']['id']
+                                        ],
+                                        [
+                                            'class' => 'main-theme-text'
+                                        ]
+                                    ); 
+                                ?>
+                                <i class="mdi-navigation-arrow-forward right"></i>
+                            </span>
+                            <br/>
                         </div>
                     </div>
                 </div>
@@ -115,5 +137,22 @@
             accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
         });
     });
+    
+    function setFavorite(card_id) {
+        var id = card_id.substr(4);
+        var set = $('#'+card_id).is(':checked') ? 1 : 0;
+//        var toggle = $('#'+card_id).checked == "checked" ? '' : "checked";
+        $.ajax({
+            url: '/mnemosyne/favorite_decks/setFavorite/',
+            type: 'POST',
+            data: {
+                'id' : id,
+                'set' : set
+            },
+            success: function(data) {
+                Materialize.toast('<h5>'+data+'</h5>', 2000);
+            }
+        });
+    }
     
 </script>

@@ -102,6 +102,7 @@ footer.page-footer {
 }
 
 .parallax-container {
+    top: -20px;
     min-height: 300px;
     line-height: 0;
     height: auto;

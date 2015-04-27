@@ -159,8 +159,8 @@
     <div class="modal-content">
         <h4>Upload Image</h4>
         <?php 
-            echo $this->UploadTemplate->renderForm(array('action' => '/mnemosyne/images/upload')); //Set action for form
-            echo $this->UploadTemplate->renderListFiles(array('action_delete' => '/mnemosyne/images/deleteFile')); //Set action for remove files
+            echo $this->UploadTemplate->renderForm(array('action' => 'upload')); //Set action for form
+            echo $this->UploadTemplate->renderListFiles(array('action_delete' => 'deleteFile')); //Set action for remove files
 
             /* Load libs js e css jQuery-File-Upload and dependences */
             echo $this->UploadScript->loadLibs();
@@ -168,7 +168,7 @@
                 $(function () {
                     $('#fileupload').fileupload({
                             xhrFields   : {withCredentials: true},
-                            url         : '/mnemosyne/images/upload',
+                            url         : 'upload',
                             multipart: false,
                             dataType: 'json'
                            
@@ -185,14 +185,14 @@
     var currentCardNumber = 0;
     
     function closeModal() {
-        var id = parseInt(currentCardID.substr(currentCardID.length-1));
+        var id = parseInt(currentCardID.substr(4));
         var card = cards[id-1];
         if(currentCardID.substr(0, currentCardID.length-1) == 'front')
             card.front = {'type':currentType, 'value': value};
         else
             card.back = {'type':currentType, 'value': value};
         
-//        console.log(JSON.stringify(cards));
+        console.log(JSON.stringify(cards));
         
         document.getElementById('cards-input').value = JSON.stringify(cards);
     }

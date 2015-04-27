@@ -9,25 +9,59 @@
 
         <div class="col s12 m9 l10 text-center-s text-left-m">
             <h5 class="black-text col-s12">
-                Firstname Lastname
+				<?php
+					echo $userObj['User']['firstname'],"  ",$userObj['User']['lastname'];						
+				?>
             </h5>
             <p class="black-text col-s12">
-                Flashcard Decks Created: 0 <br/>
-                Favorite Flashcard Decks: 0<br/>
-                Joined: <br/>
-                Last Visit:
+				<?php $countCreate = count($createdDeck);
+					  $countFavorite = count($favoriteDeck);
+				?>
+				
+				<?php
+					 echo $this->Html->link(
+						 'Flashcard Decks Created: '.$countCreate,
+						 [
+							 'controller' => 'profile',
+							 'action' => 'show_created_deck',
+							 $userObj['User']['id']
+						 ], [
+							 'escape' => FALSE
+						 ]
+					 );
+					 
+				?>
+				<br/>
+				
+				<?php
+					 echo $this->Html->link(
+						 'Favorite Flashcard Decks: '.$countFavorite,
+						 [
+							 'controller' => 'profile',
+							 'action' => 'show_favorite_deck',
+							 $userObj['User']['id']
+						 ], [
+							 'escape' => FALSE
+						 ]
+					 );
+				?>
+				<br/>
+				
+                Joined: <?php echo $userObj['User']['created'] ?><br/>
+                Last Visit: <?php echo $userObj['User']['modified'] ?><br/>
             </p>
         </div>
     </div>
 </div>
 
+<!--
 <div class="row hide-on-med-and-up">
 
     <ul class="collapsible" data-collapsible="accordion">
         <li>
             <div class="collapsible-header"><i class="mdi-action-credit-card"></i>Flashcards</div>
             <div class="collapsible-body">
-                <p>Flashcards</p>
+                <p>Flashcards m</p>
             </div>
         </li>
         <li>
@@ -44,6 +78,7 @@
         </li>
     </ul>
 </div>
+-->
 
 <div class="row white hide-on-small-only">
     <div class="container">
@@ -57,9 +92,81 @@
         </div>
         <div class="col m9">
             <div class="tab-content">
-                <div class="tab-pane active" id="flashcards">Flashcards</div>
+                <div class="tab-pane active" id="flashcards">
+
+						<div class="row">
+						<?php 
+						foreach ($deckShow as $deck): 
+							foreach($favoriteDeck as $fav):
+								if($fav['FavoriteDeck']['id']==$deck['Deck']['id']){
+									$iclass = 'mdi-action-stars brown-text';
+								}
+								else{ $iclass = null;}
+							endforeach;	
+						?>
+										
+							<div class="col s12 m5">
+								<div class="card #f4ff81 lime accent-1">
+								<div class="card-content pink-text">
+									<?php
+										echo '<i class="mdi-action-wallet-giftcard" ></i> ' . $deck['Deck']['name'];
+										
+									?>
+									<span class="pull-right"><i class=$iclass></i></span>
+									<h6 class="brown-text">Description.</h6>
+									<p><?php
+										echo $deck['Deck']['description'];
+									?></p>
+								</div>
+								<div class="card-action">
+									<?php
+										echo $this->Html->link('LEARN', 
+                                        [
+                                            'controller' => 'decks',
+                                            'action' => 'learnMode',
+                                            $deck['Deck']['id']
+                                        ],[
+                                            'class' => 'waves-effect waves-light btn red accent-1 white-text'
+                                            //'onclick' => 'location.href=\'/rentmyride/users/index/\';',
+                                        ]);
+
+                                        echo $this->Html->link('TEST', 
+                                        [
+                                            'controller' => 'decks',
+                                            'action' => 'reviewMode',
+                                            $deck['Deck']['id']
+                                        ],[
+                                            'class' => 'waves-effect waves-light btn red accent-1 white-text'
+                                            //'onclick' => 'location.href=\'/rentmyride/users/index/\';',
+                                        ]);
+									?>
+								</div>
+								<br/>
+								</div>
+							</div>
+						<?php endforeach; ?>
+						</div>
+		
+				
+				</div>
                 <div class="tab-pane" id="setting">Setting</div>
-                <div class="tab-pane" id="achievements">Achievements</div>
+                <div class="tab-pane" id="achievements">
+					<div class="row">
+					<?php foreach($uBadge as $badge):?>
+						<div class="s12 m6">
+							<ul class="collection">
+								<li class="collection-item avatar lime accent-1 pink-text">
+								  <?php echo $this->Html->image('cake.icon.png', ['class' => 'circle responsive-img']) ?>
+								  <span class="title"><h5><?php echo $badge['Badge']['name']; ?>  <i class="mdi-toggle-check-box green-text pull-right"></i></h5></span>
+								  <p><?php echo $badge['Badge']['detail']; ?><br/>
+								  </p>
+								</li>
+							</ul>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				</div>
+				</div>
             </div>
         </div>
     </div>

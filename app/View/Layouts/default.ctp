@@ -28,10 +28,14 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
+
+        echo $this->Html->css('bootstrap.min.css');
+        echo $this->Html->css('bootstrap-vertical-tabs.css');
 		echo $this->Html->css('materialize.css');
         echo $this->Html->css('style.css');
 
         echo $this->Html->script('jquery-2.1.3.min.js');
+        echo $this->Html->script('bootstrap.min.js');
         echo $this->Html->script('jquery-ui.js');
         echo $this->Html->script('materialize.js');
         echo $this->Html->script('script.js');
