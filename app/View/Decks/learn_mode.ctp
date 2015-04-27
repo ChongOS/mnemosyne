@@ -54,7 +54,7 @@ function whichType($string) {
                 <div class="card right-card">
                     <div class="col z-depth-1 card-wrapper">
                         <div class="front">
-                            <p>Question</p>
+                            <p class="card-head">Question</p>
                             <?php
 
                             $front = prepareString($card['Card']['front']);
@@ -75,7 +75,7 @@ function whichType($string) {
                             </button>
                         </div>
                         <div class="back">
-                            <p>Answer</p>
+                            <p class="card-head">Answer</p>
                             <?php
 
                             $back = prepareString($card['Card']['back']);
@@ -103,7 +103,7 @@ function whichType($string) {
                 <div class="card middle-card">
                     <div class="col z-depth-1 card-wrapper">
                         <div class="front">
-                            <p>Question</p>
+                            <p class="card-head">Question</p>
                             <?php
 
                             $front = prepareString($card['Card']['front']);
@@ -125,7 +125,7 @@ function whichType($string) {
                             </button>
                         </div>
                         <div class="back">
-                            <p>Answer</p>
+                            <p class="card-head">Answer</p>
                             <?php
 
                             $back = prepareString($card['Card']['back']);

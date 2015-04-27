@@ -64,7 +64,7 @@
 	background-color: white;
 }
 
-.card-wrapper > * {
+.card-wrapper .card-head {
 	padding-left: 15px;
 }
 

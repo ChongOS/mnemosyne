@@ -2618,3 +2618,63 @@ Stack Trace:
 #14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #15 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #16 {main}
+2015-04-27 03:54:34 Error: Fatal Error (4): syntax error, unexpected 'as' (T_AS), expecting ';' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 36]
+2015-04-27 03:54:34 Error: [FatalErrorException] syntax error, unexpected 'as' (T_AS), expecting ';'
+Request URL: /mnemosyne/Decks/reviewMode/20?ckcachecontrol=1430099675
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 03:56:33 Error: Fatal Error (4): syntax error, unexpected 'as' (T_AS), expecting ';' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 36]
+2015-04-27 03:56:33 Error: [FatalErrorException] syntax error, unexpected 'as' (T_AS), expecting ';'
+Request URL: /mnemosyne/Decks/reviewMode/20?ckcachecontrol=1430099793
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 03:59:45 Error: Fatal Error (4): syntax error, unexpected 'as' (T_AS), expecting ';' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 36]
+2015-04-27 03:59:45 Error: [FatalErrorException] syntax error, unexpected 'as' (T_AS), expecting ';'
+Request URL: /mnemosyne/Decks/reviewMode/20?ckcachecontrol=1430099984
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 04:07:33 Error: Fatal Error (1): Call to undefined method SessionComponent::set() in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 41]
+2015-04-27 04:07:33 Error: [FatalErrorException] Call to undefined method SessionComponent::set()
+Request URL: /mnemosyne/Decks/reviewMode/20?ckcachecontrol=1430100452
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 41)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 41, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 41, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 04:14:14 Error: Fatal Error (4): syntax error, unexpected 'as' (T_AS), expecting ';' in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 36]
+2015-04-27 04:14:14 Error: [FatalErrorException] syntax error, unexpected 'as' (T_AS), expecting ';'
+Request URL: /mnemosyne/Decks/reviewMode/20?ckcachecontrol=1430100854
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 36, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 36, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-27 04:26:48 Error: Fatal Error (4): syntax error, unexpected ')' in [/Applications/MAMP/htdocs/mnemosyne/app/View/Decks/review_mode.ctp, line 50]
+2015-04-27 04:26:48 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /mnemosyne/Decks/reviewMode/20?ckcachecontrol=1430101608
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 50, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 50, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
