@@ -13,7 +13,7 @@
                                     'action' => 'category',
                                     $id
                                 ], [
-                                    'class' => 'collection-item '.($id==$category_id?'active':'')   
+                                    'class' => 'collection-item '.($id==$category_id?'active ':'')   
                                 ]
                         ); 
                     }  

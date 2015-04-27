@@ -19,13 +19,20 @@ class DecksController extends AppController {
         $this->set('category_id', $category_id);
         $decks = $this->Deck->find('all', [
             'conditions' => ['Deck.status' => 1,'Category.id' => $category_id],
-            'recursive'=> 1,
+            'recursive'=> 1
+        ]);
+        
+        $favoriteDeck = $this->FavoriteDeck->find('list', [
+            'conditions' => ['FavoriteDeck.user_id' => $this->Auth->User('id')],
+            'recursive'=> -1
         ]);
         
         $tags = $this->Tag->find('list', [
-            'recursive'=> 1,
+            'recursive'=> -1,
             'fields' => ['Tag.id','Tag.name']
         ]);
+        
+        print_r($favoriteDeck);
         
         $data = [];
         foreach($decks as $deck) {
@@ -37,6 +44,7 @@ class DecksController extends AppController {
                     'name' => $tags[$id]  
                 ];
             }
+//            print_r($deck['Deck']['FavoriteDeck']);
             $data[] = [
                         'Deck' => $deck['Deck'],
                         'Card' => count($deck['Card']),
@@ -45,7 +53,8 @@ class DecksController extends AppController {
                             'username' => $deck['User']['username']
                             ],
                         'Category' => $deck['Category'],
-                        'Tag' => $deckTag
+                        'Tag' => $deckTag,
+//                        'Favorite' => 
                       ];   
         }
         $this->set('data', $data);
