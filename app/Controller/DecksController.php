@@ -2,7 +2,7 @@
 
 class DecksController extends AppController {
 
-    public $uses = array('Deck', 'Card', 'Score');
+    public $uses = array('Deck', 'Card', 'Score', 'User');
 
     public $components = array('RequestHandler');
 
@@ -160,18 +160,32 @@ class DecksController extends AppController {
 		$deckID = $this->Session->read('deckID');
 		
 		// Save latest user'sscore
+		/*
 		$data = array(
-			'data' => array(
+			'User' => array('id' => $userID),
+			'Score' => array(
 				'score' => $score,
-				'user_id' => $userID,
+ 				//'user_id' => ,
 				'deck_id' => $deckID
 			)
 		);
 		
-		$this->Score->save($data);
+		$this->User->saveAssociated($data);
+		*/
+		
 		
 		// Get the latest 10 results
 		
+		$deck = $this->Deck->find('first', array('conditions' => array('Deck.id' => $deckID),
+                    'fields' => array('name'),
+                    'recursive' => 1
+                ));
+                
+        $this->set('user_name', $this->Auth->user('username'));
+                
+        $this->set('total_score', sizeof($deck['Card']));
+        		                
+        $this->set('deck_name', $deck['Deck']['name']);
 		
 		$this->set('score', $score);
 		
