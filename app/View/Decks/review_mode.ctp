@@ -90,7 +90,7 @@ function whichType($string) {
                             <p class="card-head">Answer</p>
                             
 							<div class="input-field">
-	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'placeholder' => 'Drop the answer here', 'class' => 'validate droppable')); ?>
+	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'label' => false, 'placeholder' => 'Drop the answer here', 'class' => 'validate droppable')); ?>
         					</div>
 							
                             <button class="waves-effect waves-teal btn-flat submit-button">
@@ -131,7 +131,7 @@ function whichType($string) {
                             <p class="card-head">Answer</p>
                             
                             <div class="input-field">
-	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'placeholder' => 'Drop the answer here', 'class' => 'validate droppable')); ?>
+	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'label' => false, 'placeholder' => 'Drop the answer here', 'class' => 'validate droppable')); ?>
         					</div>
 
                             <button class="waves-effect waves-teal btn-flat submit-button">

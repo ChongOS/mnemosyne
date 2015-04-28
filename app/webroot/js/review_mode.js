@@ -82,6 +82,9 @@ var timeOut = function() {
 	
 	$('#notification p:first').html('<i class="mdi-navigation-close"></i> Time is up !').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(4000, function() { $(this).removeClass('show'); });
 	
+	// Prevent user intervention if the network is slow
+	$('.middle-card').find('*').prop('disabled', true);
+	
 	$.ajax({
 		type: 'POST',
 		url: '/mnemosyne/Decks/timeOut'
