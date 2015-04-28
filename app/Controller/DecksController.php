@@ -29,7 +29,7 @@ class DecksController extends AppController {
                     'fields' => array('name'),
                     'recursive' => -1
                 ));
-
+                
                 $cards = $this->Card->find('all', array('conditions' => array('deck_id' => $deckID),
                     'fields' => array('front', 'back'),
                     'order' => 'sort_number ASC',
@@ -48,7 +48,7 @@ class DecksController extends AppController {
                 $this->set('cards', $cards);
 
                 $this->set('deck_name', $deck['Deck']['name']);
-
+                				
             }
 
         }
@@ -116,13 +116,10 @@ class DecksController extends AppController {
 		
 		$this->request->allowMethod(array('ajax'));
 		
+		// Set the intial score to 200
+		$this->Session->write('score', 200);
+		
 		if ($this->request->is('ajax')) {
-				
-			// initial the score, set to 1000
-			
-			if (! $this->Session->check('score')) {
-				$this->Session->write('score', 1000);
-			}
 						
 			$id = $this->request->data['id'];
 			$answer = $this->request->data['value'];
@@ -133,8 +130,10 @@ class DecksController extends AppController {
 				
 				// Increase the score, if user can answer the question
 				
-				$this->Session->write('score', $currentScore + 100);
+				$currentScore += 100;
+				$this->Session->write('score', $currentScore);
 				$return['action'] = 'correct';
+				$return['score'] = $currentScore;
 				
 			}
 				
@@ -142,8 +141,10 @@ class DecksController extends AppController {
 				
 				// Decrease the score, if user can't answer the question
 				
-				$this->Session->write('score', $currentScore - 100);
+				$currentScore -= 100;
+				$this->Session->write('score', $currentScore);
 				$return['action'] = 'wrong';
+				$return['score'] = $currentScore;
 				
 			}
 			

@@ -46,6 +46,8 @@ var checkAnswer = function() {
 		
 		var ajaxResponse = $.parseJSON(data);
 		
+		console.log(data);
+				
 		if (ajaxResponse.action === 'redirect') {
 			window.location.href = ajaxResponse.value;
 		}
@@ -54,10 +56,14 @@ var checkAnswer = function() {
 						
 			$('#notification p:first').html('<i class="mdi-navigation-check"></i> Correct :)').addClass('correct').removeClass('wrong').fadeIn().addClass('show').fadeOut(4000, function() { $(this).removeClass('show'); });
 			
+			$('#score').text('Current score : ' + ajaxResponse.score);
+			
 		}
 		else {
 			
 			$('#notification p:first').html('<i class="mdi-navigation-close"></i> Wrong :(').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(4000, function() { $(this).removeClass('show'); });
+			
+			$('#score').text('Current score : ' + ajaxResponse.score);
 			
 		}
 		
@@ -69,7 +75,7 @@ var checkAnswer = function() {
 	disableInActiveCard();
 	
 	counter++;
-	$('#counter').text(counter + ' of ' + numOfCard);
+	$('#counter').text('Card: ' + counter + ' of ' + numOfCard);
 	
 	// Reset a timer
 	circle.set(0);
@@ -121,7 +127,7 @@ var init = function() {
 	numOfCard = $('.card').length;
 	
 	// initial the card's counter
-	$('#counter').text(counter + ' of ' + numOfCard);
+	$('#counter').text('Card: ' + counter + ' of ' + numOfCard);
 	
 	// call the ajax for checking the answer, then move to the next card
 	$('.submit-button').click(checkAnswer);
@@ -137,6 +143,7 @@ var init = function() {
 
 	}});
 	
+	
 	// Instantiate a new Circle timer
 	circle = new ProgressBar.Circle('#timer-container', {
 		color: '#EC6F75',
@@ -149,7 +156,8 @@ var init = function() {
 		step: function(state, bar) {
         	bar.setText((bar.value() * 10).toFixed(0));
     	}
-	});				
+	});		
+		
 	
 	// Start a begin timer
 	circle.animate(1, timeOut);

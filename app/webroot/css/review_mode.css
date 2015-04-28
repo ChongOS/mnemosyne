@@ -134,7 +134,7 @@
 
 .preloader-wrapper {
 	position: absolute;
-	top: 55%;
+	top: 60%;
 	left: 46%;
 	z-index: 9999;
 }
@@ -208,4 +208,27 @@ img {
 
 .collection li {
 	display: inline-block;
+}
+
+.input-field {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#score {
+	position: relative;
+	float: right;
+	right: 6%;
+	color: rgb(238, 110, 115);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#counter {
+	position: relative;
+	float: left;
+	left: 6%;
+	color: rgb(238, 110, 115);
+	margin-top: 0;
+	margin-bottom: 0;
 }

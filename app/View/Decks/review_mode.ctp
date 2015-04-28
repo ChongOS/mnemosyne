@@ -30,6 +30,7 @@ function whichType($string) {
 ?>
 
 <div class="row">
+	
     <h5 id="header">
         Reviewing - <?php echo $deck_name ?>
     </h5>
@@ -39,6 +40,15 @@ function whichType($string) {
 	    <div id="timer-container">
 	    </div>
     </div>
+    
+</div>
+
+<div class="row">
+	
+	<p id="counter">1 of </p>
+	
+	<p id="score">Current score : 200</p>
+	
 </div>
 
 <div class="row" id="card-container">
@@ -147,14 +157,6 @@ function whichType($string) {
 
         <?php endforeach; ?>
 
-    </div>
-</div>			
-
-<div class="row">
-    <div class="col s4 offset-s4">
-        <div class="center-align">
-            <p id="counter">1 of 10</p>
-        </div>
     </div>
 </div>
 
