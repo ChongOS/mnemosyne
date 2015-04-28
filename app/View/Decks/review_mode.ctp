@@ -3,6 +3,7 @@
 echo $this->Html->css("review_mode.css");
 echo $this->Html->script("review_mode.js");
 echo $this->Html->script("jquery-ui.js");
+echo $this->Html->script("progressbar.min.js");
 
 $counter = 0;
 
@@ -35,6 +36,8 @@ function whichType($string) {
     
     <div id="notification">
 	    <p></p>
+	    <div id="timer-container">
+	    </div>
     </div>
 </div>
 

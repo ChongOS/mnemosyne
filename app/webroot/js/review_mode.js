@@ -1,5 +1,6 @@
 var numOfCard;
 var counter = 1;
+var circle;
 
 var updateWindowHeight = function() {
 	// 250
@@ -50,12 +51,14 @@ var checkAnswer = function() {
 		}
 	
 		if (ajaxResponse.action === 'correct') {
-			$('#notification p').html('<i class="mdi-navigation-check"></i> Correct :)');
-			$('#notification').addClass('correct').removeClass('wrong').fadeIn(1000).fadeOut(3000);
+						
+			$('#notification p:first').html('<i class="mdi-navigation-check"></i> Correct :)').addClass('correct').removeClass('wrong').fadeIn().addClass('show').fadeOut(4000, function() { $(this).removeClass('show'); });
+			
 		}
 		else {
-			$('#notification p').html('<i class="mdi-navigation-close"></i> Wrong :(');
-			$('#notification').addClass('wrong').removeClass('correct').fadeIn(1000).fadeOut(3000);
+			
+			$('#notification p:first').html('<i class="mdi-navigation-close"></i> Wrong :(').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(4000, function() { $(this).removeClass('show'); });
+			
 		}
 		
 	});
@@ -68,36 +71,86 @@ var checkAnswer = function() {
 	counter++;
 	$('#counter').text(counter + ' of ' + numOfCard);
 	
+	// Reset a timer
+	circle.set(0);
+	circle.animate(1, timeOut);
+	
+	
+};
+
+var timeOut = function() {
+	
+	$('#notification p:first').html('<i class="mdi-navigation-close"></i> Time is up !').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(4000, function() { $(this).removeClass('show'); });
+	
+	$.ajax({
+		type: 'POST',
+		url: '/mnemosyne/Decks/timeOut'
+				
+	}).done(function(data){
+		
+		var ajaxResponse = $.parseJSON(data);
+		
+		if (ajaxResponse.action === 'redirect') {
+			window.location.href = ajaxResponse.value;
+		}
+		
+	});
 	
 };
 
 var init = function() {
 	
+	// Set and update the fixed absolute window size
 	$(window).resize(updateWindowHeight);
 	updateWindowHeight();
 	
+	// flip the card if answer button was clicked
 	$('.answer-button').click(flipCard);
 	
+	// right-card must be disabled at inititial
 	disableInActiveCard();
 			
+	// remove the preloader, then show the cards
 	$('.preloader-wrapper').fadeOut(1400);
 	$('.top-bottom-padding-adjustment').fadeIn(2000);
 	
+	// number of card = length of card's jQuery object
 	numOfCard = $('.card').length;
 	
+	// initial the card's counter
 	$('#counter').text(counter + ' of ' + numOfCard);
 	
+	// call the ajax for checking the answer, then move to the next card
 	$('.submit-button').click(checkAnswer);
 	
+	// Set the 'collection' class as draggable
 	$('.collection-item').draggable({revert: 'invalid', snap: '.droppable', helper: 'clone', snapMode: 'corner', snapTolerance: '22'});
 	
+	// Set the 'input-field' class as droppable
 	$('.input-field input[type=text]').droppable({accept: '.collection-item', drop: function(event, ui){
 		$(this).val($(ui.draggable).text());
 		$(this).attr('data-answer', $(ui.draggable).html());
 		$(this).parent().siblings('.submit-button').prop('disabled', false);
 
 	}});
-				
+	
+	// Instantiate a new Circle timer
+	circle = new ProgressBar.Circle('#timer-container', {
+		color: '#EC6F75',
+		strokeWidth: 8,
+		trailWidth: 4,
+		duration: 10000,
+		text: {
+        	value: '0'
+    	},
+		step: function(state, bar) {
+        	bar.setText((bar.value() * 10).toFixed(0));
+    	}
+	});				
+	
+	// Start a begin timer
+	circle.animate(1, timeOut);
+	
 };
 
 $(document).ready(init);

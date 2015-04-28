@@ -101,6 +101,8 @@ class DecksController extends AppController {
 	
 	public function validateCard() {
 		
+		// For card validation
+		
 		function _prepareString($string) {
 			$string = str_replace('{', '', $string);
 			$string = str_replace('}', '', $string);
@@ -115,31 +117,42 @@ class DecksController extends AppController {
 		$this->request->allowMethod(array('ajax'));
 		
 		if ($this->request->is('ajax')) {
-			
-			$answer = $this->request->data['value'];
 				
-			// initial the score
+			// initial the score, set to 1000
+			
 			if (! $this->Session->check('score')) {
-				$this->Session->write('score', 0);
+				$this->Session->write('score', 1000);
 			}
-			
+						
 			$id = $this->request->data['id'];
-				
+			$answer = $this->request->data['value'];
 			$currentScore = $this->Session->read('score');
-			
 			$correctAnswer = $this->Session->read('answer');
 							
 			if (_prepareString($correctAnswer[$id])['data'] == $answer) {
-				$this->Session->write('score', $currentScore + 1);
+				
+				// Increase the score, if user can answer the question
+				
+				$this->Session->write('score', $currentScore + 100);
 				$return['action'] = 'correct';
+				
 			}
+				
 			else {
+				
+				// Decrease the score, if user can't answer the question
+				
+				$this->Session->write('score', $currentScore - 100);
 				$return['action'] = 'wrong';
+				
 			}
 			
-			// force redirection if it is a last card
 			$isLastCard = $this->request->data['lastCard'];
+			
 			if ($isLastCard == 1) {
+				
+				// if it's the last card, then force redirect
+				
 				$return['action'] = 'redirect';
 				$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
 			}
@@ -151,6 +164,28 @@ class DecksController extends AppController {
 			
 		die();
 						
+	}
+	
+	public function timeOut() {
+		
+		// Fetch the correct url, for timeout force redirection
+		
+		$this->autoRender = false;
+		
+		$this->request->allowMethod(array('ajax'));
+		
+		if ($this->request->is('ajax')) {
+			
+			$return['action'] = 'redirect';
+			$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
+			
+			$return['json'] = json_encode($return);
+			echo json_encode($return);
+			
+		}
+		
+		die();
+		
 	}
 	
 	public function result() {

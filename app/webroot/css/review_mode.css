@@ -8,6 +8,8 @@
 	margin-left: 6%;
 	margin-top: 30px;
 	color: rgb(238, 110, 115);
+	display: inline-block;
+	float: left;
 }
 
 .card {
@@ -152,6 +154,24 @@ img {
 	background-color: rgb(166, 213, 169);
 }
 
+#notification p:nth-child(1) {
+	color: white;
+	padding: 5px;
+	display: none;
+	position: absolute;
+	left: 40%;
+	
+	-webkit-transition: left 1.5s ease-in-out;
+	-moz-transition: left 1.5s ease-in-out;
+	-ms-transition: left 1.5s ease-in-out;
+	transition: left 1.5s ease-in-out;
+	
+}
+
+#notification p:nth-child(1).show {
+	left: 0%;
+}
+
 .move-off {
 	display: block;
 	z-index: 20;
@@ -162,18 +182,28 @@ img {
 }
 
 #notification {
-	position: absolute;
-	height: 60px;
+	position: relative;
 	width: 20%;
-	right: 0;
-	top: 22%;
+	float: right;
+	display: inline-block;
+	right: 6%;
+	padding-top: 1%;
 }
 
 #notification > * {
 	display: inline-block;
 	vertical-align: middle;
-	color: white;
-	margin-left: 20px;
+}
+
+#timer-container {
+	height: 70px;
+	width: 70px;
+	float: right;
+}
+
+#timer-container > svg {
+	display: block;
+	width: 100%;
 }
 
 .collection li {
