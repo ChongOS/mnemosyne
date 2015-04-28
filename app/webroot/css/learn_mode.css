@@ -24,7 +24,7 @@
 	-moz-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	
+    
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
 	-ms-transform-origin: 50% 50%;
@@ -37,7 +37,7 @@
 	
 	box-shadow: none;
 	padding: 8px;
-	background-color: transparent;
+	background-color: rgb(252, 252, 252);
 	
 }
 
@@ -56,12 +56,12 @@
 	-ms-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 	
-	-webkit-transition: -webkit-transform 0.5s ease-in-out;
-	-moz-transition: -moz-transform 0.5s ease-in-out;
-	-ms-transition: -ms-transform 0.5s ease-in-out;
-	transition: transform 0.5s ease-in-out;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	-moz-transition: -moz-transform 0.3s ease-in-out;
+	-ms-transition: -ms-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
 	
-	background-color: white;
+	background-color: transparent;
 }
 
 .card-wrapper .card-head {
@@ -106,7 +106,8 @@
 	transform: rotateY(0deg);
 }
 
-.back {
+.back {	
+	
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
 	-ms-transform: rotateY(180deg);

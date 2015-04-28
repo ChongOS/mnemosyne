@@ -5735,3 +5735,266 @@ Request URL: /mnemosyne/js/jquery-ui.min.js
 Stack Trace:
 #0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-04-27 17:38:25 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/brain.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-27 17:43:58 Error: [MissingActionException] Action DecksController::tag() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'tag',
+)
+Request URL: /mnemosyne/decks/tag/5
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-27 17:44:01 Error: [MissingActionException] Action DecksController::tag() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'tag',
+)
+Request URL: /mnemosyne/decks/tag/5
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-27 17:44:06 Error: [MissingActionException] Action DecksController::profile() could not be found.
+Exception Attributes: array (
+  'controller' => 'DecksController',
+  'action' => 'profile',
+)
+Request URL: /mnemosyne/decks/profile/45
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-27 17:44:21 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/brain.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-27 17:44:21 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/brain.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-27 17:50:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/js/jquery-ui.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-28 04:00:16 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/decks/learnMode/25
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('decks')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(256): Model->find('first', Array)
+#8 [internal function]: DecksController->learnMode('25')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-28 04:00:47 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/decks/learnMode/26
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('decks')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(256): Model->find('first', Array)
+#8 [internal function]: DecksController->learnMode('26')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-28 04:01:18 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/decks/learnMode/26
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('decks')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php(256): Model->find('first', Array)
+#8 [internal function]: DecksController->learnMode('26')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(DecksController), Array)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DecksController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-28 04:07:34 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/profile
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /Applications/MAMP/htdocs/mnemosyne/app/Controller/ProfileController.php(22): Model->find('first', Array)
+#8 [internal function]: ProfileController->index()
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProfileController), Array)
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProfileController), Object(CakeRequest))
+#12 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-04-28 04:29:20 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/%3Cp%3Epikachu%3C/p%3E
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-28 04:29:51 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/%3Cp%3Epikachu%3C/p%3E
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-28 04:30:14 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/%3Cp%3Epikachu%3C/p%3E
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-28 04:30:55 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/%3Cp%3Epikachu%3C/p%3E
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-28 04:32:44 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/files/%3Cp%3Epikachu%3C/p%3E
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-28 04:37:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/img/GradeF.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-28 04:40:11 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/img/GradeF.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-28 04:41:11 Error: [MissingControllerException] Controller class CategoryController could not be found.
+Exception Attributes: array (
+  'class' => 'CategoryController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/category
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-28 04:41:16 Error: [MissingControllerException] Controller class CategorysController could not be found.
+Exception Attributes: array (
+  'class' => 'CategorysController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/categorys
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-28 04:41:20 Error: [MissingControllerException] Controller class CategoriesController could not be found.
+Exception Attributes: array (
+  'class' => 'CategoriesController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/categories
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

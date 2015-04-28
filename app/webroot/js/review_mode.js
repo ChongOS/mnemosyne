@@ -7,8 +7,11 @@ var updateWindowHeight = function() {
 };
 
 var disableInActiveCard = function() {
+	
+	// Disable all control access on all in active cards
+	
 	$('.right-card').find('*').prop('disabled', true);
-	$('.middle-card').find('*').prop('disabled', false);
+	$('.middle-card').find('*').prop('disabled', false).find('.submit-button').prop('disabled', true);
 	
 };
 
@@ -25,22 +28,34 @@ var flipCard = function() {
 
 var checkAnswer = function() {
 	
+	var isLastCard = 0;
+	
+	if (counter === numOfCard) {
+		isLastCard = 1;
+	}
+	
 	var textField = $(this).parent().find('input[type=text]');
 		
 	$.ajax({
 		type: 'POST',
 		url: '/mnemosyne/Decks/validateCard',
-		data: {id: textField.attr('id'), value: textField.val()}
+		data: {id: textField.attr('id'), value: textField.attr('data-answer'), lastCard: isLastCard}
 		
 	}).done(function(data){
 		
-		if (data === 'correct') {
-			$('#notification h5').text('Correct :)');
-			$('#notification').addClass('success').removeClass('wrong').fadeIn(500).fadeOut(1600);
+		var ajaxResponse = $.parseJSON(data);
+		
+		if (ajaxResponse.action === 'redirect') {
+			window.location.href = ajaxResponse.value;
+		}
+	
+		if (ajaxResponse.action === 'correct') {
+			$('#notification p').html('<i class="mdi-navigation-check"></i> Correct :)');
+			$('#notification').addClass('correct').removeClass('wrong').fadeIn(1000).fadeOut(3000);
 		}
 		else {
-			$('#notification h5').text('Wrong :(');
-			$('#notification').addClass('wrong').removeClass('correct').fadeIn(500).fadeOut(1600);
+			$('#notification p').html('<i class="mdi-navigation-close"></i> Wrong :(');
+			$('#notification').addClass('wrong').removeClass('correct').fadeIn(1000).fadeOut(3000);
 		}
 		
 	});
@@ -73,7 +88,16 @@ var init = function() {
 	$('#counter').text(counter + ' of ' + numOfCard);
 	
 	$('.submit-button').click(checkAnswer);
-		
+	
+	$('.collection-item').draggable({revert: 'invalid', snap: '.droppable', helper: 'clone', snapMode: 'corner', snapTolerance: '22'});
+	
+	$('.input-field input[type=text]').droppable({accept: '.collection-item', drop: function(event, ui){
+		$(this).val($(ui.draggable).text());
+		$(this).attr('data-answer', $(ui.draggable).html());
+		$(this).parent().siblings('.submit-button').prop('disabled', false);
+
+	}});
+				
 };
 
 $(document).ready(init);

@@ -78,7 +78,7 @@ var init = function() {
 	numOfCard = $('.card').length;
 	
 	$('#counter').text(counter + ' of ' + numOfCard);
-		
+			
 };
 
 $(document).ready(init);

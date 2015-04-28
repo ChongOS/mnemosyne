@@ -3,7 +3,6 @@
 echo $this->Html->css("learn_mode.css");
 echo $this->Html->script("learn_mode.js");
 
-
 $counter = 0;
 
 function prepareString($string) {
