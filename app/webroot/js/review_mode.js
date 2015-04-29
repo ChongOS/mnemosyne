@@ -45,27 +45,29 @@ var checkAnswer = function() {
 	}).done(function(data){
 		
 		var ajaxResponse = $.parseJSON(data);
-		
-		console.log(data);
 				
 		if (ajaxResponse.action === 'redirect') {
 			window.location.href = ajaxResponse.value;
 		}
-	
+		
 		if (ajaxResponse.action === 'correct') {
 						
-			$('#notification p:first').html('<i class="mdi-navigation-check"></i> Correct :)').addClass('correct').removeClass('wrong').fadeIn().addClass('show').fadeOut(4000, function() { $(this).removeClass('show'); });
+			$('#notification p:first').html('<i class="mdi-navigation-check"></i> Correct :)').addClass('correct').removeClass('wrong').fadeIn().addClass('show').fadeOut(3000, function() { $(this).removeClass('show'); });
 			
 			$('#score').text('Current score : ' + ajaxResponse.score);
 			
 		}
 		else {
 			
-			$('#notification p:first').html('<i class="mdi-navigation-close"></i> Wrong :(').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(4000, function() { $(this).removeClass('show'); });
+			$('#notification p:first').html('<i class="mdi-navigation-close"></i> Wrong :(').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(3000, function() { $(this).removeClass('show'); });
 			
 			$('#score').text('Current score : ' + ajaxResponse.score);
 			
 		}
+		
+	}).fail(function(){
+		
+		$('#notification p:first').html('<i class="mdi-navigation-close"></i> Connection failed').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(3000, function() { $(this).removeClass('show'); });
 		
 	});
 	
@@ -86,7 +88,7 @@ var checkAnswer = function() {
 
 var timeOut = function() {
 	
-	$('#notification p:first').html('<i class="mdi-navigation-close"></i> Time is up !').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(4000, function() { $(this).removeClass('show'); });
+	$('#notification p:first').html('<i class="mdi-navigation-close"></i> Time is up !').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(3000, function() { $(this).removeClass('show'); });
 	
 	// Prevent user intervention if the network is slow
 	$('.middle-card').find('*').prop('disabled', true);
@@ -102,6 +104,10 @@ var timeOut = function() {
 		if (ajaxResponse.action === 'redirect') {
 			window.location.href = ajaxResponse.value;
 		}
+		
+	}).fail(function(){
+		
+		$('#notification p:first').html('<i class="mdi-navigation-close"></i> Connection failed').addClass('wrong').removeClass('correct').fadeIn().addClass('show').fadeOut(3000, function() { $(this).removeClass('show'); });
 		
 	});
 	

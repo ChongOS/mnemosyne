@@ -210,6 +210,10 @@ img {
 	display: inline-block;
 }
 
+.collection {
+	margin-top: 2%;
+}
+
 .input-field {
 	margin-left: 10%;
 	margin-right: 10%;

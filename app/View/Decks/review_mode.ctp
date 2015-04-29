@@ -47,7 +47,7 @@ function whichType($string) {
 	
 	<p id="counter">1 of </p>
 	
-	<p id="score">Current score : 200</p>
+	<p id="score">Current score : 0</p>
 	
 </div>
 

@@ -45,6 +45,9 @@ class DecksController extends AppController {
                 // Store the answers for later validation
                 $this->Session->write('answer', $answer);
                 
+                // Set the intial score to 200
+				$this->Session->write('score', 0);
+                
                 $this->set('cards', $cards);
 
                 $this->set('deck_name', $deck['Deck']['name']);
@@ -115,9 +118,6 @@ class DecksController extends AppController {
 		$this->autoRender = false;
 		
 		$this->request->allowMethod(array('ajax'));
-		
-		// Set the intial score to 200
-		$this->Session->write('score', 200);
 		
 		if ($this->request->is('ajax')) {
 						
@@ -194,36 +194,34 @@ class DecksController extends AppController {
 		$score = $this->Session->read('score');
 		$userID = $this->Auth->user('id');
 		$deckID = $this->Session->read('deckID');
+				
+		// Check if the user already has the score(s)
 		
-		// Save latest user'sscore
-		/*
-		$data = array(
-			'User' => array('id' => $userID),
-			'Score' => array(
-				'score' => $score,
- 				//'user_id' => ,
-				'deck_id' => $deckID
-			)
-		);
-		
-		$this->User->saveAssociated($data);
-		*/
-		
-		
-		// Get the latest 10 results
-		
-		$deck = $this->Deck->find('first', array('conditions' => array('Deck.id' => $deckID),
-                    'fields' => array('name'),
-                    'recursive' => 1
-                ));
-                
-        $this->set('user_name', $this->Auth->user('username'));
-                
-        $this->set('total_score', sizeof($deck['Card']));
-        		                
-        $this->set('deck_name', $deck['Deck']['name']);
-		
-		$this->set('score', $score);
+		if ($this->Score->hasAny(array('user_id' => $userID))) {
+			
+			$scoreToSave = $score;
+			
+		}
+			
+		else {
+			
+			// Set initial score to 1000, [BONUS] for the new comer :D
+			
+			$scoreToSave = 1000 + $score;
+			
+		}
+			
+		// Update the user's score
+									
+		$data = array('score' => $scoreToSave, 'user_id' => $userID, 'deck_id' => $deckID);
+						
+		if (! $this->Score->save($data)) {
+				
+			// If save process failed, notify a user in the result page
+				
+			$this->Session->setFlash('Unable to update the user\'s score');
+				
+		}
 		
 	}
 	
