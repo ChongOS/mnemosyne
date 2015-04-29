@@ -1,11 +1,74 @@
-.col {
+#main-box {
+	
+	padding: 4%;
 	position: relative;
-	left: 24%;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	width: 50%;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	height: 500px;
+	
 }
 
-.col > * {
-	margin: 4%;
+table {
+	
+	width: 100%;
+	
+}
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+	
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+    
+}
+
+thead th {
+	
+    height: 40px;
+    
+}
+
+tbody {
+	
+    height: 200px;
+    overflow-y: auto;
+    
+}
+
+thead {
+	
+    /* fallback */
+    
+}
+
+
+tbody td, thead th {
+	
+    width: 25%;
+    float: left;
+    
+}
+
+#score-container {
+	
+	height: 15%;
+	
+}
+
+#left {
+	
+	width: 50%;
+	float: left;
+	
+}
+
+#right {
+	
+	width: 50%;
+	float: right;
 }

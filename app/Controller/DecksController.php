@@ -205,13 +205,16 @@ class DecksController extends AppController {
 			
 		}
 		
-		// Fetch the last user's score on this deck
+		// Fetch the user's score on this deck
 		
-		$query = $this->Score->find('first', array('conditions' => array('deck_id' => $deckID, 'user_id' => $userID),
-			'fields' => array('score'),
-			'recursive' => -1));
+		$scoreOnThisDeck = $this->Score->find('all', array('conditions' => array('deck_id' => $deckID, 'user_id' => $userID),
+			'fields' => array('score', 'created'),
+			'recursive' => -1,
+			'order' => 'created DESC'));
 			
-		$lastScoreOnThisDeck = $query['Score']['score']; 
+		// Fetch the name of the current deck
+		
+		$deckName = $this->Deck->find('first', array('conditions' => array('id' => $deckID), 'fields' => array('name'), 'recursive' => -1));
 			
 		// Update the user's score
 									
@@ -227,9 +230,15 @@ class DecksController extends AppController {
 		
 		// Show in the result page
 		
-		$this->set->('score', $score);
+		$this->set('score', $score);
 		
-		$this->set->('lastScoreOnThisDeck', $lastScore);
+		$this->set('scoreOnThisDeck', $scoreOnThisDeck);
+		
+		$this->set('deckName', $deckName['Deck']['name']);
+		
+		// This will only be set, if the user has a new badge(s) available
+		
+		// $this->set('badgesGranted', $badges);
 		
 	}
 	
