@@ -197,23 +197,25 @@ class DecksController extends AppController {
 				
 		// Check if the user already has the score(s)
 		
-		if ($this->Score->hasAny(array('user_id' => $userID))) {
-			
-			$scoreToSave = $score;
-			
-		}
-			
-		else {
+		if (! $this->Score->hasAny(array('user_id' => $userID))) {
 			
 			// Set initial score to 1000, [BONUS] for the new comer :D
 			
-			$scoreToSave = 1000 + $score;
+			$score += 1000;
 			
 		}
+		
+		// Fetch the last user's score on this deck
+		
+		$query = $this->Score->find('first', array('conditions' => array('deck_id' => $deckID, 'user_id' => $userID),
+			'fields' => array('score'),
+			'recursive' => -1));
+			
+		$lastScoreOnThisDeck = $query['Score']['score']; 
 			
 		// Update the user's score
 									
-		$data = array('score' => $scoreToSave, 'user_id' => $userID, 'deck_id' => $deckID);
+		$data = array('score' => $score, 'user_id' => $userID, 'deck_id' => $deckID);
 						
 		if (! $this->Score->save($data)) {
 				
@@ -222,6 +224,12 @@ class DecksController extends AppController {
 			$this->Session->setFlash('Unable to update the user\'s score');
 				
 		}
+		
+		// Show in the result page
+		
+		$this->set->('score', $score);
+		
+		$this->set->('lastScoreOnThisDeck', $lastScore);
 		
 	}
 	

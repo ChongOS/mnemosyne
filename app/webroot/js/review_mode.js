@@ -45,10 +45,6 @@ var checkAnswer = function() {
 	}).done(function(data){
 		
 		var ajaxResponse = $.parseJSON(data);
-				
-		if (ajaxResponse.action === 'redirect') {
-			window.location.href = ajaxResponse.value;
-		}
 		
 		if (ajaxResponse.action === 'correct') {
 						
@@ -63,6 +59,10 @@ var checkAnswer = function() {
 			
 			$('#score').text('Current score : ' + ajaxResponse.score);
 			
+		}
+		
+		if (ajaxResponse.action === 'redirect') {
+			window.location.href = ajaxResponse.value;
 		}
 		
 	}).fail(function(){
