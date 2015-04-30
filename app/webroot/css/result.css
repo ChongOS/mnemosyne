@@ -72,3 +72,35 @@ tbody td, thead th {
 	width: 50%;
 	float: right;
 }
+
+#score-img {
+	
+	position: absolute;
+	right: 6%;
+	top: 10%;
+	
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	-moz-transition: -moz-transform 1s ease-in-out;
+	-ms-transition: -ms-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+	
+}
+
+#score-img.expanded {
+	
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	
+}

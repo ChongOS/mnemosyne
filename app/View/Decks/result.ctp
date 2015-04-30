@@ -15,7 +15,32 @@
 	<div id="main-box" class="z-depth-1">
 		
 		<h4><i class="mdi-image-style"></i> <?php echo $deckName; ?></h4>
-		
+				
+		<?php 
+			if (isset($scoreOnThisDeck[0]['Score']['score'])) {
+				
+				if ($score >= $scoreOnThisDeck[0]['Score']['score']) {
+					
+					echo $this->Html->image('check.png', array('id' => 'score-img'));
+				
+				}
+				
+				else {
+			
+					echo $this->Html->image('uncheck.png', array('id' => 'score-img'));
+				
+				}
+				
+			}
+			
+			else {
+				
+				echo $this->Html->image('check.png', array('id' => 'score-img'));
+				
+			}
+			
+		?>
+				
 		<div id="score-container">
 			
 			<div id="left">
