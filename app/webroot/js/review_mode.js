@@ -113,6 +113,20 @@ var timeOut = function() {
 	
 };
 
+var fixZIndex = function() {
+	
+	var zIndex = 2;
+		
+	$('.right-card').each(function(){
+		
+		$(this).css('z-index', zIndex);
+		
+		zIndex--;
+		
+	});
+	
+};
+
 var init = function() {
 	
 	// Set and update the fixed absolute window size
@@ -167,6 +181,8 @@ var init = function() {
 	
 	// Start a begin timer
 	circle.animate(1, timeOut);
+	
+	fixZIndex();
 	
 };
 

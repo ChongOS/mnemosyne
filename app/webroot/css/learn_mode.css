@@ -144,3 +144,17 @@ img {
 	max-width: 60%;
 	left: 25%;
 }
+
+#counter {
+	position: relative;
+	float: left;
+	left: 6%;
+	color: rgb(238, 110, 115);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#navigation-buttons {
+	margin-top: 6%;
+	margin-bottom: 4%;
+}
