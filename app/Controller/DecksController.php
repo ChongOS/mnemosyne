@@ -106,7 +106,7 @@ class DecksController extends AppController {
 		
 		// For card validation
 		
-		function _prepareString($string) {
+		function __prepareString($string) {
 			$string = str_replace('{', '', $string);
 			$string = str_replace('}', '', $string);
 			$string = str_replace('\'', '', $string);
@@ -126,7 +126,7 @@ class DecksController extends AppController {
 			$currentScore = $this->Session->read('score');
 			$correctAnswer = $this->Session->read('answer');
 							
-			if (_prepareString($correctAnswer[$id])['data'] == $answer) {
+			if (__prepareString($correctAnswer[$id])['data'] == $answer) {
 				
 				// Increase the score, if user can answer the question
 				
@@ -242,7 +242,8 @@ class DecksController extends AppController {
 					
 			// This will only be set, if the user has a new badge(s) available
 		
-			// $this->set('badgesGranted', $badges);
+			$this->set('badgesGranted', __badgeChecking($userID, $deckID, $score));
+			
 		}
 		
 		else {
@@ -263,7 +264,7 @@ class DecksController extends AppController {
 			// Fetch the name of the current deck
 		
 			$deckName = $this->Deck->find('first', array('conditions' => array('id' => $query['Score']['deck_id']), 'fields' => array('name'), 'recursive' => -1));
-			
+						
 			// Show in the result page
 		
 			$this->set('score', $score);
@@ -276,11 +277,43 @@ class DecksController extends AppController {
 			
 		}
 		
-	}
-	
-	private function _badgeChecker($score) {
-		
-		
+		function __badgeChecking($userID, $deckID, $score) {
+			
+			$badgesArray = array();
+			
+			// User played for the first time
+			
+			if (! $this->Score->hasAny(array('user_id' => $userID))) {
+				
+				array_push($badgesArray, 'new comer');
+				
+			}
+			
+			// User played this deck up to 10 times
+			
+			$playedCount = $this->Score->find('count', array('conditions' => array('user_id' => $userID, 'deck_id' => $deckID), 'recursive' => -1));
+			
+			if ($playedCount == 10) {
+				
+				array_push($badgesArray, 'long lasting');
+				
+			}
+			
+			// User gains the maximum score compared to the others user on the same deck
+			
+			$maxScore = $this->Score->find('all', array('conditions' => array('deck_id' => $deckID),
+				'fields' => array('MAX(score)'),
+				'recursive' => -1));
+			
+			if ($score >= $maxScore) {
+				
+				array_push($badgesArray, 'maximum');
+				
+			}
+			
+			return $badgesArray;
+			
+		}
 		
 	}
 	
