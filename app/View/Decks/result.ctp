@@ -6,7 +6,8 @@
 	
 	// echo the javascript variable(s)
 	
-	echo '<script> var score = ' . $score . '; </script>';
+	echo '<script> var score = ' . $score . ';';
+	echo 'var isBadgeAvailable = ' . ((sizeof($badgesGranted) != 0) ? 1 : 0) . '; </script>';
 	
 ?>
 
@@ -22,6 +23,46 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- End of Facebook JavaScript SDK -->
+
+<!-- Badges Modal Dialog -->
+
+<div id="badge-modal" class="modal modal-fixed-footer">
+	
+    <div class="modal-content">
+	    
+      	<h4>Badges</h4>
+      	
+	  	<p>You have granted the new badge(s)</p>
+	  	
+	  	<div id="badge-container">
+		  	
+		  	<?php foreach ($badgesGranted as $badge) : ?>
+			  	
+			  	<div class="badge-row">
+		  			
+		  			<?php echo $this->Html->image($badge['Badge']['thumbnail'], array('class' => 'badge-img in-line')); ?>
+		  			
+		  			<p>Name : <?php echo $badge['Badge']['name']; ?></p>
+		  			
+		  			<p>Description : <?php echo $badge['Badge']['detail']; ?></p>
+		  		
+			  	</div>
+		  	
+		  	<?php endforeach; ?>
+		  	
+	  	</div>
+	  	
+    </div>
+    
+    <div class="modal-footer">
+	    
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">OK</a>
+      
+    </div>
+    
+</div>
+  
+<!-- End of Badges Modal Dialog -->
 
 <div class="row">
 	

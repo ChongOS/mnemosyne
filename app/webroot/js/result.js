@@ -35,6 +35,16 @@ var decreaseCounterCurrentScore = function() {
 
 var init = function() {
 	
+	// If the badges is available
+	
+	if (isBadgeAvailable == 1) {
+		
+		$('#badge-modal').openModal();
+		
+		$('.badge-img').addClass('expanded');
+		
+	}
+	
 	if (counter > score) {
 		
 		decreaseCounterCurrentScore();

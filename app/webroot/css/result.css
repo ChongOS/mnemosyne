@@ -75,10 +75,6 @@ tbody td, thead th {
 
 .badge-img {
 	
-	position: absolute;
-	right: 6%;
-	top: 10%;
-	
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
 	-ms-transform-origin: 50% 50%;

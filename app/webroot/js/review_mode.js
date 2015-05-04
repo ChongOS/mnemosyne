@@ -77,7 +77,11 @@ var checkAnswer = function() {
 	disableInActiveCard();
 	
 	counter++;
-	$('#counter').text('Card: ' + counter + ' of ' + numOfCard);
+	if (counter <= numOfCard) {
+		
+		$('#counter').text('Card: ' + counter + ' of ' + numOfCard);
+		
+	}
 	
 	// Reset a timer
 	circle.set(0);

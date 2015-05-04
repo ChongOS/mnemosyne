@@ -2,7 +2,7 @@
 
 class DecksController extends AppController {
 
-    public $uses = array('Deck', 'Card', 'Score', 'User');
+    public $uses = array('Deck', 'Card', 'Score', 'User', 'Badge', 'UserBadge');
 
     public $components = array('RequestHandler');
 
@@ -206,6 +206,56 @@ class DecksController extends AppController {
 				$score += 1000;
 			
 			}
+			
+			
+			
+			
+			$badgesArray = array();
+			
+			// Check if user played for the first time
+			
+			if ($this->Score->hasAny(array('user_id' => $userID))) {
+				
+			
+				// User played this deck up to 10 times
+			
+				$playedCount = $this->Score->find('count', array('conditions' => array('user_id' => $userID, 'deck_id' => $deckID), 'recursive' => -1));
+			
+				if ($playedCount == 10) {
+					
+					$longLastingBadge = $this->Badge->find('first', array('conditions' => array('name' => 'long lasting'), 'fields' => array('name', 'thumbnail', 'detail'), 'recursive' => -1));
+				
+					array_push($badgesArray, $longLastingBadge);
+				
+				}
+			
+				// User gains the maximum score compared to the others user on the same deck
+			
+				$maxScore = $this->Score->find('all', array('conditions' => array('deck_id' => $deckID),
+				'fields' => array('MAX(score)'),
+				'recursive' => -1));
+			
+				if ($score >= $maxScore) {
+					
+					$maxScoreBadge = $this->Badge->find('first', array('conditions' => array('name' => 'maximum'), 'fields' => array('name', 'thumbnail', 'detail'), 'recursive' => -1));
+				
+					array_push($badgesArray, $maxScoreBadge);
+				
+				}
+				
+			}
+			
+			else {
+				
+				$newComerBadge = $this->Badge->find('first', array('conditions' => array('name' => 'new comer'), 'fields' => array('name', 'thumbnail', 'detail'), 'recursive' => -1));
+				
+				array_push($badgesArray, $newComerBadge);
+				
+			}
+			
+			
+			
+			
 		
 			// Fetch the user's score on this deck
 		
@@ -242,7 +292,7 @@ class DecksController extends AppController {
 					
 			// This will only be set, if the user has a new badge(s) available
 		
-			$this->set('badgesGranted', __badgeChecking($userID, $deckID, $score));
+			$this->set('badgesGranted', $badgesArray);
 			
 		}
 		
@@ -274,44 +324,6 @@ class DecksController extends AppController {
 			$this->set('deckName', $deckName['Deck']['name']);
 			
 			$this->set('shareURL', 'http://localhost:8888/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $scoreID);
-			
-		}
-		
-		function __badgeChecking($userID, $deckID, $score) {
-			
-			$badgesArray = array();
-			
-			// User played for the first time
-			
-			if (! $this->Score->hasAny(array('user_id' => $userID))) {
-				
-				array_push($badgesArray, 'new comer');
-				
-			}
-			
-			// User played this deck up to 10 times
-			
-			$playedCount = $this->Score->find('count', array('conditions' => array('user_id' => $userID, 'deck_id' => $deckID), 'recursive' => -1));
-			
-			if ($playedCount == 10) {
-				
-				array_push($badgesArray, 'long lasting');
-				
-			}
-			
-			// User gains the maximum score compared to the others user on the same deck
-			
-			$maxScore = $this->Score->find('all', array('conditions' => array('deck_id' => $deckID),
-				'fields' => array('MAX(score)'),
-				'recursive' => -1));
-			
-			if ($score >= $maxScore) {
-				
-				array_push($badgesArray, 'maximum');
-				
-			}
-			
-			return $badgesArray;
 			
 		}
 		
