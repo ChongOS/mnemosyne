@@ -10,11 +10,13 @@
         <td class="error" colspan="2"><span class="label label-important">Error</span> {%=file.error%}</td>
         {% } else if (o.files.valid && !i) { %}
         <td>
-            <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="bar" style="width:0%;"></div></div>
+            <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                <div class="determinate" style="width:0%;"></div>
+            </div>
         </td>
         <td class="start">{% if (!o.options.autoUpload) { %}
             <button class="btn btn-primary">
-                <i class="icon-upload icon-white"></i>
+                <i class="mdi-file-file-upload left"></i>
                 <span><?php echo __('Upload') ?></span>
             </button>
             {% } %}</td>
@@ -22,8 +24,8 @@
         <td colspan="2"></td>
         {% } %}
         <td class="cancel">{% if (!i) { %}
-            <button class="btn btn-warning">
-                <i class="icon-ban-circle icon-white"></i>
+            <button class="btn red lighten-1">
+                <i class="mdi-navigation-close left"></i>
                 <span><?php echo __('Cancel') ?></span>
             </button>
             {% } %}</td>

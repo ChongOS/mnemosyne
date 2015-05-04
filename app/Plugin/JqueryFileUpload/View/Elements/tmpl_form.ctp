@@ -4,14 +4,16 @@
         <?php echo __('Ative seu JavaScript...'); ?>
     </noscript>
     <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-    <div class="row-fluid fileupload-buttonbar">
+    <div class="row">
         <div class="span7">
             <!-- The fileinput-button span is used to style the file input field as button -->
-            <span class="btn btn-success btn-mini fileinput-button">
-                <i class="icon-plus icon-white"></i>
-                <span><?php echo __('File') ?></span>
-                <input type="file" data-url="" name="files[]" multiple>
-            </span>
+            <div class="file-field input-field">
+                <input class="file-path validate" type="text"/>
+                <div class="btn">
+                    <span>File</span>
+                    <input type="file" data-url="" name="files[]">
+                </div>
+            </div>
 <!--
             <button type="submit" class="btn btn-mini btn-primary start">
                 <i class="icon-upload icon-white"></i>
@@ -31,18 +33,20 @@
 -->
         </div>
         <!-- The global progress information -->
-        <div class="span5 fileupload-progress fade">
+        <div class="fileupload-progress fade">
             <!-- The global progress bar -->
             <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                <div class="bar" style="width:0%;"></div>
+                <div class="determinate" style="width:0%;"></div>
             </div>
             <!-- The extended global progress information -->
-            <div class="progress-extended">&nbsp;</div>
+            <div class="progress-extended"></div>
         </div>
     </div>
     <!-- The loading indicator is shown during file processing -->
     <div class="fileupload-loading"></div>
     <br>
     <!-- The table listing the files available for upload/download -->
-    <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
+    <table role="presentation" class="table table-striped responsive-table">
+        <tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
+    </table>
 </form>

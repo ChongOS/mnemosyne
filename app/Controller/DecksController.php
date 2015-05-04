@@ -64,21 +64,15 @@ class DecksController extends AppController {
     
     public function add() {
         $this->__getCategories();
+        $this->__getAllTags();
         
         if ($this->request->is('post')) { 
             $tags = [];
-            foreach(explode(",,;",$this->request->data['Deck']['tags']) as $tag)
-                $tags[] = ['Tag' => ['name' => $tag]];
-
-            $cards = [];
-            $count = 1;
-            foreach(json_decode($this->request->data['Deck']['cards'], true) as $card) {
-                $front = '{\''.$card['front']['type'].'\':\''.$card['front']['value'].'\'}';
-                $back = '{\''.$card['back']['type'].'\':\''.$card['back']['value'].'\'}';
-                $cards[] = ['front' => $front, 'back' => $back, 'sort_number' => $count];
-                $count++;
+            if(!empty($this->request->data['Deck']['tags'])) {
+                foreach($this->request->data['Deck']['tag'] as $tag)
+                    $tags[] = ['tag_id' => $tag];
             }
-            
+
             $data = [
                 'Category' => ['id' => $this->request->data['Deck']['category_id']],
                 'Deck' => [
@@ -86,7 +80,7 @@ class DecksController extends AppController {
                         'name' => $this->request->data['Deck']['name'],
                         'description' => $this->request->data['Deck']['description'],
                         'user_id' => $this->Auth->user('id'),
-                        'Card' => $cards,
+                        'Card' => json_decode($this->request->data['Deck']['cards'], true),
                         'DeckTag' => $tags
                     ]
                 ]
@@ -107,9 +101,8 @@ class DecksController extends AppController {
             'conditions' => ['Deck.id' => $deck_id],
             'recursive'=> -1
         ]);
-        
-        // Published will redirect
-        if($deck['Deck']['status'])
+    
+        if($deck['Deck']['status'] || $deck['Deck']['user_id'] != $this->Auth->User('id'))
             $this->redirect(['action' => 'stat', $deck_id]);
         
         $cards = $this->Card->find('all', [
@@ -117,42 +110,58 @@ class DecksController extends AppController {
             'order' => ['Card.sort_number'],
             'fields' => ['Card.id', 'Card.front', 'Card.back', 'Card.sort_number']
         ]);
-        $this->set('cards', json_encode($cards));
-        $this->__getCategories();
-        $this->set('deck', $deck);
-        $this->set('tags', $this->__getTags($deck_id));
         
-        if ($this->request->is('post')) { 
-            $tags = [];
-            foreach(explode(",,;",$this->request->data['Deck']['tags']) as $tag)
-                $tags[] = ['Tag' => ['name' => $tag]];
-            $data = [
-                'Category' => ['id' => $this->request->data['Deck']['category_id']],
-                'Deck' => [
-                    [  
-                        'id' => $deck_id,
-                        'name' => $this->request->data['Deck']['name'],
-                        'description' => $this->request->data['Deck']['description'],
-                        'status' => $this->request->data['Deck']['status'],
-                        'Card' => json_decode($this->request->data['Deck']['cardOrder'], true),
-//                        'DeckTag' => $tags
-                    ]
-                ]
-            ];
-            
-            if($this->Category->saveAssociated($data, array('deep' => true))) {
-                $delCard = json_decode($this->request->data['Deck']['cardDelete'], true);
-                if(!empty($delCard)) {
-                    if($this->Card->deleteAll($delCard)) {
-                        $this->Session->setFlash("Success");
-                        $this->redirect(['action' => 'edit', $deck_id]);
-                    } else {
-                        $this->Session->setFlash("Error");
-                        return;
-                    }
+        // set deck data
+        $this->set('deck', $deck);
+        // set cards data
+        $this->set('cards', json_encode($cards));
+        // set all categories
+        $this->__getCategories();
+        // set all tags
+        $this->__getAllTags();
+        // set selected tag
+        $this->__getSelectedTags($deck_id);
+        
+        if ($this->request->is('post')) {
+            if($this->DeckTag->deleteAll(['DeckTag.deck_id' => $deck_id])) {
+                
+                $tags = [];
+                if(!empty($this->request->data['Deck']['tag_id'])) {
+                    foreach($this->request->data['Deck']['tag_id'] as $tag)
+                        $tags[] = ['tag_id' => $tag];
                 }
-                $this->Session->setFlash("Success");
-                $this->redirect(['action' => 'edit', $deck_id]);
+//                print_r($tags);
+
+                $data = [
+                    'Category' => ['id' => $this->request->data['Deck']['category_id']],
+                    'Deck' => [
+                        [  
+                            'id' => $deck_id,
+                            'name' => $this->request->data['Deck']['name'],
+                            'description' => $this->request->data['Deck']['description'],
+                            'status' => $this->request->data['Deck']['status'],
+                            'Card' => json_decode($this->request->data['Deck']['cards'], true),
+                            'DeckTag' => $tags
+                        ]
+                    ]
+                ];
+
+                if($this->Category->saveAssociated($data, array('deep' => true))) {
+                    $delCard = json_decode($this->request->data['Deck']['cardDelete'], true);
+                    if(!empty($delCard)) {
+                        if($this->Card->deleteAll($delCard)) {
+                            $this->Session->setFlash("Success");
+                            $this->redirect(['action' => 'edit', $deck_id]);
+                        } else {
+                            $this->Session->setFlash("Error");
+                            return;
+                        }
+                    }
+                    $this->Session->setFlash("Success");
+                    $this->redirect(['action' => 'edit', $deck_id]);
+                } else {
+                    $this->Session->setFlash("Error");
+                }
             } else {
                 $this->Session->setFlash("Error");
             }
@@ -176,7 +185,6 @@ class DecksController extends AppController {
                 'Deck.name', 'Deck.description'
             ]
         ]);
-        
         $this->set('deck', $deck);
         
         $scores = $this->Score->find('all', [
@@ -186,7 +194,6 @@ class DecksController extends AppController {
                 'Score.score', 'Score.modified', 'User.id', 'User.username'
             ]
         ]);
-        
         $this->set('scores', $scores);
     }
     
@@ -367,15 +374,30 @@ class DecksController extends AppController {
 		$this->set('score', $score);
 		
 	}
-    function __getTags($deck_id) {
+    
+    function __getSelectedTags($deck_id) {
         $tags = $this->DeckTag->find('all', [
             'conditions' => ['DeckTag.deck_id' => $deck_id],
-            'fields' => ['Tag.name']
+            'fields' => ['Tag.id']
         ]);
-        $tagStr = '';
-        foreach($tags as $tag)
-            $tagStr .= $tag['Tag']['name'].',,;';
-        return substr($tagStr, 0, -3);
+        $tagID = [];
+        foreach($tags as $tag) {
+            $tagID[] = $tag['Tag']['id'];
+        }
+        $this->set('selectedTag', $tagID);
+    }
+    
+    function __getAllTags() {
+        $list = $this->Tag->find('list', [
+            'recursive'=> -1,
+            'order' => [
+                'Tag.name' => 'ASC'
+            ],
+            'fields' => [
+                'Tag.id', 'Tag.name'
+            ]
+        ]);
+        $this->set('tags', $list);
     }
 
     function __getCategories() {

@@ -18,7 +18,7 @@
 
 
 <?php echo $this->Form->create('Deck') ?>
-    <div class="section white">
+    <div class="section">
         <div class="container">
             <h5>Create a New Flashcard Deck</h5>
 

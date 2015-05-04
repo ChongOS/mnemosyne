@@ -22,14 +22,15 @@
         <td colspan="2"></td>
         {% } %}
         <td class="">
-            <a class="btn" onclick='selectFile("{%=file.name%}","{%=file.url%}")'>
+            <a class="btn" onclick='selectFile("{%=file.name%}")'>
+                <i class="mdi-navigation-check"></i>
                 <span>Select</span>
             </a>            
         </td>
         <td class="delete">
-            <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="<?php echo isset($action_delete) ? $action_delete : '?file='; ?>/{%=file.name%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
-                    <i class="icon-trash icon-white"></i>
-                <span><i class="small mdi-action-delete"></i></span>
+            <button class="btn red lighten-1" data-type="{%=file.delete_type%}" data-url="<?php echo isset($action_delete) ? $action_delete : '?file='; ?>/{%=file.name%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                <i class="mdi-action-delete left"></i>
+                <span>Delete</span>
             </button>            
         </td>
         

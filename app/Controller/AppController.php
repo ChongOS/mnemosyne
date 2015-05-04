@@ -36,6 +36,7 @@ class AppController extends Controller {
         'DebugKit.Toolbar',
         'JqueryFileUpload.Upload',
         'RequestHandler',
+//        'Paginator',
         'Session',
         'Auth' => array(
             'loginRedirect' => array('controller' => 'profile', 'action' => 'index'),
@@ -44,6 +45,10 @@ class AppController extends Controller {
             'loginError' => 'Invalid Username or Password entered, please try again.'
         )
     );
+    
+//    public $paginate = array(
+//        'limit' => 25
+//    );
     
     public $helpers = array('JqueryFileUpload.UploadScript', 'JqueryFileUpload.UploadTemplate');
 

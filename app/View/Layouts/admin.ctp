@@ -92,10 +92,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 </ul>
             </div>
         </div>
-    </nav>
-
- 
-
+    </nav>  
+        
     <?php
 
         $flash = $this->Session->flash();

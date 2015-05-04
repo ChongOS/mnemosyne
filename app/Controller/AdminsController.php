@@ -1,5 +1,8 @@
 <?php
 Class AdminsController extends AppController{
+    
+    public $uses = ['Deck', 'Category', 'Card', 'Tag', 'User', 'DeckTag', 'FavoriteDeck', 'Score'];
+    
  public function index(){
 	 
 	  $this->redirect(['action' => 'mainAdminPage']);
@@ -237,24 +240,25 @@ public function adminAmendDecksPage(){
 }
 
 public function adminAmendDeckToSql(){
-	$this->layout = 'admin'; 
-	$deck_name = $_GET['deck'];
-	$name = $_GET['name1'];
-	$des = $_GET['descript'];
-	$status = $_GET['status'];
-	$cat = $_GET['cat'];
-	$error = false;
-	 $link = mysql_connect('fieldfirstvm.cloudapp.net','user','1234');
-	 $stmt = "use mnemosyne";
-	 $result = mysql_query($stmt);
-	 $stmt = "update `decks` set name = '$name' , description = '$des' , status = '$status' , category_id = '$cat' where id = '$deck_name'";
-	 $result = mysql_query($stmt);
-	 if(!$result){
-		 $error = true;
-	 }
-	  $this -> set('error',$error);
-	  mysql_close($link);
-	
+//	$this->layout = 'admin'; 
+//	$deck_name = $_GET['deck'];
+//	$name = $_GET['name1'];
+//	$des = $_GET['descript'];
+//	$status = $_GET['status'];
+//	$cat = $_GET['cat'];
+//	$error = false;
+//	 $link = mysql_connect('fieldfirstvm.cloudapp.net','user','1234');
+//	 $stmt = "use mnemosyne";
+//	 $result = mysql_query($stmt);
+//	 $stmt = "update `decks` set name = '$name' , description = '$des' , status = '$status' , category_id = '$cat' where id = '$deck_name'";
+//	 $result = mysql_query($stmt);
+//	 if(!$result){
+//		 $error = true;
+//	 }
+//	  $this -> set('error',$error);
+//	  mysql_close($link);
+    $deck_id = $_POST['deck'];
+     $this->redirect(['action' => 'edit', $deck_id]);
 }
 
 public function adminCardsManagementPage(){
@@ -272,10 +276,245 @@ public function adminBadgeAmendToSql(){
 	$txa = $_GET['textarea1'];
 	$input = $_GET['input'];
 	
-	
-	
-	
 }
+    
+    
+    public function add() {
+        $this->layout = 'admin';
+        $this->__getCategories();
+        $this->__getAllTags();
+        
+        if ($this->request->is('post')) { 
+            $tags = [];
+            if(!empty($this->request->data['Deck']['tags'])) {
+                foreach($this->request->data['Deck']['tag'] as $tag)
+                    $tags[] = ['tag_id' => $tag];
+            }
+
+            $data = [
+                'Category' => ['id' => $this->request->data['Deck']['category_id']],
+                'Deck' => [
+                    [
+                        'name' => $this->request->data['Deck']['name'],
+                        'description' => $this->request->data['Deck']['description'],
+                        'user_id' => $this->Auth->user('id'),
+                        'Card' => json_decode($this->request->data['Deck']['cards'], true),
+                        'DeckTag' => $tags
+                    ]
+                ]
+            ];
+
+            if($this->Category->saveAssociated($data, array('deep' => true))) {
+                $this->Session->setFlash("Success");
+                $this->redirect(['action' => 'edit', $this->Deck->getLastInsertId()]);
+            } else {
+                $this->Session->setFlash("Error");
+            }
+
+        }
+    }
+    
+    public function edit($deck_id = null) {
+        $this->layout = 'admin';
+        $deck = $this->Deck->find('first', [
+            'conditions' => ['Deck.id' => $deck_id],
+            'recursive'=> -1
+        ]);
+    
+        if($deck['Deck']['status'] || $deck['Deck']['user_id'] != $this->Auth->User('id'))
+            $this->redirect(['action' => 'stat', $deck_id]);
+        
+        $cards = $this->Card->find('all', [
+            'conditions' => ['Card.deck_id' => $deck_id],
+            'order' => ['Card.sort_number'],
+            'fields' => ['Card.id', 'Card.front', 'Card.back', 'Card.sort_number']
+        ]);
+        
+        // set deck data
+        $this->set('deck', $deck);
+        // set cards data
+        $this->set('cards', json_encode($cards));
+        // set all categories
+        $this->__getCategories();
+        // set all tags
+        $this->__getAllTags();
+        // set selected tag
+        $this->__getSelectedTags($deck_id);
+        
+        if ($this->request->is('post')) {
+            if($this->DeckTag->deleteAll(['DeckTag.deck_id' => $deck_id])) {
+                
+                $tags = [];
+                if(!empty($this->request->data['Deck']['tag_id'])) {
+                    foreach($this->request->data['Deck']['tag_id'] as $tag)
+                        $tags[] = ['tag_id' => $tag];
+                }
+//                print_r($tags);
+
+                $data = [
+                    'Category' => ['id' => $this->request->data['Deck']['category_id']],
+                    'Deck' => [
+                        [  
+                            'id' => $deck_id,
+                            'name' => $this->request->data['Deck']['name'],
+                            'description' => $this->request->data['Deck']['description'],
+                            'status' => $this->request->data['Deck']['status'],
+                            'Card' => json_decode($this->request->data['Deck']['cards'], true),
+                            'DeckTag' => $tags
+                        ]
+                    ]
+                ];
+
+                if($this->Category->saveAssociated($data, array('deep' => true))) {
+                    $delCard = json_decode($this->request->data['Deck']['cardDelete'], true);
+                    if(!empty($delCard)) {
+                        if($this->Card->deleteAll($delCard)) {
+                            $this->Session->setFlash("Success");
+                            $this->redirect(['action' => 'edit', $deck_id]);
+                        } else {
+                            $this->Session->setFlash("Error");
+                            return;
+                        }
+                    }
+                    $this->Session->setFlash("Success");
+                    $this->redirect(['action' => 'edit', $deck_id]);
+                } else {
+                    $this->Session->setFlash("Error");
+                }
+            } else {
+                $this->Session->setFlash("Error");
+            }
+        }
+    }
+    
+    public function stat($deck_id=null) {
+        $this->layout = 'admin';
+        $favoriteDeck = $this->FavoriteDeck->find('all', [
+            'conditions' => ['deck_id' => $deck_id],
+            'recursive' => 0,
+            'fields' => [
+                'User.id', 'User.username'
+            ]
+        ]);
+        $this->set('favoriteDeck',$favoriteDeck);
+        
+        $deck = $this->Deck->find('first', [
+            'conditions' => ['id' => $deck_id],
+            'recursive' => -1,
+            'fields' => [
+                'Deck.name', 'Deck.description'
+            ]
+        ]);
+        $this->set('deck', $deck);
+        
+        $scores = $this->Score->find('all', [
+            'conditions' => ['deck_id' => $deck_id],
+            'recursive' => 0,
+            'fields' => [
+                'Score.score', 'Score.modified', 'User.id', 'User.username'
+            ]
+        ]);
+        $this->set('scores', $scores);
+    }
+    
+    public function importCSV() {
+        $this->layout = 'admin';
+        $this->__getCategories();
+        
+        if($this->request->is('post')) {
+            $tmp_name = $this->data['Admins']['csv']['tmp_name'];
+            $filename = $_SERVER['DOCUMENT_ROOT'] . '/mnemosyne/app/webroot/files/csv/' . $this->data['Admins']['csv']['name'];
+            
+            if(move_uploaded_file($tmp_name, $filename)) { 
+                $handle = fopen($filename, "r");
+
+                // read the 1st row as title
+                $title = fgetcsv($handle);
+                $titleEx = explode(":", $title[0]);
+                $deck = [
+                    'Category' => ['id' => $this->request->data['Admins']['category_id']], 
+                    'Deck' => [
+                        [
+                            'name' => substr($titleEx[1],1,-1),
+                            'user_id' => $this->Auth->user('id')
+                        ]
+                    ]
+                ];
+                
+                if($this->Category->saveAssociated($deck, array('deep' => true))) {
+                    $deck_id = $this->Deck->getLastInsertId();
+                    
+                    // read the 2nd row as header
+                    $header = fgetcsv($handle);
+                    $i = 0;
+                    while (($row = fgetcsv($handle)) !== FALSE) {
+                        $i++;
+                        $data = array();
+                        $data['Deck']['id'] = $deck_id;
+                        $data['Card'][0]['sort_number'] = $i;
+                        // for each header field 
+                        foreach ($header as $k=>$head) {
+                            $data['Card'][0][$head] = '{\'text\':\''.htmlspecialchars($row[$k]).'\'}';
+                        }
+                        // save the row
+                        if (!$this->Deck->saveAssociated($data)) {
+                            $this->Session->setFlash(__(sprintf('Row %d failed to save.',$i), true));  
+                            return 1;
+                        }
+                    }
+                    
+                    fclose($handle);
+                    $this->Session->setFlash("Success");  
+                    $this->redirect(['action' => 'edit', $deck_id]);
+                    return 0;   
+                    
+                } else {
+                    $this->Session->setFlash("Error");  
+                }
+                
+            }
+        } 
+    }
+    
+    function __getSelectedTags($deck_id) {
+        $tags = $this->DeckTag->find('all', [
+            'conditions' => ['DeckTag.deck_id' => $deck_id],
+            'fields' => ['Tag.id']
+        ]);
+        $tagID = [];
+        foreach($tags as $tag) {
+            $tagID[] = $tag['Tag']['id'];
+        }
+        $this->set('selectedTag', $tagID);
+    }
+    
+    function __getAllTags() {
+        $list = $this->Tag->find('list', [
+            'recursive'=> -1,
+            'order' => [
+                'Tag.name' => 'ASC'
+            ],
+            'fields' => [
+                'Tag.id', 'Tag.name'
+            ]
+        ]);
+        $this->set('tags', $list);
+    }
+
+    function __getCategories() {
+        $list = $this->Category->find('list', [
+            'recursive'=> -1,
+            'order' => [
+                'Category.name' => 'ASC'
+            ],
+            'fields' => [
+                'Category.id','Category.name'
+            ]
+        ]);
+        $this->set('categories', $list);
+    }
+  
+    
 
 }
 ?>

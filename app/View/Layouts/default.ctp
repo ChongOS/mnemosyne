@@ -52,16 +52,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 <a href="#" class="brand-logo main-theme-text">Mnemosyne</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
-<!--                        <a class="main-theme-text">Profile</a>-->
-                        <?php echo $this->Html->link(
-                            'Profile', [
-                                'controller' => 'profile',
-                                'action' => 'index'
-                            ], [
-                                'class' => 'main-theme-text dropdown-button',
-                                'data-activates' => "dropdown-profile-menu"
-                            ]);
-                        ?>
+                        <a class="main-theme-text dropdown-button" data-activates="dropdown-profile-menu">Profile</a>
                     </li>
                     <ul id="dropdown-profile-menu" class="dropdown-content">
                         <li>
@@ -144,12 +135,51 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                             </form>
                         </div>
                     </li>
+                    <li><hr/></li> 
+                    
+
+                    </li>
+                    <li>
+                        <?php echo $this->Html->link(
+                            'Create Flashcard',
+                            [
+                                'controller' => 'decks',
+                                'action' => 'add'
+                            ]);
+                        ?>
+                    </li>
+                    <li>
+                        <?php echo $this->Html->link(
+                            'Categories',
+                            [
+                                'controller' => 'decks',
+                                'action' => 'index'
+                            ]);
+                        ?>
+                    </li>
                     <li><hr/></li>
-                    <li><a>Profile</a></li>
-                    <li><a>Create Flashcards</a></li>
-                    <li><a>Categories</a></li>
-                    <li><hr/></li>
-                    <li><a class="main-theme-text">0 Coins</a></li>
+                    <li>
+                        <?php echo $this->Html->link(
+                            'View Profile',
+                            [
+                                'controller' => 'profile',
+                                'action' => 'index'
+                            ], [
+                                'class' => 'main-theme-text'
+                            ]);
+                        ?>
+                    </li>
+                    <li>
+                        <?php echo $this->Html->link(
+                            'Logout',
+                            [
+                                'controller' => 'users',
+                                'action' => 'logout'
+                            ], [
+                                'class' => 'main-theme-text'
+                            ]);
+                        ?>
+                    </li> 
                 </ul>
             </div>
         </div>
