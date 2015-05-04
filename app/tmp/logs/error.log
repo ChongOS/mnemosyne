@@ -6663,3 +6663,14 @@ Stack Trace:
 #12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest))
 #13 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #14 {main}
+2015-05-04 14:38:43 Error: [MissingActionException] Action AdminsController::adminDeckManagementPage() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdminsController',
+  'action' => 'adminDeckManagementPage',
+)
+Request URL: /mnemosyne/admins/adminDeckManagementPage
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

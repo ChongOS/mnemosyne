@@ -1,5 +1,5 @@
 <div class = 'row'>
-	<a href = 'adminCardsManagementPage'>
+	<a href = 'adminDecksManagementPage'>
         <div class="col s12 m4 offset-m2">
           <div class="card medium">
             <div class="card-image">

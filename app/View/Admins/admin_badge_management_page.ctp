@@ -1,7 +1,7 @@
 <div class = 'row'></div>
 <div class = 'row'></div>
 
-<form = onsubmit = 'return check()' action = 'adminBadgeAmendToSql' method = 'get'>
+<form = onsubmit = 'return check()' action = 'adminBadgeAmendToSql' method = 'post' enctype="multipart/form-data">
 <div class = 'row'>
 <div class = 'col m6 offset-m3 s12'>
 	<label> Choose Badge </label>
@@ -31,29 +31,18 @@
       <div class="row">
         <div class="input-field col s12 m6 offset-m3">
           <textarea placeholder="Fill new description or Ignore for no update" id="textarea1" name = 'textarea1' class="materialize-textarea"></textarea>
-          <label for="textarea1"> detial </label>
+          <label for="textarea1"> detail </label>
         </div>
       </div>
 	  
 	  <div class = 'row'>
 	  <div class = 'col s12 m6 offset-m3'>
-	  <div class="file-field input-field">
-      <input id = 'input' placeholder="choose new .jpg  or Ignore for no update" name = 'input' class="file-path validate" type="text"/>
-      <div class="btn">
-        <span>File</span>
-        <input type="file" />
-      </div>
-    </div>
+			Select image to upload:
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<input class = 'btn' type="submit" value="submit" name="submit">
 	</div>
 	  </div>
 	  
-	  <div class = 'row'>
-		<div class = 'col offset-m5'>
-			  <button class="btn waves-effect waves-light" type="submit" name="action"> Amend
-				<i class="mdi-content-send right"></i>
-				</button>
-		</div>
-	  </div>
   </form>
   
 

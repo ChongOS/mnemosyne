@@ -11,6 +11,10 @@ Class AdminsController extends AppController{
 	 $this->layout = 'admin';
  }
  
+ public function adminDecksManagementPage(){
+	 $this->layout = 'admin';
+ }
+ 
  public function adminFlashcardsMainPage(){
 	 $this->layout = 'admin';
  }
@@ -159,6 +163,7 @@ Class AdminsController extends AppController{
 	 $error = false;
 	 $this->layout = 'admin'; 
 	 $date = date("Y-m-d H:i:s");
+	 $userid = $this -> Auth-> user('username');
 	 if( (isset($_GET['ndeck']) && isset($_GET['descript']) && isset($_GET['status']) && isset($_GET['cat']) && isset($_GET['tag']))  == false){
 		 $error = true;
 		 echo "ee";
@@ -172,7 +177,7 @@ Class AdminsController extends AppController{
 	 $link = mysql_connect('fieldfirstvm.cloudapp.net','user','1234');
 	 $stmt = "use mnemosyne";
 	 $result = mysql_query($stmt);
-	 $stmt = "insert into `decks` (name,description,status,user_id,category_id,created,modified) values ( '$name' ,'$des','$public','45','$cat','$date','$date')";
+	 $stmt = "insert into `decks` (name,description,status,user_id,category_id,created,modified) values ( '$name' ,'$des','$public','$userid','$cat','$date','$date')";
 	 $result = mysql_query($stmt);
 	 $id = mysql_insert_id();
 	 if(!$result){
@@ -269,12 +274,158 @@ public function adminBadgeManagementPage(){
 	$this->layout = 'admin'; 
 }
 
+public function adminImportCVSDecksPage(){
+	$this->layout = 'admin'; 
+}
+
+public function adminImportCvsToSql(){
+	$this->layout = 'admin'; 
+	$target_dir = "cvs/";
+	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+	$error = "";
+
+	
+	// Check if file already exists
+	if (file_exists($target_file)) {
+		$error .= "Sorry, file already exists.\n";
+		$uploadOk = 0;
+	}
+	
+	if($imageFileType != "csv" ) {
+    $error .= "Sorry, only cvs files are allowed.\n";
+    $uploadOk = 0;
+	}
+	
+	if ($uploadOk == 0) {
+		$error .= "Sorry, your file was not uploaded.\n";
+	// if everything is ok, try to upload file
+	} else {
+		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    } else {
+        $error .= "Sorry, there was an error uploading your file.\n";
+    }
+	}
+	$this -> set('error',$error);
+	$this -> set('result',$target_file);
+	$this -> set('id',$this -> Auth -> user('id'));
+	
+}
+
 public function adminBadgeAmendToSql(){
+	$date = date("Y-m-d H:i:s");
 	$this->layout = 'admin';
-	$badge = $_GET['type'];
-	$name3 = $_GET['name3'];
-	$txa = $_GET['textarea1'];
-	$input = $_GET['input'];
+	$badge = $_POST['type'];
+	$name = $_POST['name3'];
+	$detail = $_POST['textarea1'];
+	$error = "";
+
+	
+if($_FILES["fileToUpload"]["name"] != null){
+	
+	$target_dir = "imageForBadge/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+
+
+$resulty = $target_file;
+
+$uploadOk = 1;
+$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    $error .= "Sorry, file already exists.\n";
+    $uploadOk = 0;
+}
+
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+    $error .= "Sorry, only JPG, JPEG, PNG & GIF files are allowed.\n";
+    $uploadOk = 0;
+}
+
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    $error .= "Sorry, your file was not uploaded.\n";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    } else {
+        $error .= "Sorry, there was an error uploading your file.\n";
+    }
+}
+
+
+//  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+//  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+//  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+//  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+//  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+//  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+//  XXXXX   if you want to change thumnail path concate with $resulty XXXXXXXXX -->
+
+
+	$link = mysql_connect('fieldfirstvm.cloudapp.net','user','1234');
+	 $stmt = "use mnemosyne";
+	 $result = mysql_query($stmt);
+
+
+	if($name == ""){
+		if($detail == ""){
+			$stmt = "update `badges` set thumbnail = '$resulty' ,modified = '$date' where id = '$badge'";
+			$result = mysql_query($stmt) or die("Error Found : ".mysql_error());
+		}
+		else{
+			$stmt = "update `badges` set detail = '$detail',thumbnail = '$resulty' , modified = '$date' where id = '$badge'";
+			$result = mysql_query($stmt) or die("Error Found : ".mysql_error());
+		}
+	}
+	
+	else{
+		if($detail == ""){
+			$stmt = "update `badges` set name = '$name',thumbnail = '$resulty' , modified = '$date' where id = '$badge'";
+			$result = mysql_query($stmt) or die("Error Found : ".mysql_error());
+		}
+		else{
+			$stmt = "update `badges` set name = '$name', detail = '$detail',thumbnail = '$resulty', modified = '$date' where id = '$badge'";
+			$result = mysql_query($stmt) or die("Error Found : ".mysql_error());
+		}
+	}
+
+
+}
+else{
+	$link = mysql_connect('fieldfirstvm.cloudapp.net','user','1234');
+	 $stmt = "use mnemosyne";
+	 $result = mysql_query($stmt);
+	if($name == ""){
+		if($detail == ""){
+			$error .= "You didn't change anything!";
+		}
+		else{
+			$stmt = "update `badges` set detail = '$detail',modified = '$date' where id = '$badge'";
+			$result = mysql_query($stmt) or die("Error Found : ".mysql_error());
+		}
+	}
+	else{
+		if($detail == ""){
+			$stmt = "update `badges` set name = '$name',modified = '$date' where id = '$badge'";
+			$result = mysql_query($stmt) or die("Error Found : ".mysql_error());
+		}
+		else{
+			$stmt = "update `badges` set name = '$name', detail = '$detail',modified = '$date' where id = '$badge'";
+			$result = mysql_query($stmt) or die("Error Found : ".mysql_error());
+		}
+	}
+}
+
+	
+	$this -> set('error',$error);
+	
+	
 	
 }
     
@@ -321,7 +472,7 @@ public function adminBadgeAmendToSql(){
             'recursive'=> -1
         ]);
     
-        if($deck['Deck']['status'] || $deck['Deck']['user_id'] != $this->Auth->User('id'))
+        if(($deck['Deck']['status'] || $deck['Deck']['user_id'] != $this->Auth->User('id')) && $this->Auth->User('role') != 'a')
             $this->redirect(['action' => 'stat', $deck_id]);
         
         $cards = $this->Card->find('all', [
@@ -385,6 +536,10 @@ public function adminBadgeAmendToSql(){
                 $this->Session->setFlash("Error");
             }
         }
+    }
+    
+    public function delete($deck_id=null) {
+        
     }
     
     public function stat($deck_id=null) {

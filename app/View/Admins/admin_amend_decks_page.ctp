@@ -20,7 +20,6 @@
 			</select>
 	</div>
 </div>
-		
 		<div class = 'row'>
 			<div class = 'col s12  offset-m5'>
 				  <button class="btn waves-effect waves-light" type="submit" name="action"> Amend
