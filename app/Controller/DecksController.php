@@ -189,56 +189,98 @@ class DecksController extends AppController {
 		
 	}
 	
-	public function result() {
+	public function result($scoreID = null) {
 		
-		$score = $this->Session->read('score');
-		$userID = $this->Auth->user('id');
-		$deckID = $this->Session->read('deckID');
+		if (is_null($scoreID)) {
+		
+			$score = $this->Session->read('score');
+			$userID = $this->Auth->user('id');
+			$deckID = $this->Session->read('deckID');
 				
-		// Check if the user already has the score(s)
+			// Check if the user already has the score(s)
 		
-		if (! $this->Score->hasAny(array('user_id' => $userID))) {
+			if (! $this->Score->hasAny(array('user_id' => $userID))) {
 			
-			// Set initial score to 1000, [BONUS] for the new comer :D
+				// Set initial score to 1000, [BONUS] for the new comer :D
 			
-			$score += 1000;
+				$score += 1000;
 			
-		}
+			}
 		
-		// Fetch the user's score on this deck
+			// Fetch the user's score on this deck
 		
-		$scoreOnThisDeck = $this->Score->find('all', array('conditions' => array('deck_id' => $deckID, 'user_id' => $userID),
-			'fields' => array('score', 'created'),
-			'recursive' => -1,
-			'order' => 'created DESC'));
+			$scoreOnThisDeck = $this->Score->find('all', array('conditions' => array('deck_id' => $deckID, 'user_id' => $userID),
+				'fields' => array('score', 'created'),
+				'recursive' => -1,
+				'order' => 'created DESC'));
 			
-		// Fetch the name of the current deck
+			// Fetch the name of the current deck
 		
-		$deckName = $this->Deck->find('first', array('conditions' => array('id' => $deckID), 'fields' => array('name'), 'recursive' => -1));
+			$deckName = $this->Deck->find('first', array('conditions' => array('id' => $deckID), 'fields' => array('name'), 'recursive' => -1));
 			
-		// Update the user's score
+			// Update the user's score
 									
-		$data = array('score' => $score, 'user_id' => $userID, 'deck_id' => $deckID);
+			$data = array('score' => $score, 'user_id' => $userID, 'deck_id' => $deckID);
 						
-		if (! $this->Score->save($data)) {
+			if (! $this->Score->save($data)) {
 				
-			// If save process failed, notify a user in the result page
+				// If save process failed, notify a user in the result page
 				
-			$this->Session->setFlash('Unable to update the user\'s score');
+				$this->Session->setFlash('Unable to update the user\'s score');
 				
+			}
+		
+			// Show in the result page
+		
+			$this->set('score', $score);
+		
+			$this->set('scoreOnThisDeck', $scoreOnThisDeck);
+		
+			$this->set('deckName', $deckName['Deck']['name']);
+				
+			$this->set('shareURL', 'http://localhost:8888/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $this->Score->getInsertID());
+					
+			// This will only be set, if the user has a new badge(s) available
+		
+			// $this->set('badgesGranted', $badges);
 		}
 		
-		// Show in the result page
+		else {
+			
+			$query = $this->Score->find('first', array('conditions' => array('id' => $scoreID),
+			'fields' => array('score', 'user_id', 'deck_id'),
+			'recursive' => -1));
+			
+			$score = $query['Score']['score'];
+						
+			// Fetch the user's score on this deck
 		
-		$this->set('score', $score);
+			$scoreOnThisDeck = $this->Score->find('all', array('conditions' => array('deck_id' => $query['Score']['deck_id'], 'user_id' => $query['Score']['user_id']),
+				'fields' => array('score', 'created'),
+				'recursive' => -1,
+				'order' => 'created DESC'));
+				
+			// Fetch the name of the current deck
 		
-		$this->set('scoreOnThisDeck', $scoreOnThisDeck);
+			$deckName = $this->Deck->find('first', array('conditions' => array('id' => $query['Score']['deck_id']), 'fields' => array('name'), 'recursive' => -1));
+			
+			// Show in the result page
 		
-		$this->set('deckName', $deckName['Deck']['name']);
+			$this->set('score', $score);
 		
-		// This will only be set, if the user has a new badge(s) available
+			$this->set('scoreOnThisDeck', $scoreOnThisDeck);
 		
-		// $this->set('badgesGranted', $badges);
+			$this->set('deckName', $deckName['Deck']['name']);
+			
+			$this->set('shareURL', 'http://localhost:8888/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $scoreID);
+			
+		}
+		
+	}
+	
+	private function _badgeChecker($score) {
+		
+		
 		
 	}
 	

@@ -12,12 +12,6 @@ var increaseCounterCurrentScore = function() {
 			
 		}
 		
-		else {
-			
-			$('#score-img').addClass('expanded');
-			
-		}
-		
 	}, 5);
 		
 };
@@ -31,12 +25,6 @@ var decreaseCounterCurrentScore = function() {
 			$('#current-score').text('Score : ' + counter);
 						
 			counter--;
-			
-		}
-		
-		else {
-			
-			$('#score-img').addClass('expanded');
 			
 		}
 		

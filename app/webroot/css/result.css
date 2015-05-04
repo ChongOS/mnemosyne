@@ -73,7 +73,7 @@ tbody td, thead th {
 	float: right;
 }
 
-#score-img {
+.badge-img {
 	
 	position: absolute;
 	right: 6%;
@@ -96,11 +96,17 @@ tbody td, thead th {
 	
 }
 
-#score-img.expanded {
+.badge-img.expanded {
 	
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
+	
+}
+
+.fb-share-button {
+	
+	float: right;
 	
 }

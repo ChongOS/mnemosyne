@@ -10,36 +10,29 @@
 	
 ?>
 
+<!-- Facebook JavaScript SDK -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- End of Facebook JavaScript SDK -->
+
 <div class="row">
 	
 	<div id="main-box" class="z-depth-1">
 		
-		<h4><i class="mdi-image-style"></i> <?php echo $deckName; ?></h4>
-				
-		<?php 
-			if (isset($scoreOnThisDeck[0]['Score']['score'])) {
-				
-				if ($score >= $scoreOnThisDeck[0]['Score']['score']) {
-					
-					echo $this->Html->image('check.png', array('id' => 'score-img'));
-				
-				}
-				
-				else {
-			
-					echo $this->Html->image('uncheck.png', array('id' => 'score-img'));
-				
-				}
-				
-			}
-			
-			else {
-				
-				echo $this->Html->image('check.png', array('id' => 'score-img'));
-				
-			}
-			
-		?>
+		<h4>
+			<i class="mdi-image-style"></i> <?php echo $deckName; ?> <i>
+				<!-- Facebook's share button -->
+				<div class="fb-share-button" data-href="<?php echo $shareURL; ?>" data-layout="button"></div>
+			</i>
+		</h4>
 				
 		<div id="score-container">
 			

@@ -4,7 +4,7 @@ var circle;
 
 var updateWindowHeight = function() {
 	// 250
-	$('#card-container').height($(window).height() - 300);
+	$('#card-container').height($(window).height() - 250);
 };
 
 var disableInActiveCard = function() {
@@ -113,20 +113,6 @@ var timeOut = function() {
 	
 };
 
-var fixZIndex = function() {
-	
-	var zIndex = 2;
-		
-	$('.right-card').each(function(){
-		
-		$(this).css('z-index', zIndex);
-		
-		zIndex--;
-		
-	});
-	
-};
-
 var init = function() {
 	
 	// Set and update the fixed absolute window size
@@ -165,6 +151,7 @@ var init = function() {
 	
 	
 	// Instantiate a new Circle timer
+	
 	circle = new ProgressBar.Circle('#timer-container', {
 		color: '#EC6F75',
 		strokeWidth: 8,
@@ -176,13 +163,11 @@ var init = function() {
 		step: function(state, bar) {
         	bar.setText((bar.value() * 10).toFixed(0));
     	}
-	});		
-		
+	});
+	
 	
 	// Start a begin timer
 	circle.animate(1, timeOut);
-	
-	fixZIndex();
 	
 };
 
