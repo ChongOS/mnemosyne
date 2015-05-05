@@ -319,7 +319,7 @@ class DecksController extends AppController {
 				// if it's the last card, then force redirect
 				
 				$return['action'] = 'redirect';
-				$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
+				$return['value'] = 'http://mnemosyne-flashcard.azurewebsites.net/decks/result';
 			}
 			
 			$return['json'] = json_encode($return);
@@ -342,7 +342,7 @@ class DecksController extends AppController {
 		if ($this->request->is('ajax')) {
 			
 			$return['action'] = 'redirect';
-			$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
+			$return['value'] = 'http://mnemosyne-flashcard.azurewebsites.net/decks/result';
 			
 			$return['json'] = json_encode($return);
 			echo json_encode($return);
@@ -472,7 +472,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 				
-			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $this->Score->getInsertID());
+			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/decks/result/' . $this->Score->getInsertID());
 					
 			// This will only be set, if the user has a new badge(s) available
 		
@@ -487,7 +487,6 @@ class DecksController extends AppController {
 			'recursive' => -1));
 			
 			$score = $query['Score']['score'];
-						
 			// Fetch the user's score on this deck
 		
 			$scoreOnThisDeck = $this->Score->find('all', array('conditions' => array('deck_id' => $query['Score']['deck_id'], 'user_id' => $query['Score']['user_id']),
@@ -511,7 +510,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 			
-			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $scoreID);
+			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/decks/result/' . $scoreID);
 			
 			$this->set('badgesGranted', $badgesArray);
 			
