@@ -155,8 +155,7 @@ class DecksController extends AppController {
 				// if it's the last card, then force redirect
 				
 				$return['action'] = 'redirect';
-				$return['value'] = 'http://mnemosyne-flashcard.azurewebsites.net/decks/result';
-				//$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
+				$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
 			}
 			
 			$return['json'] = json_encode($return);
@@ -180,8 +179,7 @@ class DecksController extends AppController {
 			
 			$return['action'] = 'redirect';
 			
-			$return['value'] = 'http://mnemosyne-flashcard.azurewebsites.net/decks/result/';
-			//$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
+			$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
 			
 			$return['json'] = json_encode($return);
 			echo json_encode($return);
@@ -246,7 +244,7 @@ class DecksController extends AppController {
 				'fields' => array('MAX(score)'),
 				'recursive' => -1));
 							
-				if ($score >= $maxScore[0][0]['MAX(score)']) {
+				if ($score >= $maxScore[0][0]['MAX(score)'] && $score > 0) {
 					
 					$maxScoreBadge = $this->Badge->find('first', array('conditions' => array('name' => 'maximum'), 'fields' => array('id', 'name', 'thumbnail', 'detail'), 'recursive' => -1));
 				
@@ -311,7 +309,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 				
-			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/decks/result/' . $this->Score->getInsertID());
+			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/mnemosyne/decks/result/' . $this->Score->getInsertID());
 					
 			// This will only be set, if the user has a new badge(s) available
 		
@@ -350,7 +348,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 			
-			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/decks/result/' . $scoreID);
+			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/mnemosyne/decks/result/' . $scoreID);
 			
 			$this->set('badgesGranted', $badgesArray);
 			
