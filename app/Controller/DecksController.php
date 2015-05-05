@@ -155,7 +155,7 @@ class DecksController extends AppController {
 				// if it's the last card, then force redirect
 				
 				$return['action'] = 'redirect';
-				$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
+				$return['value'] = 'http://mnemosyne-flashcard.azurewebsites.net/decks/result';
 			}
 			
 			$return['json'] = json_encode($return);
@@ -178,7 +178,7 @@ class DecksController extends AppController {
 		if ($this->request->is('ajax')) {
 			
 			$return['action'] = 'redirect';
-			$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
+			$return['value'] = 'http://mnemosyne-flashcard.azurewebsites.net/decks/result';
 			
 			$return['json'] = json_encode($return);
 			echo json_encode($return);
