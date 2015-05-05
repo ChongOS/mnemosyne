@@ -316,7 +316,7 @@
     
     function selectFile(filename) {
         document.getElementById('type-'+currentCardID).value = 'image';
-        document.getElementById(currentCardID).innerHTML = '<i class="mdi-content-clear right" onclick="clearImage(\''+currentCardID+'\')"></i><img class=\"responsive-img\" name=\"'+filename+'\" src=\"/mnemosyne/app/webroot/files/'+fileurl+'\">';
+        document.getElementById(currentCardID).innerHTML = '<i class="mdi-content-clear right" onclick="clearImage(\''+currentCardID+'\')"></i><img class=\"responsive-img\" name=\"'+filename+'\" src=\"/app/webroot/files/'+fileurl+'\">';
     }
     
     function clearImage(cardID) {
