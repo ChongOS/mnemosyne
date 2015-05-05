@@ -38,7 +38,7 @@ var updateUI = function() {
 	else {
 		$('#btn-back').removeClass('disabled').prop('disabled', false);
 	}
-	$('#counter').text(counter + ' of ' + numOfCard);
+	$('#counter').text('Card: ' + counter + ' of ' + numOfCard);
 	
 };
 
@@ -49,6 +49,7 @@ var nextCard = function() {
 	counter++;
 	updateUI();
 	disableInActiveCard();
+	fixZIndex();
 };
 
 var previousCard = function() {
@@ -58,6 +59,35 @@ var previousCard = function() {
 	counter--;
 	updateUI();
 	disableInActiveCard();
+	fixZIndex();
+};
+
+var fixZIndex = function() {
+	
+	// middle-card's z-index is always 3
+	
+	var zIndex = 2;
+	
+	$('.middle-card').css('z-index', '3');
+	
+	$('.right-card').each(function(){
+		
+		$(this).css('z-index', zIndex);
+		
+		zIndex--;
+		
+	});
+	
+	zIndex = 2;
+	
+	$('.left-card').reverse().each(function(){
+		
+		$(this).css('z-index', zIndex);
+		
+		zIndex--;
+		
+	});
+	
 };
 
 var init = function() {
@@ -69,6 +99,8 @@ var init = function() {
 	
 	disableInActiveCard();
 	
+	fixZIndex();
+	
 	$('#btn-next').click(nextCard);
 	$('#btn-back').click(previousCard);
 	
@@ -77,7 +109,7 @@ var init = function() {
 	
 	numOfCard = $('.card').length;
 	
-	$('#counter').text(counter + ' of ' + numOfCard);
+	$('#counter').text('Card: ' + counter + ' of ' + numOfCard);
 			
 };
 

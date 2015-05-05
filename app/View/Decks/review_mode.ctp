@@ -3,6 +3,7 @@
 echo $this->Html->css("review_mode.css");
 echo $this->Html->script("review_mode.js");
 echo $this->Html->script("jquery-ui.js");
+echo $this->Html->script("progressbar.min.js");
 
 $counter = 0;
 
@@ -29,13 +30,25 @@ function whichType($string) {
 ?>
 
 <div class="row">
+	
     <h5 id="header">
         Reviewing - <?php echo $deck_name ?>
     </h5>
     
     <div id="notification">
 	    <p></p>
+	    <div id="timer-container">
+	    </div>
     </div>
+    
+</div>
+
+<div class="row">
+	
+	<p id="counter">1 of </p>
+	
+	<p id="score">Current score : 0</p>
+	
 </div>
 
 <div class="row" id="card-container">
@@ -87,7 +100,7 @@ function whichType($string) {
                             <p class="card-head">Answer</p>
                             
 							<div class="input-field">
-	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'placeholder' => 'Drop the answer here', 'class' => 'validate droppable')); ?>
+	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'label' => false, 'placeholder' => 'Drop the answer here', 'class' => 'validate droppable')); ?>
         					</div>
 							
                             <button class="waves-effect waves-teal btn-flat submit-button">
@@ -128,7 +141,7 @@ function whichType($string) {
                             <p class="card-head">Answer</p>
                             
                             <div class="input-field">
-	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'placeholder' => 'Drop the answer here', 'class' => 'validate droppable')); ?>
+	                            <?php echo $this->Form->input($counter, array('type' => 'text', 'div' => false, 'label' => false, 'placeholder' => 'Drop the answer here', 'class' => 'validate droppable')); ?>
         					</div>
 
                             <button class="waves-effect waves-teal btn-flat submit-button">
@@ -144,14 +157,6 @@ function whichType($string) {
 
         <?php endforeach; ?>
 
-    </div>
-</div>			
-
-<div class="row">
-    <div class="col s4 offset-s4">
-        <div class="center-align">
-            <p id="counter">1 of 10</p>
-        </div>
     </div>
 </div>
 

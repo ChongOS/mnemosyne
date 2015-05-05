@@ -17,51 +17,87 @@
 		<div class="col s12 m10">
 			<div class="row">
 			<?php 
-			foreach ($favoriteDeck as $deck): ?>
-				<div class="col s12 m5">
-					<div class="card #f4ff81 lime accent-1">
-					<div class="card-content pink-text">
-						<?php
-							echo '<i class="mdi-action-wallet-giftcard" ></i> ' . $deck['Deck']['name'];
+            $i = 0;
+			foreach ($deck as $key => $deck): ?>
+				<div class="col s12">
+					<div class="card-panel">
+						<div class="card-title">
+							<h5>
+							<?php echo $this->Html->link(
+								$deck['Deck']['name'],
+									[
+										'controller' => 'decks',
+										'action' => 'learnMode',
+										$deck['Deck']['id']
+									]
+								); ?>
+							</h5>
+						</div>
+						<div class="card-content">
 							
-						?>
-						<span class="pull-right"><i class="mdi-action-stars brown-text"></i></span>
-						<h6 class="brown-text">Description.</h6>
-						<p><?php
-							echo $deck['Deck']['description'];
-						?></p>
-					</div>
-					<div class="card-action">
-						<?php
-                            echo $this->Html->link('LEARN', 
-                            [
-                                'controller' => 'decks',
-                                'action' => 'learnMode',
-                                $deck['Deck']['id']
-                            ],[
-                                'class' => 'waves-effect waves-light btn red accent-1 white-text'
-								//'onclick' => 'location.href=\'/rentmyride/users/index/\';',
-                            ]);
-						
-                            echo $this->Html->link('TEST', 
-                            [
-                                'controller' => 'decks',
-                                'action' => 'reviewMode',
-                                $deck['Deck']['id']
-                            ],[
-                                'class' => 'waves-effect waves-light btn red accent-1 white-text'
-								//'onclick' => 'location.href=\'/rentmyride/users/index/\';',
-                            ]);
-						?>
-					</div>
-					<br/>
+							<h6><b><?php echo $deck['Deck']['description']; ?></b></h6>
+							<h6>
+								Create by: <?php echo $this->Html->link(
+								$deck['User']['username'],
+									[
+										'action' => 'profile',
+										$deck['User']['id']
+									]
+								); ?> 
+							</h6>
+							<h6>
+								Created: <?php echo $deck['Deck']['created']; ?> 
+							</h6>
+								
+							<span class="right main-theme-text">
+								<?php echo $this->Html->link(
+									'Test',
+										[
+											'controller' => 'decks',
+											'action' => 'reviewMode',
+											$deck['Deck']['id']
+										],
+										[
+											'class' => 'main-theme-text'
+										]
+									); 
+								?>
+								<i class="mdi-navigation-arrow-forward right"></i>
+							</span>
+							<br/>
+						</div>
 					</div>
 				</div>
-			<?php endforeach; ?>
+			<?php $i++; endforeach; ?>
 			</div>
 		
 		</div>
 		</div>
 	</div>
 	
+ <script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.collapsible').collapsible({
+            accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        });
+    });
     
+    function setFavorite(card_id) {
+        var id = card_id.substr(4);
+        var set = $('#'+card_id).is(':checked') ? 1 : 0;
+//        var toggle = $('#'+card_id).checked == "checked" ? '' : "checked";
+        $.ajax({
+            url: '/mnemosyne/favorite_decks/setFavorite/',
+            type: 'POST',
+            data: {
+                'id' : id,
+                'set' : set
+            },
+            success: function(data) {
+                Materialize.toast('<h5>'+data+'</h5>', 2000);
+            }
+        });
+    }
+    
+</script>   

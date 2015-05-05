@@ -1,11 +1,108 @@
-.col {
+#main-box {
+	
+	padding: 4%;
 	position: relative;
-	left: 24%;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	width: 50%;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	height: 500px;
+	
 }
 
-.col > * {
-	margin: 4%;
+table {
+	
+	width: 100%;
+	
+}
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+	
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+    
+}
+
+thead th {
+	
+    height: 40px;
+    
+}
+
+tbody {
+	
+    height: 200px;
+    overflow-y: auto;
+    
+}
+
+thead {
+	
+    /* fallback */
+    
+}
+
+
+tbody td, thead th {
+	
+    width: 25%;
+    float: left;
+    
+}
+
+#score-container {
+	
+	height: 15%;
+	
+}
+
+#left {
+	
+	width: 50%;
+	float: left;
+	
+}
+
+#right {
+	
+	width: 50%;
+	float: right;
+}
+
+.badge-img {
+	
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	-moz-transition: -moz-transform 1s ease-in-out;
+	-ms-transition: -ms-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+	
+}
+
+.badge-img.expanded {
+	
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	
+}
+
+.fb-share-button {
+	
+	float: right;
+	
 }

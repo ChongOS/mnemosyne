@@ -1,9 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col s12 m3 l2">
+			<br/>
             <div class="col s4 offset-s4 m12">
-<!--                <img src="images/user.jpg" alt="" class="circle responsive-img">-->
-                <?php echo $this->Html->image('user.jpg', ['class' => 'circle responsive-img']) ?>
+				<?php $img = $userObj['User']['img'];
+					if($img==null){$img = 'user.jpg';} ?>
+                <img class="circle responsive-img" src="/mnemosyne/app/webroot/profiles/<?php echo $img; ?>">
             </div>
         </div>
 
@@ -15,7 +17,7 @@
             </h5>
             <p class="black-text col-s12">
 				<?php $countCreate = count($createdDeck);
-					  $countFavorite = count($favoriteDeck);
+					  $countFavorite = count($favorite);
 				?>
 				
 				<?php
@@ -96,67 +98,104 @@
 
 						<div class="row">
 						<?php 
-						foreach ($deckShow as $deck): 
-							foreach($favoriteDeck as $fav):
-								if($fav['FavoriteDeck']['id']==$deck['Deck']['id']){
-									$iclass = 'mdi-action-stars brown-text';
-								}
-								else{ $iclass = null;}
-							endforeach;	
-						?>
-										
-							<div class="col s12 m5">
-								<div class="card #f4ff81 lime accent-1">
-								<div class="card-content pink-text">
-									<?php
-										echo '<i class="mdi-action-wallet-giftcard" ></i> ' . $deck['Deck']['name'];
-										
-									?>
-									<span class="pull-right"><i class=$iclass></i></span>
-									<h6 class="brown-text">Description.</h6>
-									<p><?php
-										echo $deck['Deck']['description'];
-									?></p>
+						foreach ($deckShow as $deck): ?>
+						
+							<div class="col s12">
+							<div class="card-panel">
+								<div class="card-title">
+									<h5>
+									<?php echo $this->Html->link(
+										$deck['Deck']['name'],
+											[
+												'controller' => 'decks',
+												'action' => 'learnMode',
+												$deck['Deck']['id']
+											]
+										); ?>
+									</h5>
 								</div>
-								<div class="card-action">
-									<?php
-										echo $this->Html->link('LEARN', 
-                                        [
-                                            'controller' => 'decks',
-                                            'action' => 'learnMode',
-                                            $deck['Deck']['id']
-                                        ],[
-                                            'class' => 'waves-effect waves-light btn red accent-1 white-text'
-                                            //'onclick' => 'location.href=\'/rentmyride/users/index/\';',
-                                        ]);
-
-                                        echo $this->Html->link('TEST', 
-                                        [
-                                            'controller' => 'decks',
-                                            'action' => 'reviewMode',
-                                            $deck['Deck']['id']
-                                        ],[
-                                            'class' => 'waves-effect waves-light btn red accent-1 white-text'
-                                            //'onclick' => 'location.href=\'/rentmyride/users/index/\';',
-                                        ]);
-									?>
-								</div>
-								<br/>
+								<div class="card-content">
+									<span class="right main-theme-text">
+										<p>
+		<!--                                    checked="checked"-->
+										  <input type="checkbox" onclick="setFavorite($(this).attr('id'))" id='deck<?php echo $deck['Deck']['id']; ?>' <?php echo in_array($deck['Deck']['id'], $favorite) ? 'checked="checked"':''; ?> />
+										  <label for='deck<?php echo $deck['Deck']['id']; ?>'>Favorite</label>
+										</p>
+										</span>
+									<h6><b><?php echo $deck['Deck']['description']; ?></b></h6>
+									<h6>
+										Create by: <?php echo $this->Html->link(
+										$deck['User']['username'],
+											[
+												'action' => 'profile',
+												$deck['User']['id']
+											]
+										); ?> 
+									</h6>
+									<h6>
+										Created: <?php echo $deck['Deck']['created']; ?> 
+									</h6>
+									
+									<span class="right main-theme-text">
+										<?php echo $this->Html->link(
+											'Test',
+												[
+													'controller' => 'decks',
+													'action' => 'reviewMode',
+													$deck['Deck']['id']
+												],
+												[
+													'class' => 'main-theme-text'
+												]
+											); 
+										?>
+										<i class="mdi-navigation-arrow-forward right"></i>
+									</span>
+									<br/>
 								</div>
 							</div>
+						</div>
 						<?php endforeach; ?>
 						</div>
 		
 				
 				</div>
-                <div class="tab-pane" id="setting">Setting</div>
-                <div class="tab-pane" id="achievements">
+				
+                <div class="tab-pane" id="setting">
+					<?php
+					echo $this->Html->link(
+						 'edit profile',
+						 [
+							 'controller' => 'profile',
+							 'action' => 'edit_profile',
+							 $userObj['User']['id']
+						 ], [
+							 'escape' => FALSE
+						 ]
+					 );
+					 
+					echo '<br/>'; 
+					echo $this->Html->link(
+						 'change password',
+						 [
+							 'controller' => 'profile',
+							 'action' => 'change_password',
+							 $userObj['User']['id']
+						 ], [
+							 'escape' => FALSE
+						 ]
+					 );
+					?>
+				</div>
+                
+				<div class="tab-pane" id="achievements">
 					<div class="row">
 					<?php foreach($uBadge as $badge):?>
 						<div class="s12 m6">
+						<?php $img = $badge['Badge']['thumbnail']; ?>
 							<ul class="collection">
-								<li class="collection-item avatar lime accent-1 pink-text">
-								  <?php echo $this->Html->image('cake.icon.png', ['class' => 'circle responsive-img']) ?>
+								<li class="collection-item avatar lime accent-1 pink-text">								  
+								  <img class="circle responsive-img" src="/mnemosyne/app/webroot/badges/<?php echo $img; ?>" width="50" height="50">
 								  <span class="title"><h5><?php echo $badge['Badge']['name']; ?>  <i class="mdi-toggle-check-box green-text pull-right"></i></h5></span>
 								  <p><?php echo $badge['Badge']['detail']; ?><br/>
 								  </p>
@@ -171,3 +210,30 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.collapsible').collapsible({
+            accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        });
+    });
+    
+    function setFavorite(card_id) {
+        var id = card_id.substr(4);
+        var set = $('#'+card_id).is(':checked') ? 1 : 0;
+//        var toggle = $('#'+card_id).checked == "checked" ? '' : "checked";
+        $.ajax({
+            url: '/mnemosyne/favorite_decks/setFavorite/',
+            type: 'POST',
+            data: {
+                'id' : id,
+                'set' : set
+            },
+            success: function(data) {
+                Materialize.toast('<h5>'+data+'</h5>', 2000);
+            }
+        });
+    }
+    
+</script>

@@ -31,6 +31,13 @@ function whichType($string) {
         Learning - <?php echo $deck_name ?>
     </h5>
 </div>
+
+<div class="row">
+	
+	<p id="counter">1 of </p>
+		
+</div>
+
 <div class="row" id="card-container">
 
     <div class="preloader-wrapper big active">
@@ -162,12 +169,9 @@ function whichType($string) {
     </div>
 </div>
 
-<div class="row">
+<div class="row" id="navigation-buttons">
     <div class="col s4 offset-s4">
-        <div class="center-align top-bottom-padding-adjustment">
-            <p id="counter">1 of 10</p>
-            <button class="waves-effect waves-light btn disabled" id="btn-back" disabled><i class="mdi-navigation-arrow-back left"></i> Back</button>
-            <button class="waves-effect waves-light btn" id="btn-next">Next <i class="mdi-navigation-arrow-forward right"></i></button>
-        </div>
+        <button class="waves-effect waves-light btn disabled" id="btn-back" disabled><i class="mdi-navigation-arrow-back left"></i> Back</button>
+        <button class="waves-effect waves-light btn" id="btn-next">Next <i class="mdi-navigation-arrow-forward right"></i></button>
     </div>
 </div>
