@@ -173,28 +173,12 @@ class ProfileController extends AppController {
 					'password' => $this->request->data['User']['confirmpassword'],
                 ]
             ];
-			
-			$filename = WWW_ROOT. DS . 'profiles'.DS.$this->data['User']['upload']; 
-			move_uploaded_file($this->data['User']['upload'], $filename);
-			
-			echo $this->data['User']['upload'];
-					
-			/*$user = [
-                'User' => [
-                    'id' => $user_id,
-					'firstname' => $this->request->data['User']['firstname'],
-					'lastname' => $this->request->data['User']['lastname'],
-					'img' => $this->data['User']['upload'],
-					'username' => $this->request->data['User']['username'],
-					'password' => $this->request->data['User']['confirmpassword']
-				]
-            ];*/
 					
 
 			$this->loadModel('User');
 			
 			
-		if($this->User->save($user)){
+		if($this->User->save($data)){
 			$this->Session->setFlash('change password success.');
 			$this->redirect(['action' => 'index']);
 		}else{

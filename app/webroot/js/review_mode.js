@@ -39,7 +39,7 @@ var checkAnswer = function() {
 		
 	$.ajax({
 		type: 'POST',
-		url: '/decks/validateCard',
+		url: '/mnemosyne/decks/validateCard',
 		data: {id: textField.attr('id'), value: textField.attr('data-answer'), lastCard: isLastCard}
 		
 	}).done(function(data){
@@ -99,7 +99,7 @@ var timeOut = function() {
 	
 	$.ajax({
 		type: 'POST',
-		url: '/decks/timeOut'
+		url: '/mnemosyne/decks/timeOut'
 				
 	}).done(function(data){
 		

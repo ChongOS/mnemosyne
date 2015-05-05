@@ -83,7 +83,7 @@ function whichType($string) {
 
                             if (whichType($front['type']) === 'image'): ?>
                             
-                                <img class="center" src="/app/webroot/files/<?php echo $front['data']; ?>">
+                                <img class="center" src="/mnemosyne/files/<?php echo $front['data']; ?>">
 
                             <?php elseif (whichType($front['type']) === 'text'): ?>
                                 
@@ -124,7 +124,7 @@ function whichType($string) {
 
                             if (whichType($front['type']) === 'image'): ?>
                             
-                                <img class="center" src="/app/webroot/files/<?php echo $front['data']; ?>">
+                                <img class="center" src="/mnemosyne/files/<?php echo $front['data']; ?>">
 
                             <?php elseif (whichType($front['type']) === 'text'): ?>
                                 
@@ -180,7 +180,7 @@ function whichType($string) {
 						
 			<?php elseif (whichType($back['type']) === 'image'): ?>
 					
-				<li class="collection-item"><img src="/app/webroot/files/<?php echo $back['data'] ?>"></li>
+				<li class="collection-item"><img src="/mnemosyne/files/<?php echo $back['data'] ?>"></li>
 						
 			<?php endif; ?>
 					
@@ -192,7 +192,7 @@ function whichType($string) {
 						
 		<?php elseif (whichType($back['type']) === 'image'): ?>
 					
-			<li class="collection-item"><img src="/app/webroot/files/<?php echo $back['data'] ?>"></li>
+			<li class="collection-item"><img src="/mnemosyne/files/<?php echo $back['data'] ?>"></li>
 						
 		<?php endif; ?>
 			

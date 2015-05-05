@@ -5,7 +5,7 @@
             <div class="col s4 offset-s4 m12">
 				<?php $img = $userObj['User']['img'];
 					if($img==null){$img = 'user.jpg';} ?>
-                <img class="circle responsive-img" src="/app/webroot/profiles/<?php echo $img; ?>">
+                <img class="circle responsive-img" src="/mnemosyne/profiles/<?php echo $img; ?>">
             </div>
         </div>
 
@@ -195,7 +195,7 @@
 						<?php $img = $badge['Badge']['thumbnail']; ?>
 							<ul class="collection">
 								<li class="collection-item avatar lime accent-1 pink-text">								  
-								  <img class="circle responsive-img" src="/app/webroot/imageForBadge/<?php echo $img; ?>" width="50" height="50">
+								  <img class="circle responsive-img" src="/mnemosyne/imageForBadge/<?php echo $img; ?>" width="50" height="50">
 								  <span class="title"><h5><?php echo $badge['Badge']['name']; ?>  <i class="mdi-toggle-check-box green-text pull-right"></i></h5></span>
 								  <p><?php echo $badge['Badge']['detail']; ?><br/>
 								  </p>
@@ -224,7 +224,7 @@
         var set = $('#'+card_id).is(':checked') ? 1 : 0;
 //        var toggle = $('#'+card_id).checked == "checked" ? '' : "checked";
         $.ajax({
-            url: '/favorite_decks/setFavorite/',
+            url: '/mnemosyne/favorite_decks/setFavorite/',
             type: 'POST',
             data: {
                 'id' : id,

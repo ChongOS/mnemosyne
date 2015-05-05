@@ -6955,3 +6955,465 @@ Stack Trace:
 #3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-05-05 04:50:43 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 04:50:43 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 05:09:47 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 05:09:47 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 05:09:47 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 05:09:47 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 05:14:12 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 05:14:12 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 05:23:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 05:23:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /mnemosyne/app/webroot/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-05 05:34:38 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:34:38 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:35:05 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:35:05 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:35:30 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:35:30 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:37:54 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:37:54 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:49:18 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:49:18 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:51:34 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:51:34 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:56:35 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/MAMP/htdocs/mnemosyne/app/View/Users/login.ctp(22): FormHelper->create('User')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-05-05 05:56:46 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/MAMP/htdocs/mnemosyne/app/View/Users/login.ctp(22): FormHelper->create('User')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-05-05 05:57:53 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/MAMP/htdocs/mnemosyne/app/View/Users/login.ctp(22): FormHelper->create('User')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-05-05 05:58:26 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /mnemosyne/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/MAMP/htdocs/mnemosyne/app/View/Users/login.ctp(22): FormHelper->create('User')
+#9 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(961): include('/Applications/M...')
+#10 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(923): View->_evaluate('/Applications/M...', Array)
+#11 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/View/View.php(473): View->_render('/Applications/M...')
+#12 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-05-05 05:59:45 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:02:48 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:06:40 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:06:40 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:08:36 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:08:36 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:09:58 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:09:58 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:11:30 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:11:30 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:13:32 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:13:32 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:13:55 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:13:55 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:14:59 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/new_comer.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 06:14:59 Error: [MissingControllerException] Controller class ImageForBadgeController could not be found.
+Exception Attributes: array (
+  'class' => 'ImageForBadgeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/imageForBadge/maximum.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
