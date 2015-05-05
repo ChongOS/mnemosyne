@@ -300,7 +300,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 				
-			$this->set('shareURL', 'http://localhost:8888/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $this->Score->getInsertID());
+			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $this->Score->getInsertID());
 					
 			// This will only be set, if the user has a new badge(s) available
 		
@@ -339,7 +339,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 			
-			$this->set('shareURL', 'http://localhost:8888/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $scoreID);
+			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $scoreID);
 			
 			$this->set('badgesGranted', $badgesArray);
 			
