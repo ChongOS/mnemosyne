@@ -99,7 +99,7 @@ var timeOut = function() {
 	
 	$.ajax({
 		type: 'POST',
-		url: '/desks/timeOut'
+		url: '/decks/timeOut'
 				
 	}).done(function(data){
 		
