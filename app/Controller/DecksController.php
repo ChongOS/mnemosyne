@@ -201,9 +201,9 @@ class DecksController extends AppController {
 		
 			if (! $this->Score->hasAny(array('user_id' => $userID))) {
 			
-				// Set initial score to 1000, [BONUS] for the new comer :D
+				// Set initial score to 200, [BONUS] for the new comer :D
 			
-				$score += 1000;
+				$score += 200;
 			
 			}
 			
@@ -227,9 +227,13 @@ class DecksController extends AppController {
 				
 					array_push($badgesArray, $longLastingBadge);
 					
-					$data = array('user_id' => $userID, 'badge_id' => $longLastingBadge['Badge']['id']);
+					if (! $this->UserBadge->hasAny(array('user_id' => $userID, 'badge_id' => $longLastingBadge['Badge']['id']))) {
 					
-					$this->UserBadge->save($data);
+						$data = array('user_id' => $userID, 'badge_id' => $longLastingBadge['Badge']['id']);
+					
+						$this->UserBadge->save($data);
+						
+					}
 				
 				}
 			
@@ -245,9 +249,13 @@ class DecksController extends AppController {
 				
 					array_push($badgesArray, $maxScoreBadge);
 					
-					$data = array('user_id' => $userID, 'badge_id' => $maxScoreBadge['Badge']['id']);
+					if (! $this->UserBadge->hasAny(array('user_id' => $userID, 'badge_id' => $maxScoreBadge['Badge']['id']))) {
 					
-					$this->UserBadge->save($data);
+						$data = array('user_id' => $userID, 'badge_id' => $maxScoreBadge['Badge']['id']);
+					
+						$this->UserBadge->save($data);
+						
+					}
 				
 				}
 				
