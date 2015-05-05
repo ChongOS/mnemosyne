@@ -242,8 +242,8 @@ class DecksController extends AppController {
 				$maxScore = $this->Score->find('all', array('conditions' => array('deck_id' => $deckID),
 				'fields' => array('MAX(score)'),
 				'recursive' => -1));
-			
-				if ($score >= $maxScore) {
+							
+				if ($score >= $maxScore[0][0]['MAX(score)']) {
 					
 					$maxScoreBadge = $this->Badge->find('first', array('conditions' => array('name' => 'maximum'), 'fields' => array('id', 'name', 'thumbnail', 'detail'), 'recursive' => -1));
 				
