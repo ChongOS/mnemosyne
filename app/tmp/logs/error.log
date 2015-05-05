@@ -6925,3 +6925,33 @@ Stack Trace:
 #1 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
 #2 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2015-05-05 03:44:54 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 412]
+2015-05-05 03:44:54 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/Decks/result
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 412)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 412, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 412, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-05 03:45:28 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 412]
+2015-05-05 03:45:28 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /mnemosyne/Decks/result
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 412)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 412, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 412, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-05 03:46:05 Error: Fatal Error (1): Call to a member function hasAny() on null in [/Applications/MAMP/htdocs/mnemosyne/app/Controller/DecksController.php, line 416]
+2015-05-05 03:46:05 Error: [FatalErrorException] Call to a member function hasAny() on null
+Request URL: /mnemosyne/Decks/result
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 416)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 416, Array)
+#2 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 416, Array)
+#3 /Applications/MAMP/htdocs/mnemosyne/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

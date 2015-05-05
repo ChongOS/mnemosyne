@@ -195,7 +195,7 @@
 						<?php $img = $badge['Badge']['thumbnail']; ?>
 							<ul class="collection">
 								<li class="collection-item avatar lime accent-1 pink-text">								  
-								  <img class="circle responsive-img" src="/mnemosyne/app/webroot/badges/<?php echo $img; ?>" width="50" height="50">
+								  <img class="circle responsive-img" src="/mnemosyne/app/webroot/imageForBadge/<?php echo $img; ?>" width="50" height="50">
 								  <span class="title"><h5><?php echo $badge['Badge']['name']; ?>  <i class="mdi-toggle-check-box green-text pull-right"></i></h5></span>
 								  <p><?php echo $badge['Badge']['detail']; ?><br/>
 								  </p>

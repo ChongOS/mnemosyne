@@ -8,7 +8,7 @@
 
 class DecksController extends AppController {
 
-    public $uses = ['Deck', 'Category', 'Card', 'Tag', 'User', 'DeckTag', 'FavoriteDeck', 'Score'];
+    public $uses = ['Deck', 'Category', 'Card', 'Tag', 'User', 'DeckTag', 'FavoriteDeck', 'Score', 'Badge', 'UserBadge'];
 
     public function index() {
         $this->__getCategories();
