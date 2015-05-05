@@ -472,7 +472,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 				
-			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/decks/result/' . $this->Score->getInsertID());
+			$this->set('shareURL', 'decks/result/' . $this->Score->getInsertID());
 					
 			// This will only be set, if the user has a new badge(s) available
 		
@@ -510,7 +510,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 			
-			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/decks/result/' . $scoreID);
+			$this->set('shareURL', 'decks/result/' . $scoreID);
 			
 			$this->set('badgesGranted', $badgesArray);
 			
