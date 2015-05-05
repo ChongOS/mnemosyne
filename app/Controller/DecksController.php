@@ -156,6 +156,7 @@ class DecksController extends AppController {
 				
 				$return['action'] = 'redirect';
 				$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
+				
 			}
 			
 			$return['json'] = json_encode($return);
@@ -180,7 +181,7 @@ class DecksController extends AppController {
 			$return['action'] = 'redirect';
 			
 			$return['value'] = Router::url(array('controller' => 'Decks', 'action' => 'result'));
-			
+						
 			$return['json'] = json_encode($return);
 			echo json_encode($return);
 			
@@ -309,7 +310,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 				
-			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/mnemosyne/decks/result/' . $this->Score->getInsertID());
+			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/mnemosyne/app/decks/result/' . $this->Score->getInsertID());
 					
 			// This will only be set, if the user has a new badge(s) available
 		
@@ -348,7 +349,7 @@ class DecksController extends AppController {
 		
 			$this->set('deckName', $deckName['Deck']['name']);
 			
-			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/mnemosyne/decks/result/' . $scoreID);
+			$this->set('shareURL', 'http://mnemosyne-flashcard.azurewebsites.net/mnemosyne/app/decks/result/' . $scoreID);
 			
 			$this->set('badgesGranted', $badgesArray);
 			

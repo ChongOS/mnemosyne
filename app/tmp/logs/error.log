@@ -16768,3 +16768,39 @@ Request URL: /mnemosyne/img/new_comer.png
 Stack Trace:
 #0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-05-05 05:01:56 Error: [MissingControllerException] Controller class LearnModeController could not be found.
+Exception Attributes: array (
+  'class' => 'LearnModeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/learnMode/25
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:02:29 Error: [MissingControllerException] Controller class DesksController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/desks/learnMode/25
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:02:41 Error: [MissingControllerException] Controller class DesksController could not be found.
+Exception Attributes: array (
+  'class' => 'DesksController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/Desks/learnMode/25
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 05:05:18 Error: [MissingControllerException] Controller class ReviewModeController could not be found.
+Exception Attributes: array (
+  'class' => 'ReviewModeController',
+  'plugin' => NULL,
+)
+Request URL: /mnemosyne/reviewMode/25
+Stack Trace:
+#0 /Applications/MAMP/htdocs/mnemosyne/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
