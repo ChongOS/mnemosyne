@@ -224,7 +224,7 @@
         var set = $('#'+card_id).is(':checked') ? 1 : 0;
 //        var toggle = $('#'+card_id).checked == "checked" ? '' : "checked";
         $.ajax({
-            url: '/mnemosyne/favorite_decks/setFavorite/',
+            url: '/favorite_decks/setFavorite/',
             type: 'POST',
             data: {
                 'id' : id,
