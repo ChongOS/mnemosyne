@@ -208,7 +208,7 @@ class DecksController extends AppController {
 			}
 			
 			
-			
+			// Assign the badge(s), then store it to the db
 			
 			$badgesArray = array();
 			
@@ -223,9 +223,13 @@ class DecksController extends AppController {
 			
 				if ($playedCount == 10) {
 					
-					$longLastingBadge = $this->Badge->find('first', array('conditions' => array('name' => 'long lasting'), 'fields' => array('name', 'thumbnail', 'detail'), 'recursive' => -1));
+					$longLastingBadge = $this->Badge->find('first', array('conditions' => array('name' => 'long lasting'), 'fields' => array('id', 'name', 'thumbnail', 'detail'), 'recursive' => -1));
 				
 					array_push($badgesArray, $longLastingBadge);
+					
+					$data = array('user_id' => $userID, 'badge_id' => $longLastingBadge['Badge']['id']);
+					
+					$this->UserBadge->save($data);
 				
 				}
 			
@@ -237,9 +241,13 @@ class DecksController extends AppController {
 			
 				if ($score >= $maxScore) {
 					
-					$maxScoreBadge = $this->Badge->find('first', array('conditions' => array('name' => 'maximum'), 'fields' => array('name', 'thumbnail', 'detail'), 'recursive' => -1));
+					$maxScoreBadge = $this->Badge->find('first', array('conditions' => array('name' => 'maximum'), 'fields' => array('id', 'name', 'thumbnail', 'detail'), 'recursive' => -1));
 				
 					array_push($badgesArray, $maxScoreBadge);
+					
+					$data = array('user_id' => $userID, 'badge_id' => $maxScoreBadge['Badge']['id']);
+					
+					$this->UserBadge->save($data);
 				
 				}
 				
@@ -247,9 +255,13 @@ class DecksController extends AppController {
 			
 			else {
 				
-				$newComerBadge = $this->Badge->find('first', array('conditions' => array('name' => 'new comer'), 'fields' => array('name', 'thumbnail', 'detail'), 'recursive' => -1));
+				$newComerBadge = $this->Badge->find('first', array('conditions' => array('name' => 'new comer'), 'fields' => array('id', 'name', 'thumbnail', 'detail'), 'recursive' => -1));
 				
 				array_push($badgesArray, $newComerBadge);
+				
+				$data = array('user_id' => $userID, 'badge_id' => $newComerBadge['Badge']['id']);
+					
+				$this->UserBadge->save($data);
 				
 			}
 			
@@ -314,6 +326,10 @@ class DecksController extends AppController {
 			// Fetch the name of the current deck
 		
 			$deckName = $this->Deck->find('first', array('conditions' => array('id' => $query['Score']['deck_id']), 'fields' => array('name'), 'recursive' => -1));
+			
+			// Empty set of badge(s)
+			$badgesArray = array();
+			
 						
 			// Show in the result page
 		
@@ -324,6 +340,8 @@ class DecksController extends AppController {
 			$this->set('deckName', $deckName['Deck']['name']);
 			
 			$this->set('shareURL', 'http://localhost:8888/' . Router::url(array('controller' => 'Decks', 'action' => 'result')) . '/' . $scoreID);
+			
+			$this->set('badgesGranted', $badgesArray);
 			
 		}
 		
